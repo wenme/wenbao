@@ -1,0 +1,66 @@
+/* pages/company-detial/company-detial.wxss */
+page {
+    background-color: #f5f6f8;
+    font-size: 13pt;
+}
+.company-img-txt {
+	padding-top:40rpx;
+	height:104rpx;
+}
+.company-img {
+	width:100rpx;
+	height:100rpx;
+	border:1px solid #eaeaea;
+	float:left;
+	
+}
+.company-img image {
+	width:100rpx;
+	height:100rpx;
+	
+}
+.company-txt {
+	width:570rpx;
+	height:100rpx;
+	line-height:100rpx;
+	float:right;
+	overflow: hidden;
+	font-size: 14pt;
+}
+.company-info-row {
+	height:80rpx;
+	line-height:80rpx;
+	font-size: 12pt;
+}
+.company-info-row .complable {
+	width:170rpx;
+	float: left;
+	color: #aaaaaa;
+}
+.company-info-row .website {
+	width: 500rpx;
+	float: left;
+	color: #4682f0;
+	overflow: hidden;
+}
+.company-info-row .compcon {
+	width:340rpx;
+	float: left;
+	color: #333333;
+}
+.company-info-row .compbut {
+	width:160rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	text-align: center;
+	border:1px solid #17bf15;
+	float: right;
+	background-image: url(https://wenme.cc/static/images/photo-icon.png);
+	background-size: 36rpx;
+	background-repeat: no-repeat;
+	background-position: 20rpx center;
+	color: #09bb07;
+	text-indent: 10px;
+	font-size: 11pt;
+	margin-top: 14rpx;
+}

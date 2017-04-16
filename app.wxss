@@ -1,0 +1,202 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+} 
+.logo {
+  width: 186rpx;
+  height: 186rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:40rpx;
+}
+.logo image {
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+}
+.wrap {
+  width: 100%;
+}
+.border-tope9 {
+  border-top:1px solid #e9e9e9;
+}
+.mart20 {
+  margin-top: 20rpx;
+}
+.white-bg {
+  background: #fff;
+}
+.padd-lr-30 {
+  padding-left:30rpx;
+  padding-right:30rpx;
+}
+.mess-iconaa {
+  width: 32rpx;
+  height: 32rpx;
+  background-image:url(../../images/mess-icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 32rpx;
+}
+.clear {
+  clear:both;
+}
+.padding-30 {
+  padding: 30rpx;
+}
+.blue-button {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #5082f0;
+  color: #fff;
+  font-size: 15pt;
+  text-align: center;
+}
+/*公司*/
+.pro-company-name {
+  width:100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 14pt;
+  background:#fff;
+  overflow: hidden;
+}
+.part-one {
+  border-top: 1px solid #bfcded;
+  background:#fff;
+}
+.part-white {
+  background:#fff;
+}
+.pro-company-chose {
+  width: 50%;
+  height: 110rpx;
+  line-height:110rpx;
+  font-size: 13pt;
+  float: left;
+  background: #fff;
+  text-align: center;
+}
+/*tab公用*/
+.pro-detial-mess {
+  margin-top: 30rpx;
+  background:#fff;
+}
+.pro-detial-mess-tit {
+  height: 86rpx;
+  line-height: 86rpx;
+  border-bottom:1px solid #e9e9e9;
+}
+.proli-item {
+  margin: 0 30rpx;
+  float: left;
+  color: #999999;
+}
+.proli-item-cur {
+  height: 82rpx;
+  line-height: 82rpx;
+  color: #5082f0;
+  margin: 0 30rpx;
+  float: left;
+  border-bottom:2px solid #5082f0;
+}
+.pro-detial-mess-row {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top:1px solid #e9e9e9;
+  position: relative;
+  font-size: 12pt;
+}
+.pro-detial-mess-row:first-child {
+  border-top:none;
+}
+.pro-detial-mess-row .messlable {
+  width: 300rpx;
+  height: 100rpx;
+  color: #999999;
+  float: left;
+  overflow: hidden;
+}
+.pro-detial-mess-row .messcon {
+  width: 350rpx;
+  height: 100rpx;
+  float: left;
+  overflow: hidden;
+  text-indent: 20rpx;
+  color: #333;
+}
+.pro-detial-mess-row .mess-iconaa {
+  height: 100rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+}
+
+.pro-detial-mess-row .pro-duty-aa {
+  width: 48rpx;
+  height: 100rpx;
+  float: left;
+  text-align:left;
+}
+.pro-detial-mess-row .pro-duty-aa image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.pro-detial-mess-row .pro-duty-bb {
+  width:295rpx;
+  height:100rpx;
+  color:#333;
+  float: left;
+}
+.pro-detial-mess-row .pro-duty-cc {
+  width:315rpx;
+  height:100rpx;
+  color:#999999;
+  padding-right:25rpx;
+  background-image:url(https://wenme.cc/static/images/gopage-icon.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size:12rpx 20rpx;
+  text-align:right;
+  float: right;
+}
+.pro-detial-mess-row .pro-duty-dd {
+  width:315rpx;
+  height:100rpx;
+  color:#999999;
+  padding-right:25rpx;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size:12rpx 20rpx;
+  text-align:right;
+  float: right;
+}
+.padding-bot20 {
+  padding-bottom: 20rpx;
+}
+.posi-rela {
+  position:relative;
+}
+.show {
+  display:show;
+}
+.hidden {
+  display:none;
+}
+.posi-fixed-top {
+  position: fixed;
+  top: -1px;
+  z-index: 999;
+  margin-top: 0px;
+}
+.margin-top120 {
+  margin-top: 118rpx;
+}

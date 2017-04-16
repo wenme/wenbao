@@ -1,0 +1,50 @@
+/**index.wxss**/
+.search-box {
+  width: 100%;
+  height: 106rpx;
+  border:1px solid #3c6ee6;
+  margin-top:124rpx;
+  background: #fff;
+}
+.search-box-but {
+  width: 100%;
+  height:112rpx;
+  line-height:112rpx;
+  font-size: 14pt;
+  color: #fff;
+  text-align: center;
+  margin-top:44rpx;
+  border:1px solid #5082f0;
+  background: #5082f0;
+  border-radius:0rpx;
+  font-weight: 400;
+}
+.pro-search-txt {
+  width: 490rpx;
+  height: 108rpx;
+  line-height: 108rpx;
+  float:left;
+  padding:0rpx;
+  margin-left:20rpx;
+}
+.pro-search-scan {
+  width: 106rpx;
+  height: 106rpx;
+  background-image: url(https://wenme.cc/static/images/scan-icon.png);
+  background-size:50rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+  float:right;
+  border:0px;
+}
+.home-swiper {
+  width:388rpx;
+  height:140rpx;
+  margin-top:160rpx;
+  align-items: center;
+  text-align: center;
+}
+.home-swiper image {
+  width:388rpx;
+  height:122rpx;
+}

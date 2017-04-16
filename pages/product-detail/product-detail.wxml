@@ -1,0 +1,99 @@
+<!--pages/product-detial/product-detial.wxml-->
+<view>
+    <view class="part-one padd-lr-30">
+		<view class="pro-company-name">{{product}}</view>
+	</view>
+	<view class="wrap border-tope9">
+		<view class="pro-company-chose left" bindtap="toCompany">
+			公司详情
+			<view class="lineaa"></view>
+		</view>
+		<view class="pro-company-chose right" bindtap="download">条款下载链接</view>
+		<view class="clear"></view>
+	</view>
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="{{baseInfo?'proli-item-cur':'proli-item'}}" bindtap="showBaseInfo">基本信息</view>
+            <view class="{{purchaseInfo?'proli-item-cur':'proli-item'}}" bindtap="showPurchaseInfo">购买信息</view>
+        </view>
+
+        <view class="padd-lr-30">
+			
+			<view class="{{baseInfo?'show':'hidden'}}">
+				<view class="pro-detial-mess-row">
+					<view class="messlable">产品类型</view>
+					<view class="messcon">{{product_class}}</view>
+					<view class="mess-iconaa"></view>
+				</view>
+	
+				<view class="pro-detial-mess-row">
+					<view class="messlable">产品架构</view>
+					<view class="messcon">{{product_structure}}</view>
+					<view class="mess-iconaa"></view>
+				</view>
+	
+				<view class="pro-detial-mess-row">
+					<view class="messlable">备案年份</view>
+					<view class="messcon">{{filing_year}}年</view>
+					<view class="mess-iconaa"></view>	
+				</view>
+				
+				<view class="pro-detial-mess-row">
+					<view class="messlable">保险期间</view>
+					<view class="messcon">{{policy_period}}</view>
+					<view class="mess-iconaa"></view>	
+				</view>
+	
+				<view class="pro-detial-mess-row">
+					<view class="messlable">犹豫期</view>
+					<view class="messcon">{{cooling_off_period}}</view>
+				</view>
+	
+			<view class="clear"></view>
+			</view>
+			
+			<view class="{{purchaseInfo?'show':'hidden'}}">
+				<view class="pro-detial-mess-row">
+					<view class="messlable">是否在售</view>
+					<view class="messcon">{{sale_available}}</view>
+				</view>
+	
+				<view class="pro-detial-mess-row">
+					<view class="messlable">销售渠道</view>
+					<view class="messcon">{{channel}}</view>
+					<view class="mess-iconaa"></view>
+				</view>
+	
+				<view class="pro-detial-mess-row">
+					<view class="messlable">被保人最小投保年龄</view>
+					<view class="messcon">{{insured_minimum_age}}</view>
+				</view>
+	
+				<view class="pro-detial-mess-row">
+					<view class="messlable">被保人最大投保年龄</view>
+					<view class="messcon">{{insured_maximum_age}}</view>
+					<view class="mess-iconaa"></view>
+				</view>
+	
+				<view class="pro-detial-mess-row">
+					<view class="messlable">被保人最大续保年龄</view>
+					<view class="messcon">{{insured_renewal_maximum_age}}</view>
+				</view>
+			<view class="clear"></view>
+			</view>
+            
+
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+    <view class="padding-30">
+        <view class="blue-button" bindtap="toGrade">产品评级</view>
+    </view>
+
+</view>
+<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>

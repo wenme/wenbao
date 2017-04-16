@@ -1,0 +1,66 @@
+/* pages/product-grade/product-grade.wxss */
+page {
+    background-color: #f5f6f8;
+    font-size: 13pt;
+}
+.comp-grade-chose {
+  width: 50%;
+  height: 110rpx;
+  line-height: 110rpx;
+  float: left;
+  background: #fff;
+  text-align: center;
+}
+.comp-grade-chose.left {
+  height: 110rpx;
+  background-image: url(https://wenme.cc/static/images/service-icon.png);
+  background-size: 46rpx;
+  background-repeat: no-repeat;
+  background-position: 76rpx center;
+  text-indent: 30rpx;
+  position: relative;
+  color: #09bb07;
+}
+.comp-grade-chose.left .lineaa {
+  width: 1px;
+  height: 110rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.comp-grade-chose.right {
+  color: #4682f0;
+  height: 110rpx;
+  background-image: url(https://wenme.cc/static/images/feb-icon.png);
+  background-size: 46rpx;
+  background-repeat: no-repeat;
+  background-position: 70rpx center;
+  text-indent: 30rpx;
+}
+
+.company-info-row {
+	height:80rpx;
+	line-height:80rpx;
+	font-size: 12pt;
+}
+.company-info-row .gradeable {
+	width: 220rpx;
+	float: left;
+	color: #aaaaaa;
+}
+.company-info-row .gradecon {
+	width: 350rpx;
+	float: left;
+	color: #ff7800;
+	position:relative;
+}
+.company-info-row .gradecon image {
+	width:189rpx;
+	height:28rpx;
+}
+.company-info-row .mess-iconaa {
+	position:absolute;
+	right:0rpx;
+	top:22rpx;
+}

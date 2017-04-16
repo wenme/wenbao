@@ -1,0 +1,35 @@
+/* pages/product-detial/product-detial.wxss */
+@import "/pages/tabbar/tabbar.wxss"
+
+page {
+    background-color: #f5f6f8;
+    font-size: 13pt;
+}
+
+.pro-company-chose.left {
+  height: 110rpx;
+  background-image: url(https://wenme.cc/static/images/company-icon.png);
+  background-size: 46rpx;
+  background-repeat: no-repeat;
+  background-position: 76rpx center;
+  text-indent: 30rpx;
+  position: relative;
+  color: #4682f0;
+}
+.pro-company-chose.left .lineaa {
+  width: 1px;
+  height: 110rpx;
+  background: #e9e9e9;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.pro-company-chose.right {
+  color: #09bb07;
+  height: 110rpx;
+  background-image: url(https://wenme.cc/static/images/down-icon.png);
+  background-size: 46rpx;
+  background-repeat: no-repeat;
+  background-position: 46rpx center;
+  text-indent: 50rpx;
+}

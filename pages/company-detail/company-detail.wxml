@@ -1,0 +1,99 @@
+<!--pages/company-detial/company-detial.wxml-->
+<view>
+    <view class="part-one padd-lr-30 padding-bot20">
+		<view class="company-img-txt padding-bot20 ">
+            <view class="company-img">
+                <image src="../../images/yb-logo.jpg" ></image>
+            </view>
+            <view class="company-txt">{{insurer}}</view>
+        <view class="clear"></view>
+        </view>
+        
+        <view class="company-info-row">
+            <view class="complable">公 司 主 页</view>
+            <view class="website">{{insurer_website}}</view>
+        </view>
+        <view class="company-info-row">
+            <view class="complable">客服电话1</view>
+            <view class="compcon">{{hotline_1}}</view>
+            <view class="compbut">通话</view>
+        </view>
+        <view class="company-info-row">
+            <view class="complable">客服电话2</view>
+            <view class="compcon">{{hotline_2}}</view>
+            <view class="compbut">通话</view>
+        </view>
+
+
+		
+	<view class="clear"></view>
+	</view>
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="{{selected?'proli-item-cur':'proli-item'}}" bindtap="selected">市场地位</view>
+            <view class="{{selected1?'proli-item-cur':'proli-item'}}" bindtap="selected1">偿付能力</view>
+        </view>
+
+        <view class="padd-lr-30">
+            <view class="{{selected?'show':'hidden'}}">
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">财政年度</view>
+                    <view class="messcon">{{financial_year}}</view>
+                    <view class="mess-iconaa"></view>
+                </view>
+
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">原保险保费收入</view>
+                    <view class="messcon">{{original_premium}}亿</view>
+                </view>
+
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">保费收入排名</view>
+                    <view class="messcon">{{original_premium_ranking}}位</view>
+                </view>
+
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">市场占有率</view>
+                    <view class="messcon">{{original_premium_market_pct}}%</view>
+                    <view class="mess-iconaa"></view>
+                </view>
+            <view class="clear"></view>
+            </view>
+
+            <view class="{{selected1?'show':'hidden'}}">
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">偿付能力评估季度</view>
+                    <view class="messcon">{{solvency_valuation_quarter}}</view>
+                </view>
+
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">核心偿付能力充足率</view>
+                    <view class="messcon">{{core_solvency_adequacy_ratio}}%</view>
+                    <view class="mess-iconaa"></view>
+                </view>
+
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">综合偿付能力充足率</view>
+                    <view class="messcon">{{comp_solvency_adequacy_ratio}}%</view>
+                </view>
+
+                <view class="pro-detial-mess-row">
+                    <view class="messlable">风险综合评级</view>
+                    <view class="messcon">{{solvency_rating}}</view>
+                    <view class="mess-iconaa"></view>
+                </view>
+            <view class="clear"></view>
+            </view>
+
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+</view>
+<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>

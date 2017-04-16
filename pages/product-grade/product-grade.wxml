@@ -1,0 +1,121 @@
+<!--pages/product-grade/product-grade.wxml-->
+<view>
+<view class="pro-company-name posi-fixed-top padd-lr-30">{{product}}</view>
+    <view class="part-white padd-lr-30 padding-bot20 margin-top120">
+		
+        <view class="company-info-row posi-rela">
+            <view class="gradeable">产品综合评分</view>
+            <view class="gradecon">{{product_score}}分</view>
+			<view class="mess-iconaa"></view>
+        </view>
+        <view class="company-info-row posi-rela">
+            <view class="gradeable">产品综合评级</view>
+            <view class="gradecon"><image src="../../images/star{{product_rating}}.png" ></image></view>
+			<view class="mess-iconaa"></view>
+        </view>
+		
+		
+	<view class="clear"></view>
+	</view>
+
+    <view class="wrap border-tope9">
+			<view class="comp-grade-chose left">
+				<contact-button type="default-light">专业客服</contact-button>
+			</view>
+			<view class="comp-grade-chose right">发现错误</view>
+			<view class="clear"></view>
+		</view>
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">保险责任</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-aa"><image src="../../images/insur-icona.png" ></image></view>
+                <view class="pro-duty-bb">人寿</view>
+                <view class="pro-duty-cc">{{life_benefit_count}}项保险金</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-aa"><image src="../../images/insur-iconb.png" ></image></view>
+                <view class="pro-duty-bb">疾病</view>
+                <view class="pro-duty-cc">{{disease_benefit_count}}项保险金</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-aa"><image src="../../images/insur-iconc.png" ></image></view>
+                <view class="pro-duty-bb">意外</view>
+                <view class="pro-duty-cc">{{accident_benefit_count}}项保险金</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-aa"><image src="../../images/insur-icond.png" ></image></view>
+                <view class="pro-duty-bb">医疗</view>
+                <view class="pro-duty-cc">{{medical_benefit_count}}项保险金</view>
+            </view>
+			
+			<view class="pro-detial-mess-row">
+                <view class="pro-duty-aa"><image src="../../images/insur-icone.png" ></image></view>
+                <view class="pro-duty-bb">储蓄</view>
+                <view class="pro-duty-cc">{{saving_benefit_count}}项保险金</view>
+            </view>
+
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">投资</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb">{{product_structure}}</view>
+                <view class="pro-duty-cc"></view>
+            </view>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">重要条款</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb">责任除外</view>
+                <view class="pro-duty-cc">{{exclusion_count}}项</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb">等待期</view>
+                <view class="pro-duty-dd">{{waiting_period}}</view>
+            </view>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+</view>
+<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
