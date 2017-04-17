@@ -95,5 +95,5 @@
 
 
 </view>
-<import src="../tabbar/tabbar.wxml"/>
-<template is="tabbar" data="{{tabbar}}"/>
+<!--<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>-->

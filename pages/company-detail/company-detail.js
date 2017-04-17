@@ -17,7 +17,7 @@ Page({
         comp_solvency_adequacy_ratio: 0,
         solvency_rating : "",
 
-        tabbar          : app.globalData.tabbar,
+        // tabbar          : app.globalData.tabbar,
 
         selected:true,
         selected1:false
@@ -36,20 +36,24 @@ Page({
     },
 
     onLoad({insurer_id}) {
-      wx.request({
-          url: 'https://wenme.cc/insurer/get_insurer_info',
-          data: {insurer_id},
-          method: 'POST',
-          success: ({
-              data: {
-                  err_code,
-                  insurer_info
-              }
-          }) => {
-              if (err_code === 0) {
-                  this.setData(insurer_info);
-              }
-          }
-      });
+        app.getSessionKey()
+            .then(session_key => wx.request({
+                url: 'https://wenme.cc/insurer/get_insurer_info',
+                data: {insurer_id, session_key},
+                method: 'POST',
+                header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                },
+                success: ({
+                              data: {
+                                  err_code,
+                                  insurer_info
+                              }
+                          }) => {
+                    if (err_code === 0) {
+                        this.setData(insurer_info);
+                    }
+                }
+            }));
     }
-})
+});

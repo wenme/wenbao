@@ -21,6 +21,6 @@
     </swiper>
 
 </view>
-<import src="../tabbar/tabbar.wxml"/>
+<!--<import src="../tabbar/tabbar.wxml"/>
 <template is="tabbar" data="{{tabbar}}"/>
-
+-->

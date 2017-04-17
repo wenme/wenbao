@@ -1,6 +1,6 @@
 <!--pages/product-grade/product-grade.wxml-->
 <view>
-<view class="pro-company-name posi-fixed-top padd-lr-30">{{product}}</view>
+    <view class="pro-company-name posi-fixed-top padd-lr-30">{{product}}</view>
     <view class="part-white padd-lr-30 padding-bot20 margin-top120">
 		
         <view class="company-info-row posi-rela">
@@ -117,5 +117,5 @@
 
 
 </view>
-<import src="../tabbar/tabbar.wxml"/>
-<template is="tabbar" data="{{tabbar}}"/>
+<!--<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>-->

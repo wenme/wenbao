@@ -90,10 +90,10 @@
     <view class="clear"></view>
     </view>
 
-    <view class="padding-30">
-        <view class="blue-button" bindtap="toGrade">产品评级</view>
+    <view class="padding-30" bindtap="toGrade">
+        <view class="blue-button">产品评级</view>
     </view>
 
 </view>
-<import src="../tabbar/tabbar.wxml"/>
-<template is="tabbar" data="{{tabbar}}"/>
+<!--<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>-->

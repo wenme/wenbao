@@ -1,4 +1,6 @@
 //app.js
+let code, userInfo, session_key;
+
 App({
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -6,60 +8,87 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
   },
-  getUserInfo:function(cb){
-    var that = this
-    if(this.globalData.userInfo){
-      typeof cb == "function" && cb(this.globalData.userInfo)
+  getSessionKey() {
+    return this.getCode()
+      .then(({code, isNewSession}) => {
+        if (isNewSession) {
+          return this.getUserInfo()
+            .then(userInfo => {
+              return new Promise(resolve => {
+                let data = Object.assign({
+                    code,
+                    nick_name : userInfo.nickName,
+                    avatar_url: userInfo.avatarUrl
+                  }, userInfo);
+                delete data.nickName;
+                delete data.avatarUrl;
+                wx.request({
+                    url: 'https://wenme.cc/users/wx_login',
+                    data,
+                    method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    success: function({data: {
+                      session_key: key,
+                      err_code
+                    }}){
+                      if (err_code === 0) {
+                      resolve(session_key = key);
+                    }
+                  }
+                });
+              });
+             });
+        } else {
+          return session_key;
+        }
+      });
+  },
+  getUserInfo(){
+    if(userInfo){
+      return Promise.resolve(userInfo);
     }else{
       //调用登录接口
-      wx.login({
-        success: function () {
+      return this.getCode()
+        .then(() => new Promise((resolve, reject) => {
           wx.getUserInfo({
-            success: function (res) {
-              that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
+            success: function ({userInfo: _userInfo}) {
+              resolve(userInfo = _userInfo);
             }
           })
-        }
-      })
+        }));
     }
   },
-  editTabBar: function(){
-    var tabbar = this.globalData.tabbar,
-        currentPages = getCurrentPages(),
-        _this = currentPages[currentPages.length - 1],
-        pagePath = _this.__route__;
-    (pagePath.indexOf('/') != 0) && (pagePath = '/' + pagePath);
-    for(var i in tabbar.list){
-      tabbar.list[i].selected = false;
-      (tabbar.list[i].pagePath == pagePath) && (tabbar.list[i].selected = true);
+  getCode() {
+    if (!code) {
+      return this.login()
+        .then(({code}) => {
+          return {code, isNewSession: true};
+        });
     }
-    _this.setData({
-      tabbar: tabbar
+    return new Promise(resolve => {
+      wx.checkSession({
+        success() {
+          resolve({code});
+        },
+
+        fail: () => {
+          this.login()
+            .then(({code}) => {
+              resolve({code, isNewSession: true});
+            });
+        }
+      });
     });
+  },
+  login() {
+    return new Promise(resolve => wx.login({
+      success: resolve
+    }));
   },
   globalData:{
     userInfo:null,
-    tabbar:{
-      color: "#000000",
-      selectedColor: "#0f87ff",
-      backgroundColor: "#ffffff",
-      borderStyle: "black",
-      list: [
-        {
-          pagePath: "/pages/index/index",
-          iconPath: "/images/home-icon.png",
-          selectedIconPath: "/images/home-iconS.png",
-          selected: false
-        },
-        {
-          pagePath: "/pages/address/address",
-          iconPath: "/images/user-icon.png",
-          selectedIconPath: "/images/user-iconS.png",
-          selected: false
-        }
-      ],
-      position: "bottom"
-    }
+    code    : ""
   }
-})
+});
