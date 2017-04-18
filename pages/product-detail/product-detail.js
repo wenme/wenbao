@@ -6,10 +6,10 @@ const app               = getApp();
 Page({
     data                :{
         product         : "",
-        filing_year     : "0",
-        sale_available  : "在售",
-        product_structure: "传统型",
-        product_class   : "终身寿险",
+        filing_year     : "",
+        sale_available  : "",
+        product_structure: "",
+        product_class   : "",
         insured_minimum_age: "",
         insured_maximum_age: "",
         insured_renewal_maximum_age: "",
@@ -28,13 +28,13 @@ Page({
         this.setData({
             baseInfo:true,
             purchaseInfo:false
-        })
+        });
     },
     showPurchaseInfo() {
         this.setData({
             baseInfo:false,
             purchaseInfo:true
-        })
+        });
     },
 
     toCompany() {
@@ -86,12 +86,12 @@ Page({
 
                 .then(({data: {
                     err_code,
-                    product_basic_info
+                    product_detail_info
                 }, session_key}) => {
                     let pid;
                     if (err_code === 0) {
-                        this.setData(product_basic_info);
-                        pid = product_basic_info.pid;
+                        this.setData(product_detail_info);
+                        pid = product_detail_info.pid;
                     }
 
                     return {pid, session_key};
