@@ -56,10 +56,10 @@ Page({
         wx.downloadFile({
           url: this.data.terms_download_link,
           success: function({tempFilePath}){
-            wx.openDocument({
-                filePath    : tempFilePath,
-                success: function (res) {
-                    console.log('打开文档成功')
+            wx.saveFile({
+                tempFilePath,
+                success: function ({savedFilePath}) {
+                    console.log(savedFilePath)
                 },
                 fail(res) {
                     console.log(res)
@@ -82,7 +82,8 @@ Page({
                     header: {
                         'content-type': 'application/x-www-form-urlencoded'
                     }
-                }).then(res => (res.session_key = session_key) && res))
+                })
+                    .then(res => (res.session_key = session_key) && res))
 
                 .then(({data: {
                     err_code,
@@ -97,25 +98,26 @@ Page({
                     return {pid, session_key};
                 })
 
-                .then(({pid, session_key}) => pid !== null && Promise.all([
-                    request({
-                        url: 'https://wenme.cc/orders/check_product_is_paid',
-                        data: {
-                            pid,
-                            session_key
-                        },
-                        header: {
-                            'content-type': 'application/x-www-form-urlencoded'
-                        },
-                        method: 'POST'
-                    }).then(({data: {
-                        err_code,
-                        check_rslt
-                    }}) => {
-                        if (err_code === 0) {
-                            this.setData({check_rslt});
-                        }
-                    }),
+                .then(({pid, session_key}) => pid !== null && request({
+                    url: 'https://wenme.cc/orders/check_product_is_paid',
+                    data: {
+                        pid,
+                        session_key
+                    },
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    method: 'POST'
+                }))
+
+                .then(({data: {
+                    err_code,
+                    check_rslt
+                }}) => {
+                    if (err_code === 0) {
+                        this.setData({check_rslt});
+                    }
+                })/*,
                     request({
                         url: 'https://wenme.cc/terms/get_product_detail_info',
                         data: {
@@ -126,12 +128,12 @@ Page({
                             'content-type': 'application/x-www-form-urlencoded'
                         },
                         method: 'POST'
-                    }).then(({data: {err_code, product_info_json}}) => {
+                    }).then(({data: {err_code, product_detail_info}}) => {
                         if (err_code === 0) {
-                            this.setData(product_info_json);
+                            this.setData(product_detail_info);
                         }
                     })
-                ]))
+                ])*/
         }
 
     }
