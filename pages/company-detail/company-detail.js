@@ -1,4 +1,6 @@
 // pages/company-detial/company-detial.js
+const request           = require('../../utils/request');
+
 const app               = getApp();
 
 Page({
@@ -6,8 +8,8 @@ Page({
         insurer         : "",
         logo_link       : "",
         insurer_website : "",
-        hotline_1       : "",
-        hotline_2       : "",
+        hotline1        : "",
+        hotline2        : "",
         financial_year  : "",
         original_premium: 0,
         original_premium_market_pct: 0,
@@ -35,25 +37,30 @@ Page({
         })
     },
 
+    call(event) {
+        wx.makePhoneCall({
+            phoneNumber : event.target.dataset.phone
+        })
+    },
+
     onLoad({insurer_id}) {
         app.getSessionKey()
-            .then(session_key => wx.request({
+            .then(session_key => request({
                 url: 'https://wenme.cc/insurer/get_insurer_info',
                 data: {insurer_id, session_key},
                 method: 'POST',
                 header: {
                     'content-type': 'application/x-www-form-urlencoded'
-                },
-                success: ({
-                              data: {
-                                  err_code,
-                                  insurer_info
-                              }
-                          }) => {
-                    if (err_code === 0) {
-                        this.setData(insurer_info);
-                    }
                 }
-            }));
+            }))
+
+            .then(({data: {
+                err_code,
+                insurer_info
+            }}) => {
+                if (err_code === 0) {
+                    this.setData(insurer_info);
+                }
+            });
     }
 });

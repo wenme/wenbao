@@ -13,15 +13,15 @@
             <view class="complable">公 司 主 页</view>
             <view class="website">{{insurer_website}}</view>
         </view>
-        <view class="company-info-row">
+        <view wx:if="{{hotline1}}" class="company-info-row">
             <view class="complable">客服电话1</view>
-            <view class="compcon">{{hotline_1}}</view>
-            <view class="compbut">通话</view>
+            <view class="compcon">{{hotline1}}</view>
+            <view class="compbut" data-phone="{{hotline1}}" bindtap="call">通话</view>
         </view>
-        <view class="company-info-row">
+        <view wx:if="{{hotline2}}" class="company-info-row">
             <view class="complable">客服电话2</view>
-            <view class="compcon">{{hotline_2}}</view>
-            <view class="compbut">通话</view>
+            <view class="compcon">{{hotline2}}</view>
+            <view class="compbut" data-phone="{{hotline2}}" bindtap="call">通话</view>
         </view>
 
 
