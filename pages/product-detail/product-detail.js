@@ -1,4 +1,6 @@
 // pages/product-detial/product-detial.js
+const request           = require('../../utils/request');
+
 const app               = getApp();
 
 Page({
@@ -53,11 +55,16 @@ Page({
     download() {
         wx.downloadFile({
           url: this.data.terms_download_link,
-          success: function(res){
-            // success
-          },
-          fail: function(res) {
-            // fail
+          success: function({tempFilePath}){
+            wx.openDocument({
+                filePath    : tempFilePath,
+                success: function (res) {
+                    console.log('打开文档成功')
+                },
+                fail(res) {
+                    console.log(res)
+                }
+            });
           }
         });
     },
@@ -65,51 +72,66 @@ Page({
     onLoad({product_iachina_link}) {
         if (product_iachina_link) {
             app.getSessionKey()
-                .then(session_key => {
-                    wx.request({
-                        url: 'https://wenme.cc/terms/scan',
+                .then(session_key => request({
+                    url: 'https://wenme.cc/terms/scan',
+                    data: {
+                        product_iachina_link: decodeURIComponent(product_iachina_link),
+                        session_key
+                    },
+                    method: 'POST',
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    }
+                }).then(res => (res.session_key = session_key) && res))
+
+                .then(({data: {
+                    err_code,
+                    product_basic_info
+                }, session_key}) => {
+                    let pid;
+                    if (err_code === 0) {
+                        this.setData(product_basic_info);
+                        pid = product_basic_info.pid;
+                    }
+
+                    return {pid, session_key};
+                })
+
+                .then(({pid, session_key}) => pid !== null && Promise.all([
+                    request({
+                        url: 'https://wenme.cc/orders/check_product_is_paid',
                         data: {
-                            product_iachina_link: decodeURIComponent(product_iachina_link),
+                            pid,
                             session_key
                         },
-                        method: 'POST',
                         header: {
                             'content-type': 'application/x-www-form-urlencoded'
                         },
-                        success: ({
-                            data: {
-                                err_code,
-                                product_basic_info
-                            }
-                        }) => {
-                            if (err_code === 0) {
-                                this.setData(product_basic_info);
-                                wx.request({
-                                    url: 'https://wenme.cc/orders/check_product_is_paid',
-                                    data: {
-                                        pid: product_basic_info.pid,
-                                        session_key
-                                    },
-                                    header: {
-                                        'content-type': 'application/x-www-form-urlencoded'
-                                    },
-                                    method: 'POST',
-                                    success: ({
-                                        data: {
-                                            err_code,
-                                            check_rslt
-                                        }
-                                    }) => {
-                                        if (err_code === 0) {
-                                            this.setData({check_rslt});
-                                        }
-                                    }
-                                });
-                            }
+                        method: 'POST'
+                    }).then(({data: {
+                        err_code,
+                        check_rslt
+                    }}) => {
+                        if (err_code === 0) {
+                            this.setData({check_rslt});
                         }
-                    });
-
-                });
+                    }),
+                    request({
+                        url: 'https://wenme.cc/terms/get_product_detail_info',
+                        data: {
+                            pid,
+                            session_key
+                        },
+                        header: {
+                            'content-type': 'application/x-www-form-urlencoded'
+                        },
+                        method: 'POST'
+                    }).then(({data: {err_code, product_info_json}}) => {
+                        if (err_code === 0) {
+                            this.setData(product_info_json);
+                        }
+                    })
+                ]))
         }
 
     }
