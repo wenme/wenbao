@@ -21,7 +21,7 @@ Page({
   scanQRCode() {
     wx.scanCode({
       success({result, scanType, charSet}) {
-        wx.redirectTo({
+        wx.navigateTo({
           url: `../product-detail/product-detail?product_iachina_link=${encodeURIComponent(result).replace(/\./g, "%2E")}`
         });
       }
