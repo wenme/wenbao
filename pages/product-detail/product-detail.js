@@ -52,14 +52,23 @@ Page({
         });
     },
 
+    toExplaination(event) {
+        wx.navigateTo({
+            url: `../explaination/explaination?tid=${event.target.dataset.tid}`,
+            fail(res) {
+                console.log(res);
+            }
+        });
+    },
+
     download() {
         wx.downloadFile({
           url: this.data.terms_download_link,
           success: function({tempFilePath}){
-            wx.saveFile({
-                tempFilePath,
-                success: function ({savedFilePath}) {
-                    console.log(savedFilePath)
+            wx.openDocument({
+                filePath    : tempFilePath,
+                success(res) {
+                    console.log(res)
                 },
                 fail(res) {
                     console.log(res)
