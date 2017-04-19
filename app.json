@@ -4,6 +4,7 @@
     "pages/product-detail/product-detail",
     "pages/company-detail/company-detail",
     "pages/product-grade/product-grade",
+    "pages/explaination/explaination",
     "pages/tabbar/tabbar"
   ],
   "window":{

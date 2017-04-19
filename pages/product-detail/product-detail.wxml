@@ -24,30 +24,31 @@
 				<view class="pro-detial-mess-row">
 					<view class="messlable">产品类型</view>
 					<view class="messcon">{{product_class}}</view>
-					<view class="mess-iconaa"></view>
+					<view wx:if="{{product_class_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{product_class_hintid}}"></view>
 				</view>
 	
 				<view class="pro-detial-mess-row">
 					<view class="messlable">产品架构</view>
 					<view class="messcon">{{product_structure}}</view>
-					<view class="mess-iconaa"></view>
+					<view wx:if="{{product_structure_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{product_structure_hintid}}"></view>
 				</view>
 	
 				<view class="pro-detial-mess-row">
 					<view class="messlable">备案年份</view>
 					<view class="messcon">{{filing_year}}年</view>
-					<view class="mess-iconaa"></view>	
+					<view wx:if="{{filing_year_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{filing_year_hintid}}"></view>
 				</view>
 				
 				<view class="pro-detial-mess-row">
 					<view class="messlable">保险期间</view>
 					<view class="messcon">{{policy_period}}</view>
-					<view class="mess-iconaa"></view>	
+					<view wx:if="{{policy_period_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{policy_period_hintid}}"></view>
 				</view>
 	
 				<view class="pro-detial-mess-row">
 					<view class="messlable">犹豫期</view>
 					<view class="messcon">{{cooling_off_period}}</view>
+					<view wx:if="{{cooling_off_period_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{cooling_off_period_hintid}}"></view>
 				</view>
 	
 			<view class="clear"></view>
@@ -57,28 +58,31 @@
 				<view class="pro-detial-mess-row">
 					<view class="messlable">是否在售</view>
 					<view class="messcon">{{sale_available}}</view>
+					<view wx:if="{{sale_available_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{sale_available_hintid}}"></view>
 				</view>
 	
 				<view class="pro-detial-mess-row">
 					<view class="messlable">销售渠道</view>
 					<view class="messcon">{{channel}}</view>
-					<view class="mess-iconaa"></view>
+					<view wx:if="{{channel_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{channel_hintid}}"></view>
 				</view>
 	
 				<view class="pro-detial-mess-row">
 					<view class="messlable">被保人最小投保年龄</view>
 					<view class="messcon">{{insured_minimum_age}}</view>
+					<view wx:if="{{insured_minimum_age_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{insured_minimum_age_hintid}}"></view>
 				</view>
 	
 				<view class="pro-detial-mess-row">
 					<view class="messlable">被保人最大投保年龄</view>
 					<view class="messcon">{{insured_maximum_age}}</view>
-					<view class="mess-iconaa"></view>
+					<view wx:if="{{insured_maximum_age_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{insured_maximum_age_hintid}}"></view>
 				</view>
 	
 				<view class="pro-detial-mess-row">
 					<view class="messlable">被保人最大续保年龄</view>
 					<view class="messcon">{{insured_renewal_maximum_age}}</view>
+					<view wx:if="{{insured_renewal_maximum_age_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{insured_renewal_maximum_age_hintid}}"></view>
 				</view>
 			<view class="clear"></view>
 			</view>
