@@ -40,7 +40,7 @@
             <view class="{{selected?'show':'hidden'}}">
                 <view class="pro-detial-mess-row">
                     <view class="messlable">财政年度</view>
-                    <view class="messcon">{{financial_year}}</view>
+                    <view class="messcon">{{finance_year}}</view>
                     <view class="mess-iconaa"></view>
                 </view>
 
