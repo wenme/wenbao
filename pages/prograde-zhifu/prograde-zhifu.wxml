@@ -1,0 +1,60 @@
+<!--pages/prograde-zhifu/prograde-zhifu.wxml-->
+<view>
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    
+
+
+    <view class="pro-detial-mess margin-top120">
+
+        <view class="prograde-contxt">
+            <text class="blue">该产品的评级是付费服务，付费后你将立即获得下列好处。</text>
+            <text>
+            • 产品综合评级及深度数据分析\n
+• 专业客服为你解释产品细节\n
+• 永久拥有该产品评级及数据更新
+
+            </text>
+        <view class="clear"></view>
+        </view>
+
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row border-tope9">
+                <view class="pro-duty-bb cost">条款字数</view>
+                <view class="pro-duty-dd cost">3725字</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">保险金数量</view>
+                <view class="pro-duty-dd cost">4项</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">投资功能</view>
+                <view class="pro-duty-dd cost">投资连结型</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">解读难度</view>
+                <view class="pro-duty-dd cost">复杂</view>
+            </view>
+
+            <view class="pro-price border-tope9">
+                <view class="lefpric">价格：<text class="span">¥10.00</text></view>
+                <view class="agreement">问保评级服务协议<view class="go-icon"><image src="../../images/gopage-icon-blue.png" ></image></view></view>
+            <view class="clear"></view>
+            </view>
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+    
+    <view class="padding-30">
+        <view class="green-button">微信支付</view>
+    </view>
+
+</view>

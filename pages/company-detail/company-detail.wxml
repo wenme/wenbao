@@ -10,8 +10,7 @@
         </view>
         
         <view class="company-info-row">
-            <view class="complable">公 司 主 页</view>
-            <view class="website">{{insurer_website}}</view>
+            <view class="fullline">公 司 主 页<text class="span blue">{{insurer_website}}</text></view>
         </view>
         <view wx:if="{{hotline1}}" class="company-info-row">
             <view class="complable">客服电话1</view>
@@ -42,18 +41,21 @@
                     <view class="messlable">财政年度</view>
                     <view class="messcon">{{finance_year}}</view>
 					<view wx:if="{{finance_year_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{finance_year_hintid}}"></view>
+                <view class="clear"></view>
                 </view>
 
                 <view class="pro-detial-mess-row">
                     <view class="messlable">原保险保费收入</view>
                     <view class="messcon">{{original_premium}}亿</view>
 					<view wx:if="{{original_premium_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{original_premium_hintid}}"></view>
+                <view class="clear"></view>
                 </view>
 
                 <view class="pro-detial-mess-row">
                     <view class="messlable">保费收入排名</view>
                     <view class="messcon">{{original_premium_ranking}}位</view>
 					<view wx:if="{{original_premium_ranking_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{original_premium_ranking_hintid}}"></view>
+                <view class="clear"></view>
                 </view>
 
                 <view class="pro-detial-mess-row">
@@ -69,24 +71,28 @@
                     <view class="messlable">偿付能力评估季度</view>
                     <view class="messcon">{{solvency_valuation_quarter}}</view>
 					<view wx:if="{{solvency_valuation_quarter_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{solvency_valuation_quarter_hintid}}"></view>
+                <view class="clear"></view>
                 </view>
 
                 <view class="pro-detial-mess-row">
                     <view class="messlable">核心偿付能力充足率</view>
                     <view class="messcon">{{core_solvency_adequacy_ratio}}%</view>
 					<view wx:if="{{core_solvency_adequacy_ratio_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{core_solvency_adequacy_ratio_hintid}}"></view>
+                <view class="clear"></view>
                 </view>
 
                 <view class="pro-detial-mess-row">
                     <view class="messlable">综合偿付能力充足率</view>
                     <view class="messcon">{{comp_solvency_adequacy_ratio}}%</view>
 					<view wx:if="{{comp_solvency_adequacy_ratio_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{comp_solvency_adequacy_ratio_hintid}}"></view>
+                <view class="clear"></view>
                 </view>
 
                 <view class="pro-detial-mess-row">
                     <view class="messlable">风险综合评级</view>
                     <view class="messcon">{{solvency_rating}}</view>
 					<view wx:if="{{solvency_rating_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{solvency_rating_hintid}}"></view>
+                <view class="clear"></view>
                 </view>
             <view class="clear"></view>
             </view>

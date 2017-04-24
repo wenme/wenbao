@@ -1,0 +1,14 @@
+<!--pages/catalogue/catalogue.wxml-->
+<view bindtap="Shouye">1. 首页</view>
+<view bindtap="Product">2. 产品详情页</view>
+<view bindtap="Company">3. 公司详情页</view>
+<view bindtap="Gradea">4. 产品评级</view>
+
+<view class="border" bindtap="Baoxianjin">5. 产品评级 - 保险金</view>
+<view bindtap="Bxzeren">6. 产品评级 - 保险责任</view>
+<view bindtap="Bxfenhong">7. 产品评级 - 分红型</view>
+<view bindtap="Bxtouzi">8. 产品评级 - 投资</view>
+<view bindtap="Bxtoulianzhanghu">9. 产品评级 - 投连账户</view>
+<view bindtap="Bxwanneng">10. 产品评级 - 万能型</view>
+<view bindtap="Bxzerenchuwai">11. 产品评级 - 责任除外</view>
+<view bindtap="Bxzhifu">12. 产品评级 - 支付</view>

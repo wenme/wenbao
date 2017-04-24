@@ -1,0 +1,126 @@
+<!--pages/prograde-wanneng/prograde-wanneng.wxml-->
+<view class="padding-bottom">
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    <view class="part-white padd-lr-30 padding-bot20 margin-top120">
+		
+        <view class="company-info-row posi-rela">
+            <view class="fullline">2017年3月结算利率<text class="span">4.3%</text></view>
+        </view>
+        <view class="company-info-row posi-rela">
+            <view class="fullline">产品疾病评分<text class="span red">226分</text></view>
+        </view>
+        <view class="company-info-row posi-rela">
+            <view class="fullline">投资功能排名<text class="span">34名，总计245个产品
+</text></view>
+        </view>
+		
+		
+	<view class="clear"></view>
+	</view>
+
+
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">投资价值走势</view>
+        </view>
+
+        <view class="prograde-contxt">
+            <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+
+    
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">历史表现</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">3年平均收益率
+</view>
+                <view class="pro-duty-dd cost">4.1%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">3年平均波动率
+</view>
+                <view class="pro-duty-dd cost">0.3%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">最近1年收益率
+</view>
+                <view class="pro-duty-dd cost">4.0%
+</view>
+<view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">最低保证利率
+</view>
+                <view class="pro-duty-dd cost">1.8%
+</view>
+<view class="clear"></view>
+            </view>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">费用成本</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">初始费用</view>
+                <view class="pro-duty-dd cost">0.8%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">头5年平均退保费用</view>
+                <view class="pro-duty-dd cost">3.1%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">无费用退保年期</view>
+                <view class="pro-duty-dd cost">第4年</view>
+                <view class="clear"></view>
+            </view>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+<view class="wrap border-tope9 bottom-fix">
+			<view class="comp-grade-chose left">
+				专业客服
+				<view class="lineaa"></view>
+			</view>
+			<view class="comp-grade-chose right">发现错误</view>
+			<view class="clear"></view>
+		</view>
+</view>

@@ -14,10 +14,16 @@ Page({
 
     // tabbar  : app.globalData.tabbar
   },
+  bindViewTap: function() {
+    wx.redirectTo({
+      url: '../catalogue/catalogue'
+    })
+  },
   //事件处理函数
   searchProduct() {
 
   },
+  
   scanQRCode() {
     wx.scanCode({
       success({result, scanType, charSet}) {

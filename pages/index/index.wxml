@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="logo"><image src="../../images/logo.png" ></image></view>
+  <view class="logo" bindtap="bindViewTap"><image src="../../images/logo.png" ></image></view>
   <view>
     <view class="search-box">
       <input class="pro-search-txt" placeholder="想了解什么保险？" />

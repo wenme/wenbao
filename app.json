@@ -5,6 +5,15 @@
     "pages/company-detail/company-detail",
     "pages/product-grade/product-grade",
     "pages/explaination/explaination",
+    "pages/prograde-baoxianzeren/prograde-baoxianzeren",
+    "pages/prograde-baoxianjin/prograde-baoxianjin",
+    "pages/prograde-zerenchuwai/prograde-zerenchuwai",
+    "pages/prograde-fenhong/prograde-fenhong",
+    "pages/prograde-touzi/prograde-touzi",
+    "pages/prograde-touzitoulian/prograde-touzitoulian",
+    "pages/prograde-wanneng/prograde-wanneng",
+    "pages/prograde-zhifu/prograde-zhifu",
+    "pages/catalogue/catalogue",
     "pages/tabbar/tabbar"
   ],
   "window":{

@@ -1,0 +1,41 @@
+<!--pages/prograde-zerenchuwai/prograde-zerenchuwai.wxml-->
+<view class="padding-bottom">
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    
+
+
+
+
+    <view class="pro-detial-mess margin-top150">
+
+        <view class="prograde-contxt">
+            <text class="blue">因下列情形索赔，可能会被保险公司拒绝赔付:</text>
+            <text>
+            1.   被保人有既往病史；\n
+2.   投保人故意杀害或伤害被保人；\n
+3.   被保人自杀、自残；\n
+4.   被保人参与军、警任务；\n
+5.   被保险人犯罪；\n
+6.   被保人危险驾驶；\n
+7.   被保人遭遇战争或武装冲突；\n
+8.   被保人遭遇恐怖袭击；\n
+9.   被保人遭遇核灾难；\n
+10. 被保人参与危险运动；\n
+11. 被保人参与特技表演。
+
+            </text>
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+<view class="wrap border-tope9 bottom-fix">
+			<view class="comp-grade-chose left">
+				专业客服
+				<view class="lineaa"></view>
+			</view>
+			<view class="comp-grade-chose right">发现错误</view>
+			<view class="clear"></view>
+		</view>
+</view>

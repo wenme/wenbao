@@ -1,0 +1,99 @@
+<!--pages/prograde-touzi/prograde-touzi.wxml-->
+<view class="padding-bottom">
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    <view class="part-white padd-lr-30 padding-bot20 margin-top120">
+		
+        <view class="company-info-row posi-rela">
+            <view class="gradeable">产品疾病评分</view>
+            <view class="gradecon">226分</view>
+        </view>
+        <view class="company-info-row posi-rela">
+            <view class="fullline">疾病功能排名<text class="span">34名，总计245个产品</text></view>
+            <view class="gradecon txt">
+</view>
+        </view>
+		
+		
+	<view class="clear"></view>
+	</view>
+
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">投连账户</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-ee">平安发展投资账户</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-ee">平安基金投资账户</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-ee">平安精选权益投资账户</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-ee">平安货币投资账户</view>
+            </view>
+
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+
+    
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">费用成本</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">初始费用</view>
+                <view class="pro-duty-dd cost">1.0%</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">头5年平均退保费用
+</view>
+                <view class="pro-duty-dd cost">2.5%</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">无费用退保年期</view>
+                <view class="pro-duty-dd cost">第4年</view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">投连账户平均资产管理费</view>
+                <view class="pro-duty-dd cost">1.7%</view>
+            </view>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+    <view class="wrap border-tope9 bottom-fix">
+			<view class="comp-grade-chose left">
+				专业客服
+				<view class="lineaa"></view>
+			</view>
+			<view class="comp-grade-chose right">发现错误</view>
+			<view class="clear"></view>
+		</view>
+</view>

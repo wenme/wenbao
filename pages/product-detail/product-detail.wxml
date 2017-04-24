@@ -1,7 +1,8 @@
 <!--pages/product-detial/product-detial.wxml-->
 <view>
-    <view class="part-one padd-lr-30">
-		<view class="pro-company-name">{{product}}</view>
+	
+	<view class="part-one">
+		<view class="pro-company-name"><view class="productname padd-lr-30" >{{product}}</view></view>
 	</view>
 	<view class="wrap border-tope9">
 		<view class="pro-company-chose left" bindtap="toCompany">
@@ -11,6 +12,10 @@
 		<view class="pro-company-chose right" bindtap="download">条款下载链接</view>
 		<view class="clear"></view>
 	</view>
+
+
+
+
 
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
@@ -97,6 +102,9 @@
     <view class="padding-30" bindtap="toGrade">
         <view class="blue-button">产品评级</view>
     </view>
+
+
+
 
 </view>
 <!--<import src="../tabbar/tabbar.wxml"/>

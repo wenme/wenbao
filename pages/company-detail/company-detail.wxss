@@ -1,11 +1,12 @@
 /* pages/company-detial/company-detial.wxss */
 page {
     background-color: #f5f6f8;
-    font-size: 13pt;
+    font-size: 32rpx;
 }
 .company-img-txt {
 	padding-top:40rpx;
-	height:104rpx;
+	min-height:104rpx;
+	display: table;
 }
 .company-img {
 	width:100rpx;
@@ -21,16 +22,29 @@ page {
 }
 .company-txt {
 	width:570rpx;
-	height:100rpx;
-	line-height:100rpx;
-	float:right;
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 50rpx;
+	padding-left: 20rpx;
 	overflow: hidden;
-	font-size: 14pt;
+	font-size: 40rpx;
 }
 .company-info-row {
-	height:80rpx;
-	line-height:80rpx;
-	font-size: 12pt;
+	min-height:54rpx;
+	line-height:54rpx;
+	font-size: 32rpx;
+	padding: 17rpx 0rpx;
+}
+.company-info-row .fullline {
+	width: 100%;
+  color: #aaaaaa;
+}
+.company-info-row .fullline text.span {
+  padding-left: 20rpx;
+  color: #555;
+}
+.company-info-row .fullline text.span.blue {
+	color: #4682f0;
 }
 .company-info-row .complable {
 	width:170rpx;
@@ -61,6 +75,6 @@ page {
 	background-position: 20rpx center;
 	color: #09bb07;
 	text-indent: 10px;
-	font-size: 11pt;
+	font-size: 32rpx;
 	margin-top: 14rpx;
 }

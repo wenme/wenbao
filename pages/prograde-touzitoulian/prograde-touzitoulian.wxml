@@ -1,0 +1,116 @@
+<!--pages/prograde-touzitoulian/prograde-touzitoulian.wxml-->
+<view class="padding-bottom">
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    <view class="part-white padd-lr-30 padding-bot20 margin-top120">
+		<view class="company-info-row title">
+            平安发展投资账户
+        </view>
+        <view class="company-info-row posi-rela">
+            <view class="fullline">2017年3月16日单位卖出价<text class="span red">1.28元</text></view>
+        </view>
+		
+		
+	<view class="clear"></view>
+	</view>
+
+    
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">投资价值走势</view>
+        </view>
+
+        <view class="prograde-contxt">
+            <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+
+    
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">历史表现</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">3年平均收益率
+</view>
+                <view class="pro-duty-dd cost">8.1%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">3年平均波动率
+</view>
+                <view class="pro-duty-dd cost">12.3%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">最近1年收益率</view>
+                <view class="pro-duty-dd cost">-4.4%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">今年收益率
+</view>
+                <view class="pro-duty-dd cost">6.1%</view>
+                <view class="clear"></view>
+            </view>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+    <view class="pro-detial-mess">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">费用成本</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">资产管理费
+</view>
+                <view class="pro-duty-dd cost">1.2%</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">单位买卖差价
+
+</view>
+                <view class="pro-duty-dd cost">2.0%</view>
+                <view class="clear"></view>
+            </view>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+
+<view class="wrap border-tope9 bottom-fix">
+			<view class="comp-grade-chose left">
+				专业客服
+				<view class="lineaa"></view>
+			</view>
+			<view class="comp-grade-chose right">发现错误</view>
+			<view class="clear"></view>
+		</view>
+</view>

@@ -1,5 +1,4 @@
 /* pages/product-detial/product-detial.wxss */
-@import "/pages/tabbar/tabbar.wxss"
 
 page {
     background-color: #f5f6f8;
