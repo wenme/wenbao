@@ -126,23 +126,7 @@ Page({
                     if (err_code === 0) {
                         this.setData({check_rslt});
                     }
-                })/*,
-                    request({
-                        url: 'https://wenme.cc/terms/get_product_detail_info',
-                        data: {
-                            pid,
-                            session_key
-                        },
-                        header: {
-                            'content-type': 'application/x-www-form-urlencoded'
-                        },
-                        method: 'POST'
-                    }).then(({data: {err_code, product_detail_info}}) => {
-                        if (err_code === 0) {
-                            this.setData(product_detail_info);
-                        }
-                    })
-                ])*/
+                });
         }
 
     }
