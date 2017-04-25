@@ -1,8 +1,6 @@
 // pages/product-grade/product-grade.js
 const request           = require('../../utils/request');
 
-const app               = getApp();
-
 Page({
   data:{
     product   : "",

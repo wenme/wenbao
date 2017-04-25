@@ -1,8 +1,6 @@
 // pages/company-detial/company-detial.js
 const request           = require('../../utils/request');
 
-const app               = getApp();
-
 Page({
     data:{
         insurer         : "",

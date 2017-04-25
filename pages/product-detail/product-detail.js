@@ -1,8 +1,6 @@
 // pages/product-detial/product-detial.js
 const request           = require('../../utils/request');
 
-const app               = getApp();
-
 Page({
     data                :{
         product         : "",
