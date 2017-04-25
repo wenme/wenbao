@@ -22,7 +22,7 @@ Page({
 
   toZeren(event) {
       wx.redirectTo({
-          url: `../prograde-baoxianzeren/prograde-baoxianzeren?mCode=${event.target.dataset.mCode}&pid=${this.data.pid}`,
+          url: `../prograde-baoxianzeren/prograde-baoxianzeren?mCode=${event.target.dataset.code}&pid=${this.data.pid}`,
           fail(res) {
               console.log(res);
           }
@@ -33,11 +33,7 @@ Page({
       this.setData({pid});
       request.withSessionKey({
           url: 'https://wenme.cc/terms/product_brief_evaluation',
-          data: {pid},
-          method: 'POST',
-          header: {
-              'content-type': 'application/x-www-form-urlencoded'
-          }
+          data: {pid}
       })
           .then(({
               data: {
