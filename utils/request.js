@@ -2,7 +2,7 @@
  * Created by gzwujiaxiang@corp.netease.com on 2017/4/18 0018.
  */
 
-module.exports  = (options = {}) => new Promise((resolve, reject) => {
+const request   = (options = {}) => new Promise((resolve, reject) => {
     let {success, fail, complete}   = options;
 
     options.success = (res) => {
@@ -21,3 +21,12 @@ module.exports  = (options = {}) => new Promise((resolve, reject) => {
 
     wx.request(options);
 });
+
+module.exports  = request;
+
+module.exports.withSessionKey   = (options = {}) => getApp()
+    .getSessionKey()
+    .then(session_key => {
+        options.data    = Object.assign(options.data || {}, {session_key});
+        return request(options);
+    });

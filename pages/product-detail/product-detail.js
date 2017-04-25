@@ -80,39 +80,33 @@ Page({
 
     onLoad({product_iachina_link}) {
         if (product_iachina_link) {
-            app.getSessionKey()
-                .then(session_key => request({
-                    url: 'https://wenme.cc/terms/scan',
-                    data: {
-                        product_iachina_link: decodeURIComponent(product_iachina_link),
-                        session_key
-                    },
-                    method: 'POST',
-                    header: {
-                        'content-type': 'application/x-www-form-urlencoded'
-                    }
-                })
-                    .then(res => (res.session_key = session_key) && res))
+            request.withSessionKey({
+                url: 'https://wenme.cc/terms/scan',
+                data: {
+                    product_iachina_link: decodeURIComponent(product_iachina_link),
+                },
+                method: 'POST',
+                header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                }
+            })
 
                 .then(({data: {
                     err_code,
                     product_detail_info
-                }, session_key}) => {
+                }}) => {
                     let pid;
                     if (err_code === 0) {
                         this.setData(product_detail_info);
                         pid = product_detail_info.pid;
                     }
 
-                    return {pid, session_key};
+                    return pid;
                 })
 
-                .then(({pid, session_key}) => pid !== null && request({
+                .then(pid => pid !== null && request.withSessionKey({
                     url: 'https://wenme.cc/orders/check_product_is_paid',
-                    data: {
-                        pid,
-                        session_key
-                    },
+                    data: {pid},
                     header: {
                         'content-type': 'application/x-www-form-urlencoded'
                     },

@@ -1,4 +1,6 @@
 // pages/product-grade/product-grade.js
+const request           = require('../../utils/request');
+
 const app               = getApp();
 
 Page({
@@ -20,27 +22,34 @@ Page({
     // tabbar          : app.globalData.tabbar,
   },
 
-  toZeren() {},
+  toZeren(event) {
+      wx.redirectTo({
+          url: `../prograde-baoxianzeren/prograde-baoxianzeren?mCode=${event.target.dataset.mCode}&pid=${this.data.pid}`,
+          fail(res) {
+              console.log(res);
+          }
+      });
+  },
 
   onLoad:function({pid}){
-      app.getSessionKey()
-          .then(session_key => wx.request({
-              url: 'https://wenme.cc/terms/product_brief_evaluation',
-              data: {pid, session_key},
-              method: 'POST',
-              header: {
-                  'content-type': 'application/x-www-form-urlencoded'
-              },
-              success: ({
-                            data: {
-                                err_code,
-                                evaluation_info
-                            }
-                        }) => {
-                  if (err_code === 0) {
-                      this.setData(evaluation_info);
-                  }
+      this.setData({pid});
+      request.withSessionKey({
+          url: 'https://wenme.cc/terms/product_brief_evaluation',
+          data: {pid},
+          method: 'POST',
+          header: {
+              'content-type': 'application/x-www-form-urlencoded'
+          }
+      })
+          .then(({
+              data: {
+                  err_code,
+                  evaluation_info
               }
-          }));
+          }) => {
+              if (err_code === 0) {
+                  this.setData(evaluation_info);
+              }
+          });
   }
 });

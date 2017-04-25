@@ -53,15 +53,14 @@ Page({
     },
 
     onLoad({insurer_id}) {
-        app.getSessionKey()
-            .then(session_key => request({
-                url: 'https://wenme.cc/insurer/get_insurer_info',
-                data: {insurer_id, session_key},
-                method: 'POST',
-                header: {
-                    'content-type': 'application/x-www-form-urlencoded'
-                }
-            }))
+        request.withSessionKey({
+            url: 'https://wenme.cc/insurer/get_insurer_info',
+            data: {insurer_id},
+            method: 'POST',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            }
+        })
 
             .then(({data: {
                 err_code,
