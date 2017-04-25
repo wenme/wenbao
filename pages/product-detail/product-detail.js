@@ -82,10 +82,6 @@ Page({
                 url: 'https://wenme.cc/terms/scan',
                 data: {
                     product_iachina_link: decodeURIComponent(product_iachina_link),
-                },
-                method: 'POST',
-                header: {
-                    'content-type': 'application/x-www-form-urlencoded'
                 }
             })
 
@@ -104,11 +100,7 @@ Page({
 
                 .then(pid => pid !== null && request.withSessionKey({
                     url: 'https://wenme.cc/orders/check_product_is_paid',
-                    data: {pid},
-                    header: {
-                        'content-type': 'application/x-www-form-urlencoded'
-                    },
-                    method: 'POST'
+                    data: {pid}
                 }))
 
                 .then(({data: {

@@ -53,11 +53,7 @@ Page({
     onLoad({insurer_id}) {
         request.withSessionKey({
             url: 'https://wenme.cc/insurer/get_insurer_info',
-            data: {insurer_id},
-            method: 'POST',
-            header: {
-                'content-type': 'application/x-www-form-urlencoded'
-            }
+            data: {insurer_id}
         })
 
             .then(({data: {

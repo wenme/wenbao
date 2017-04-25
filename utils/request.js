@@ -27,6 +27,12 @@ module.exports  = request;
 module.exports.withSessionKey   = (options = {}) => getApp()
     .getSessionKey()
     .then(session_key => {
-        options.data    = Object.assign(options.data || {}, {session_key});
-        return request(options);
+        options.data    = Object.assign({session_key}, options.data || {});
+
+        return request(Object.assign({
+            method: 'POST',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            }
+        }, options));
     });
