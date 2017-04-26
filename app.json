@@ -4,6 +4,8 @@
     "pages/product-detail/product-detail",
     "pages/company-detail/company-detail",
     "pages/product-grade/product-grade",
+    "pages/product-list/product-list",
+    "pages/product-screen/product-screen",
     "pages/explaination/explaination",
     "pages/prograde-baoxianzeren/prograde-baoxianzeren",
     "pages/prograde-baoxianjin/prograde-baoxianjin",
