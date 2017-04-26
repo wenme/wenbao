@@ -21,8 +21,20 @@ Page({
         });
     },
 
+    toBaoXianJin(event) {
+        wx.navigateTo({
+            url: `../prograde-baoxianjin/prograde-baoxianjin?bid=${event.target.dataset.bid}&pid=${this.data.pid}`,
+            fail(res) {
+                console.log(res);
+            }
+        });
+    },
+
     onLoad:function({pid, mCode}){
-        this.setData({insuranceType: INSURANCE_TYPES[mCode-1]});
+        this.setData({
+            pid,
+            insuranceType: INSURANCE_TYPES[mCode-1]
+        });
         request.withSessionKey({
             url: 'https://wenme.cc/terms/product_module_evaluation',
             data: {

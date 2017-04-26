@@ -34,7 +34,7 @@
 
             <view wx:for="{{benefit_arr}}" class="pro-detial-mess-row">
                 <view class="pro-duty-bb">{{item[1]}}</view>
-                <view class="pro-duty-cc">{{item[2]}}</view>
+                <view class="pro-duty-cc" data-bid="{{item[0]}}" bindtap="toBaoXianJin">{{item[2]}}</view>
                 <view class="clear"></view>
             </view>
             <view class="clear"></view>
