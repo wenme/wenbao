@@ -1,0 +1,99 @@
+<!--pages/product-list/product-list.wxml-->
+<view>
+    <view class="part-white pro-detial-mess-row border-bottomf568 posi-fixed-top">
+        <view class="padd-lr-30">
+        <view class="pro-duty-bb">共有365个匹配产品</view>
+        <view class="pro-duty-cc blue">产品筛选</view>
+        <view class="clear"></view>
+        </view>
+    </view>
+
+    <view class="pro-detial-mess padd-lr-30 margin-top120">
+
+
+        <view class="product-item">
+            <view class="product-item-tit">工银安盛人寿保鑫如终身寿险</view>
+            <view class="product-item-con">
+                <view class="type type-aa">简单</view>
+                <view class="span-item">工银安盛人寿</view>
+            <view class="clear"></view>
+            </view>
+        </view>
+
+        <view class="product-item">
+            <view class="product-item-tit">工银安盛人寿保鑫如终身寿险</view>
+            <view class="product-item-con">
+                <view class="type type-bb">中等</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+            <view class="clear"></view>
+            </view>
+        </view>
+
+        <view class="product-item">
+            <view class="product-item-tit">工银安盛人寿保鑫如终身寿险</view>
+            <view class="product-item-con">
+                <view class="type type-cc">复杂</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+            <view class="clear"></view>
+            </view>
+        </view>
+
+        <view class="product-item">
+            <view class="product-item-tit">工银安盛人寿保鑫如终身寿险</view>
+            <view class="product-item-con">
+                <view class="type type-cc">复杂</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+            <view class="clear"></view>
+            </view>
+        </view>
+
+        <view class="product-item">
+            <view class="product-item-tit">工银安盛人寿保鑫如终身寿险</view>
+            <view class="product-item-con">
+                <view class="type type-cc">复杂</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+            <view class="clear"></view>
+            </view>
+        </view>
+
+        <view class="product-item">
+            <view class="product-item-tit">工银安盛人寿保鑫如终身寿险</view>
+            <view class="product-item-con">
+                <view class="type type-cc">复杂</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+            <view class="clear"></view>
+            </view>
+        </view>
+
+        <view class="product-item">
+            <view class="product-item-tit">工银安盛人寿保鑫如终身寿险</view>
+            <view class="product-item-con">
+                <view class="type type-cc">复杂</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+                <view class="span-item">工银安盛人寿</view>
+                <view class="span-item">终身寿险</view>
+            <view class="clear"></view>
+            </view>
+        </view>
+
+
+    <view class="clear"></view>
+    </view>
+
+</view>

@@ -1,0 +1,2 @@
+/* pages/product-list/product-list.wxss */
+@import "../../pages/product-grade/product-grade.wxss"
