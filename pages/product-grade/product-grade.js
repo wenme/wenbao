@@ -30,7 +30,7 @@ Page({
   },
 
   toZerenchuwai() {
-      wx.redirectTo({
+      wx.navigateTo({
           url: `../prograde-zerenchuwai/prograde-zerenchuwai?pid=${this.data.pid}`,
           fail(res) {
               console.log(res);
