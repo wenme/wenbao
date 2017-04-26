@@ -15,7 +15,7 @@
         </view>
 		
 		
-	<view class="clear"></view>
+	    <view class="clear"></view>
 	</view>
 
     
@@ -100,7 +100,7 @@
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">责任除外</view>
-                <view class="pro-duty-cc" data-code="7" bindtap="toZeren">{{exclusion_count}}项</view>
+                <view class="pro-duty-cc" bindtap="toZerenchuwai">{{exclusion_count}}项</view>
                 <view class="clear"></view>
             </view>
 

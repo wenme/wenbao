@@ -29,6 +29,15 @@ Page({
       });
   },
 
+  toZerenchuwai() {
+      wx.redirectTo({
+          url: `../prograde-zerenchuwai/prograde-zerenchuwai?pid=${this.data.pid}`,
+          fail(res) {
+              console.log(res);
+          }
+      });
+  },
+
   onLoad:function({pid}){
       this.setData({pid});
       request.withSessionKey({
