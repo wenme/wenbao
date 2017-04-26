@@ -1,6 +1,14 @@
 // pages/prograde-baoxianjin/prograde-baoxianjin.js
 const request           = require('../../utils/request');
 
+const INSURANCE_TYPES   = [
+    '人寿',
+    '疾病',
+    '意外',
+    '医疗',
+    '储蓄'
+];
+
 Page({
     data:{},
     onLoad:function({pid, bid}){
@@ -26,4 +34,4 @@ Page({
                 }
             });
     }
-})
+});

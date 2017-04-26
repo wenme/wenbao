@@ -1,6 +1,6 @@
 <!--pages/prograde-baoxianjin/prograde-baoxianjin.wxml-->
 <view class="padding-bottom">
-<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >{{product}}</view></view>
     <view class="part-white padd-lr-30 padding-bot20 margin-top120">
 		
         <view class="company-info-row title">
@@ -11,7 +11,7 @@
         </view>
 		
 		
-	<view class="clear"></view>
+	    <view class="clear"></view>
 	</view>
 
     
@@ -27,40 +27,40 @@
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">被保人身份</view>
-                <view class="pro-duty-dd">--</view>
+                <view class="pro-duty-dd">{{insured_status}}</view>
                 <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">事故原因</view>
-                <view class="pro-duty-dd">意外</view>
+                <view class="pro-duty-dd">{{risk_cause}}</view>
                 <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">事故后果</view>
-                <view class="pro-duty-dd">重大疾病</view>
+                <view class="pro-duty-dd">{{risk_consequence}}</view>
                 <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">赔付方式</view>
-                <view class="pro-duty-dd">一次过给付</view>
+                <view class="pro-duty-dd">{{pay_mode}}</view>
                 <view class="clear"></view>
             </view>
 
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
-    <view class="clear"></view>
+        <view class="clear"></view>
     </view>
 
-<view class="wrap border-tope9 bottom-fix">
-			<view class="comp-grade-chose left">
-				专业客服
-				<view class="lineaa"></view>
-			</view>
-			<view class="comp-grade-chose right">发现错误</view>
-			<view class="clear"></view>
-		</view>
+    <view class="wrap border-tope9 bottom-fix">
+        <view class="comp-grade-chose left">
+            <contact-button type="default-light">专业客服</contact-button>
+            <view class="lineaa"></view>
+        </view>
+        <view class="comp-grade-chose right">发现错误</view>
+        <view class="clear"></view>
+    </view>
 </view>
