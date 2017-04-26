@@ -1,19 +1,33 @@
 // pages/prograde-fenhong/prograde-fenhong.js
+const request           = require('../../utils/request');
+
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
-  }
-})
+    data:{
+    },
+    onLoad:function({pid}){
+        request.withSessionKey({
+            url: 'https://wenme.cc/terms/product_module_evaluation',
+            data: {
+                pid,
+                module_code: 6,
+                product_structure: '分红型'
+            }
+        })
+            .then(({
+                data: {
+                    err_code,
+                    evaluation_info
+                }
+            }) => {
+                if (err_code === 0) {
+                    [
+                        'avg_return_3y',
+                        'volatile_return_3y',
+                        'last_year_return',
+                        'last_year_acc_return'
+                    ].forEach(key => evaluation_info[key] = (evaluation_info[key]*100).toFixed(1));
+                    this.setData(evaluation_info);
+                }
+            });
+    }
+});

@@ -80,7 +80,7 @@
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">{{product_structure}}</view>
-                <view class="pro-duty-cc" data-code="6" bindtap="toZeren"></view>
+                <view class="pro-duty-cc" bindtap="toProductType"></view>
                 <view class="clear"></view>
             </view>
 
