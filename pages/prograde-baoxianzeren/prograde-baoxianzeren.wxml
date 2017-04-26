@@ -58,7 +58,7 @@
                 <view class="pro-duty-bb">{{item[0]}}</view>
                 <view class="pro-duty-cc" wx:if="{{item[0]==='重大疾病种数' || item[0]==='轻度重疾种数'}}">{{item[1]}}种</view>
                 <view class="pro-duty-cc" wx:if="{{item[0]==='重疾赔付次数'}}">{{item[1]}}次</view>
-                <view class="pro-duty-cc" wx:if="{{item[0]==='轻疾赔付比例'}}">{{item[1]*100}}%</view>
+                <view class="pro-duty-cc" wx:if="{{item[0]==='轻疾赔付比例'}}">{{item[1]}}%</view>
             </view>
 
             <view class="clear"></view>

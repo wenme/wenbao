@@ -49,6 +49,8 @@ Page({
                 }
             }) => {
                 if (err_code === 0) {
+                    evaluation_info.important_info_arr
+                        .some(info => info[0] === '轻疾赔付比例' && (!!(info[1]=(info[1]*100).toFixed(1)) || true));
                     this.setData(evaluation_info);
                 }
             });
