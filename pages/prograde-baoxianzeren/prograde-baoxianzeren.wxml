@@ -4,7 +4,7 @@
     <view class="part-white padd-lr-30 padding-bot20 margin-top120">
 		
         <view class="company-info-row title">
-            {{insuranceType}}保障
+            {{module_type}}
         </view>
         <view class="company-info-row posi-rela">
             <view class="gradeable">{{module_score_str}}</view>

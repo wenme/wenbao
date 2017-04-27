@@ -4,10 +4,10 @@
     <view class="part-white padd-lr-30 padding-bot20 margin-top120">
 		
         <view class="company-info-row title">
-            疾病保障
+            {{benefit_type1}}
         </view>
         <view class="company-info-row posi-rela">
-            <view class="fullline">重大疾病保险金</view>
+            <view class="fullline">{{benefit_type2}}</view>
         </view>
 		
 		

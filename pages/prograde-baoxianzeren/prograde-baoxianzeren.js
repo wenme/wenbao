@@ -1,14 +1,6 @@
 // pages/prograde-baoxianzeren/prograde-baoxianzeren.js
 const request           = require('../../utils/request');
 
-const INSURANCE_TYPES   = [
-    '人寿',
-    '疾病',
-    '意外',
-    '医疗',
-    '储蓄'
-];
-
 Page({
     data:{},
 
@@ -31,10 +23,6 @@ Page({
     },
 
     onLoad:function({pid, mCode}){
-        this.setData({
-            pid,
-            insuranceType: INSURANCE_TYPES[mCode-1]
-        });
         request.withSessionKey({
             url: 'https://wenme.cc/terms/product_module_evaluation',
             data: {
