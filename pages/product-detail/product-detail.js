@@ -42,8 +42,10 @@ Page({
     },
 
     toGrade() {
+        let page    = this.data.check_rslt ? 'product-grade' : 'prograde-zhifu';
+
         wx.navigateTo({
-            url: `../product-grade/product-grade?pid=${this.data.pid}`,
+            url: `../${page}/${page}?pid=${this.data.pid}`,
             fail(res) {
                 console.log(res);
             }
