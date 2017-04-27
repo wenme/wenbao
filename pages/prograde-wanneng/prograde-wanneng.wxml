@@ -27,7 +27,7 @@
         </view>
 
         <view class="prograde-contxt">
-            <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+            <canvas canvas-id="touzijiazhi" style="display: block;height: 200px"></canvas>
         <view class="clear"></view>
         </view>
 
