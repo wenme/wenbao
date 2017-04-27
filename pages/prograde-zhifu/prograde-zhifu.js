@@ -32,16 +32,30 @@ Page({
             .then(() => 'success')
             .catch(() => 'fail')
 
-            .then(status => {
+            .then(status => new Promise((resolve, reject) => {
+                let success = status === 'success';
                 wx.showToast({
-                    title: `支付${status === 'success' ? '成功' : '失败'}`,
+                    title: `支付${success ? '成功' : '失败'}`,
                     icon: status,
-                    duration: 500
+                    duration: 500,
+                    success : () => {
+                        if (success) {
+                            resolve();
+                        } else {
+                            reject();
+                        }
+                    }
                 });
-                return request({
-                    url   : `https://wenme.cc/orders/wx_pay_notify?status=${status}&prepay_id=`
-                });
-            })
+            }))
+
+            .then(() => wx.navigateTo({
+                url: `../product-grade/product-grade?pid=${this.data.pid}`,
+                fail(res) {
+                    console.log(res);
+                }
+            }))
+
+            .catch(() => wx.navigateBack());
     },
     onLoad:function({pid}){
         request.withSessionKey({
