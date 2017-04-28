@@ -43,7 +43,8 @@ Page({
                             resolve();
                         } else {
                             reject();
-                        }}, 600)
+                        }
+                    }, 600)
                 });
             }))
 
