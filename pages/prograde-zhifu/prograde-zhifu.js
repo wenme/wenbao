@@ -12,22 +12,13 @@ Page({
             }
         })
             .then(({data  : {
-                appId,
-                "package" : prepay_id,
-                signType,
-                nonceStr,
-                timeStamp,
-                paySign
-            }}) => new Promise((resolve, reject) => wx.requestPayment({
-                timeStamp,
-                nonceStr,
-                "package" : prepay_id,
-                signType,
-                paySign,
+                err_code,
+                wx_pay_json
+            }}) => new Promise((resolve, reject) => wx.requestPayment(Object.assign(wx_pay_json, {
                 success   : resolve,
                 fail      : reject,
                 complete  : reject
-            })))
+            }))))
 
             .then(() => 'success')
             .catch(() => 'fail')
