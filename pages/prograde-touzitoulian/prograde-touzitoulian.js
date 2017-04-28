@@ -1,5 +1,6 @@
 // pages/prograde-touzitoulian/prograde-touzitoulian.js
 const request           = require('../../utils/request');
+const Chart             = require('../../utils/wxcharts');
 
 Page({
     data:{
@@ -28,6 +29,27 @@ Page({
                         'volatile_return_3y'
                     ].forEach(key => account_info[key] = (account_info[key]*100).toFixed(1));
                     this.setData(account_info);
+
+                    new Chart({
+                        canvasId    : 'touzijiazhi',
+                        type        : 'line',
+                        width       : 300,
+                        height      : 200,
+                        categories  : account_info.invest_time_line,
+                        yAxis       : {
+                            min     : 0
+                        },
+                        series      : [
+                            {
+                                name: '成交量1',
+                                data: account_info.invest_value
+                            },
+                            {
+                                name: account_info.invest_bm_name,
+                                data: account_info.invest_bm_value
+                            }
+                        ]
+                    });
                 }
             });
     }

@@ -1,5 +1,6 @@
 // pages/prograde-wanneng/prograde-wanneng.js
 const request           = require('../../utils/request');
+const Chart             = require('../../utils/wxcharts');
 
 Page({
     data:{
@@ -30,6 +31,27 @@ Page({
                         'volatile_credit_rate_3y'
                     ].forEach(key => evaluation_info[key] = (evaluation_info[key]*100).toFixed(1));
                     this.setData(evaluation_info);
+
+                    new Chart({
+                        canvasId    : 'touzijiazhi',
+                        type        : 'line',
+                        width       : 300,
+                        height      : 200,
+                        categories  : evaluation_info.invest_time_line,
+                        yAxis       : {
+                            min     : 0
+                        },
+                        series      : [
+                            {
+                                name: '成交量1',
+                                data: evaluation_info.invest_value
+                            },
+                            {
+                                name: evaluation_info.invest_bm_name,
+                                data: evaluation_info.invest_bm_value
+                            }
+                        ]
+                    });
                 }
             });
     }
