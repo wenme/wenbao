@@ -38,13 +38,12 @@ Page({
                     title: `支付${success ? '成功' : '失败'}`,
                     icon: status,
                     duration: 500,
-                    success : () => {
+                    success : () => setTimeout(() => {
                         if (success) {
                             resolve();
                         } else {
                             reject();
-                        }
-                    }
+                        }}, 600)
                 });
             }))
 
