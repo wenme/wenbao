@@ -14,16 +14,30 @@ Page({
             .then(({data  : {
                 err_code,
                 wx_pay_json
-            }}) => new Promise((resolve, reject) => wx.requestPayment(Object.assign(wx_pay_json, {
-                success   : resolve,
-                fail      : reject,
-                complete  : reject
-            }))))
+            }}) => new Promise((resolve, reject) => {
+                let prepay_id = (wx_pay_json || {}).package;
+                reject  = reject.bind(this, prepay_id);
+                wx.requestPayment(Object.assign(wx_pay_json, {
+                    success   : resolve.bind(this, prepay_id),
+                    fail      : reject,
+                    complete  : reject
+                }));
+            }))
 
-            .then(() => 'success')
-            .catch(() => 'fail')
+            .then(prepay_id => {
+                return {
+                    prepay_id,
+                    status  :'success'
+                };
+            })
+            .catch(prepay_id => {
+                return {
+                    prepay_id,
+                    status  :'fail'
+                };
+            })
 
-            .then(status => new Promise((resolve, reject) => {
+            .then(({status, prepay_id}) => new Promise((resolve, reject) => {
                 let success = status === 'success';
                 wx.showToast({
                     title: `支付${success ? '成功' : '失败'}`,
@@ -36,6 +50,9 @@ Page({
                             reject();
                         }
                     }, 600)
+                });
+                wx.request({
+                    url     : `https://wenme.cc/orders/wx_pay_notify?status=${status}&${prepay_id}`
                 });
             }))
 
