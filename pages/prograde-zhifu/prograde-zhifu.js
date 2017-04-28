@@ -56,7 +56,7 @@ Page({
                 });
             }))
 
-            .then(() => wx.navigateTo({
+            .then(() => wx.redirectTo({
                 url: `../product-grade/product-grade?pid=${this.data.pid}`,
                 fail(res) {
                     console.log(res);
