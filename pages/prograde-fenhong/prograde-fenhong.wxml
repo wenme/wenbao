@@ -73,7 +73,7 @@
         </view>
 
         <view class="pro-detial-mess-row">
-            <view class="pro-duty-bb cost">积累生息最近1年收益率</view>
+            <view class="pro-duty-bb cost">累积生息最近1年收益率</view>
             <view class="pro-duty-dd cost">{{last_year_acc_return}}%</view>
             <view class="clear"></view>
         </view>
