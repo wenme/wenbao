@@ -42,14 +42,36 @@ Page({
     },
 
     toGrade() {
-        let page    = this.data.check_rslt ? 'product-grade' : 'prograde-zhifu';
-
-        wx.navigateTo({
-            url: `../${page}/${page}?pid=${this.data.pid}`,
-            fail(res) {
-                console.log(res);
+        request.withSessionKey({
+            url: 'https://wenme.cc/orders/check_product_is_paid',
+            data: {
+                pid : this.data.pid
             }
-        });
+        })
+            .then(({data: {
+                err_code,
+                check_rslt
+            }}) => {
+                let page    = 'prograde-zhifu';
+                if (err_code === 0 && check_rslt) {
+                    page    = 'product-grade';
+                }
+                wx.navigateTo({
+                    url: `../${page}/${page}?pid=${this.data.pid}`,
+                    fail(res) {
+                        console.log(res);
+                    }
+                });
+            })
+            .catch(() => {
+                wx.navigateTo({
+                    url: `../prograde-zhifu/prograde-zhifu?pid=${this.data.pid}`,
+                    fail(res) {
+                        console.log(res);
+                    }
+                });
+            })
+
     },
 
     toExplaination(event) {
@@ -91,26 +113,8 @@ Page({
                     err_code,
                     product_detail_info
                 }}) => {
-                    let pid;
                     if (err_code === 0) {
                         this.setData(product_detail_info);
-                        pid = product_detail_info.pid;
-                    }
-
-                    return pid;
-                })
-
-                .then(pid => pid !== null && request.withSessionKey({
-                    url: 'https://wenme.cc/orders/check_product_is_paid',
-                    data: {pid}
-                }))
-
-                .then(({data: {
-                    err_code,
-                    check_rslt
-                }}) => {
-                    if (err_code === 0) {
-                        this.setData({check_rslt});
                     }
                 });
         }
