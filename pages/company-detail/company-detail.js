@@ -1,8 +1,6 @@
 // pages/company-detial/company-detial.js
 const request           = require('../../utils/request');
 
-const app               = getApp();
-
 Page({
     data:{
         insurer         : "",
@@ -53,15 +51,10 @@ Page({
     },
 
     onLoad({insurer_id}) {
-        app.getSessionKey()
-            .then(session_key => request({
-                url: 'https://wenme.cc/insurer/get_insurer_info',
-                data: {insurer_id, session_key},
-                method: 'POST',
-                header: {
-                    'content-type': 'application/x-www-form-urlencoded'
-                }
-            }))
+        request.withSessionKey({
+            url: 'https://wenme.cc/insurer/get_insurer_info',
+            data: {insurer_id}
+        })
 
             .then(({data: {
                 err_code,

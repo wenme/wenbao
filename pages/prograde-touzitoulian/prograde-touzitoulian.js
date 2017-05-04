@@ -1,19 +1,56 @@
 // pages/prograde-touzitoulian/prograde-touzitoulian.js
+const request           = require('../../utils/request');
+const Chart             = require('../../utils/wxcharts');
+
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
-  }
-})
+    data:{
+    },
+    onLoad:function({pid, aid}){
+        request.withSessionKey({
+            url: 'https://wenme.cc/terms/get_investment_link_account_info',
+            data: {
+                pid,
+                account_id: aid
+            }
+        })
+            .then(({
+                data: {
+                    err_code,
+                    account_info
+                }
+            }) => {
+                if (err_code === 0) {
+                    [
+                        'account_spread',
+                        'avg_return_3y',
+                        'last_year_return',
+                        'manage_fee',
+                        'this_year_return',
+                        'volatile_return_3y'
+                    ].forEach(key => account_info[key] = (account_info[key]*100).toFixed(1));
+                    this.setData(account_info);
+
+                    new Chart({
+                        canvasId    : 'touzijiazhi',
+                        type        : 'line',
+                        width       : 300,
+                        height      : 200,
+                        categories  : account_info.invest_time_line,
+                        yAxis       : {
+                            min     : 0
+                        },
+                        series      : [
+                            {
+                                name: '成交量1',
+                                data: account_info.invest_value
+                            },
+                            {
+                                name: account_info.invest_bm_name,
+                                data: account_info.invest_bm_value
+                            }
+                        ]
+                    });
+                }
+            });
+    }
+});

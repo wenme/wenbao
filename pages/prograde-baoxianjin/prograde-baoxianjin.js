@@ -1,19 +1,37 @@
 // pages/prograde-baoxianjin/prograde-baoxianjin.js
+const request           = require('../../utils/request');
+
+const INSURANCE_TYPES   = [
+    '人寿',
+    '疾病',
+    '意外',
+    '医疗',
+    '储蓄'
+];
+
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
-  }
-})
+    data:{},
+    onLoad:function({pid, bid}){
+        this.setData({
+            pid,
+            bid
+        });
+        request.withSessionKey({
+            url: 'https://wenme.cc/terms/get_benefit_info',
+            data: {
+                pid,
+                benefit_id: bid
+            }
+        })
+            .then(({
+                data: {
+                    err_code,
+                    benefit_info
+                }
+            }) => {
+                if (err_code === 0) {
+                    this.setData(benefit_info);
+                }
+            });
+    }
+});

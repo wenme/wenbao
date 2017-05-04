@@ -1,8 +1,6 @@
 // pages/product-detial/product-detial.js
 const request           = require('../../utils/request');
 
-const app               = getApp();
-
 Page({
     data                :{
         product         : "",
@@ -44,12 +42,36 @@ Page({
     },
 
     toGrade() {
-        wx.navigateTo({
-            url: `../product-grade/product-grade?pid=${this.data.pid}`,
-            fail(res) {
-                console.log(res);
+        request.withSessionKey({
+            url: 'https://wenme.cc/orders/check_product_is_paid',
+            data: {
+                pid : this.data.pid
             }
-        });
+        })
+            .then(({data: {
+                err_code,
+                check_rslt
+            }}) => {
+                let page    = 'prograde-zhifu';
+                if (err_code === 0 && check_rslt) {
+                    page    = 'product-grade';
+                }
+                wx.navigateTo({
+                    url: `../${page}/${page}?pid=${this.data.pid}`,
+                    fail(res) {
+                        console.log(res);
+                    }
+                });
+            })
+            .catch(() => {
+                wx.navigateTo({
+                    url: `../prograde-zhifu/prograde-zhifu?pid=${this.data.pid}`,
+                    fail(res) {
+                        console.log(res);
+                    }
+                });
+            })
+
     },
 
     toExplaination(event) {
@@ -80,69 +102,21 @@ Page({
 
     onLoad({product_iachina_link}) {
         if (product_iachina_link) {
-            app.getSessionKey()
-                .then(session_key => request({
-                    url: 'https://wenme.cc/terms/scan',
-                    data: {
-                        product_iachina_link: decodeURIComponent(product_iachina_link),
-                        session_key
-                    },
-                    method: 'POST',
-                    header: {
-                        'content-type': 'application/x-www-form-urlencoded'
-                    }
-                })
-                    .then(res => (res.session_key = session_key) && res))
+            request.withSessionKey({
+                url: 'https://wenme.cc/terms/scan',
+                data: {
+                    product_iachina_link: decodeURIComponent(product_iachina_link),
+                }
+            })
 
                 .then(({data: {
                     err_code,
                     product_detail_info
-                }, session_key}) => {
-                    let pid;
-                    if (err_code === 0) {
-                        this.setData(product_detail_info);
-                        pid = product_detail_info.pid;
-                    }
-
-                    return {pid, session_key};
-                })
-
-                .then(({pid, session_key}) => pid !== null && request({
-                    url: 'https://wenme.cc/orders/check_product_is_paid',
-                    data: {
-                        pid,
-                        session_key
-                    },
-                    header: {
-                        'content-type': 'application/x-www-form-urlencoded'
-                    },
-                    method: 'POST'
-                }))
-
-                .then(({data: {
-                    err_code,
-                    check_rslt
                 }}) => {
                     if (err_code === 0) {
-                        this.setData({check_rslt});
+                        this.setData(product_detail_info);
                     }
-                })/*,
-                    request({
-                        url: 'https://wenme.cc/terms/get_product_detail_info',
-                        data: {
-                            pid,
-                            session_key
-                        },
-                        header: {
-                            'content-type': 'application/x-www-form-urlencoded'
-                        },
-                        method: 'POST'
-                    }).then(({data: {err_code, product_detail_info}}) => {
-                        if (err_code === 0) {
-                            this.setData(product_detail_info);
-                        }
-                    })
-                ])*/
+                });
         }
 
     }

@@ -3,7 +3,7 @@
     <view class="part-one padd-lr-30 padding-bot20">
 		<view class="company-img-txt padding-bot20 ">
             <view class="company-img">
-                <image src="../../images/yb-logo.jpg" ></image>
+                <image src="{{insurer_logo}}" ></image>
             </view>
             <view class="company-txt">{{insurer}}</view>
         <view class="clear"></view>

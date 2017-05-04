@@ -1,7 +1,5 @@
 const request           = require('../../utils/request');
 
-const app               = getApp();
-
 Page({
     data: {
         title   : "",
@@ -11,22 +9,17 @@ Page({
     },
 
     onLoad({tid}) {
-        app.getSessionKey()
-            .then(session_key => request({
-                url: 'https://wenme.cc/helpdesk/get_explaination',
-                data: {
-                    tid,
-                    session_key
-                },
-                method: 'POST',
-                header: {
-                    'content-type': 'application/x-www-form-urlencoded'
-                }
-            }))
+        request.withSessionKey({
+            url: 'https://wenme.cc/helpdesk/get_explaination',
+            data: {
+                tid,
+                session_key
+            }
+        })
 
             .then(({data: {
                 err_code,
                 explaination_rslt
-            }}) => err_code === 0 && this.setData(explaination_rslt))
+            }}) => err_code === 0 && this.setData(explaination_rslt));
     }
 });

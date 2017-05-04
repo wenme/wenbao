@@ -1,18 +1,18 @@
 <!--pages/prograde-baoxianzeren/prograde-baoxianzeren.wxml-->
 <view class="padding-bottom">
-<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >{{product}}</view></view>
     <view class="part-white padd-lr-30 padding-bot20 margin-top120">
 		
         <view class="company-info-row title">
-            疾病保障
+            {{module_type}}
         </view>
         <view class="company-info-row posi-rela">
-            <view class="gradeable">产品疾病评分</view>
-            <view class="gradecon">226分</view>
-			<view class="mess-iconaa"></view>
+            <view class="gradeable">{{module_score_str}}</view>
+            <view class="gradecon">{{module_score}}分</view>
+			<view class="mess-iconaa" wx:if="{{module_score_hintid !== undefined}}" bindtap="toExplaination" data-tid="{{module_score_hintid}}"></view>
         </view>
         <view class="company-info-row posi-rela">
-            <view class="fullline">疾病功能排名<text class="span">34名，总计245个产品</text></view>
+            <view class="fullline">{{module_ranking_str}}<text class="span">{{module_ranking}}名，总计{{module_product_count}}个产品</text></view>
             <view class="gradecon txt">
 </view>
         </view>
@@ -32,28 +32,15 @@
         <view class="padd-lr-30">
 
 
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">重大疾病给付</view>
-                <view class="pro-duty-cc">重大疾病保险金</view>
+            <view wx:for="{{benefit_arr}}" class="pro-detial-mess-row">
+                <view class="pro-duty-bb">{{item[1]}}</view>
+                <view class="pro-duty-cc" data-bid="{{item[0]}}" bindtap="toBaoXianJin">{{item[2]}}</view>
                 <view class="clear"></view>
             </view>
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">轻度重疾给付</view>
-                <view class="pro-duty-cc">轻度重疾保险金</view>
-                <view class="clear"></view>
-            </view>
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">投保人重疾豁免保费</view>
-                <view class="pro-duty-cc">重大疾病豁免保费</view>
-                <view class="clear"></view>
-            </view>
-
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
-    <view class="clear"></view>
+        <view class="clear"></view>
     </view>
 
 
@@ -67,38 +54,24 @@
 
         <view class="padd-lr-30">
 
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">重大疾病种数</view>
-                <view class="pro-duty-cc">50种</view>
+            <view wx:for="{{important_info_arr}}" class="pro-detial-mess-row">
+                <view class="pro-duty-bb">{{item[0]}}</view>
+                <view class="pro-duty-cc" wx:if="{{item[0]==='重大疾病种数' || item[0]==='轻度重疾种数'}}">{{item[1]}}种</view>
+                <view class="pro-duty-cc" wx:if="{{item[0]==='重疾赔付次数'}}">{{item[1]}}次</view>
+                <view class="pro-duty-cc" wx:if="{{item[0]==='轻疾赔付比例'}}">{{item[1]}}%</view>
             </view>
 
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">轻度重疾种数</view>
-                <view class="pro-duty-cc">20种</view>
-            </view>
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">重疾赔付次数</view>
-                <view class="pro-duty-dd">5次</view>
-            </view>
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">轻疾赔付比例</view>
-                <view class="pro-duty-dd">20%</view>
-            </view>
-
-            
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
-    <view class="clear"></view>
+        <view class="clear"></view>
     </view>
 
 
 
     <view class="wrap border-tope9 bottom-fix">
 			<view class="comp-grade-chose left">
-				专业客服
+				<contact-button type="default-light">专业客服</contact-button>
 				<view class="lineaa"></view>
 			</view>
 			<view class="comp-grade-chose right">发现错误</view>

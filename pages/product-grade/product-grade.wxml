@@ -15,7 +15,7 @@
         </view>
 		
 		
-	<view class="clear"></view>
+	    <view class="clear"></view>
 	</view>
 
     
@@ -31,42 +31,42 @@
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-aa"><image src="../../images/insur-icona.png" ></image></view>
                 <view class="pro-duty-bb">人寿</view>
-                <view class="pro-duty-cc">{{life_benefit_count}}项保险金</view>
+                <view class="pro-duty-cc" data-code="1" bindtap="toZeren">{{life_benefit_count}}项保险金</view>
                 <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-aa"><image src="../../images/insur-iconb.png" ></image></view>
                 <view class="pro-duty-bb">疾病</view>
-                <view class="pro-duty-cc">{{disease_benefit_count}}项保险金</view>
-            <view class="clear"></view>
+                <view class="pro-duty-cc" data-code="2" bindtap="toZeren">{{disease_benefit_count}}项保险金</view>
+                <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-aa"><image src="../../images/insur-iconc.png" ></image></view>
                 <view class="pro-duty-bb">意外</view>
-                <view class="pro-duty-cc">{{accident_benefit_count}}项保险金</view>
-            <view class="clear"></view>
+                <view class="pro-duty-cc" data-code="3" bindtap="toZeren">{{accident_benefit_count}}项保险金</view>
+                <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-aa"><image src="../../images/insur-icond.png" ></image></view>
                 <view class="pro-duty-bb">医疗</view>
-                <view class="pro-duty-cc">{{medical_benefit_count}}项保险金</view>
-            <view class="clear"></view>
+                <view class="pro-duty-cc" data-code="4" bindtap="toZeren">{{medical_benefit_count}}项保险金</view>
+                <view class="clear"></view>
             </view>
 			
 			<view class="pro-detial-mess-row">
                 <view class="pro-duty-aa"><image src="../../images/insur-icone.png" ></image></view>
                 <view class="pro-duty-bb">储蓄</view>
-                <view class="pro-duty-cc">{{saving_benefit_count}}项保险金</view>
-            <view class="clear"></view>
+                <view class="pro-duty-cc" data-code="5" bindtap="toZeren">{{saving_benefit_count}}项保险金</view>
+                <view class="clear"></view>
             </view>
 
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
-    <view class="clear"></view>
+        <view class="clear"></view>
     </view>
 
 
@@ -80,15 +80,15 @@
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">{{product_structure}}</view>
-                <view class="pro-duty-cc"></view>
+                <view class="pro-duty-cc" bindtap="toProductType"></view>
                 <view class="clear"></view>
             </view>
 
             
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
-    <view class="clear"></view>
+        <view class="clear"></view>
     </view>
 
     <view class="pro-detial-mess">
@@ -100,7 +100,7 @@
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">责任除外</view>
-                <view class="pro-duty-cc">{{exclusion_count}}项</view>
+                <view class="pro-duty-cc" bindtap="toZerenchuwai">{{exclusion_count}}项</view>
                 <view class="clear"></view>
             </view>
 
@@ -111,21 +111,21 @@
             </view>
 
             
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
-    <view class="clear"></view>
+        <view class="clear"></view>
     </view>
 
 
-<view class="wrap border-tope9 bottom-fix">
-			<view class="comp-grade-chose left">
-				<contact-button type="default-light">专业客服</contact-button>
-                <view class="lineaa"></view>
-			</view>
-			<view class="comp-grade-chose right">发现错误</view>
-			<view class="clear"></view>
-		</view>
+    <view class="wrap border-tope9 bottom-fix">
+        <view class="comp-grade-chose left">
+            <contact-button type="default-light">专业客服</contact-button>
+            <view class="lineaa"></view>
+        </view>
+        <view class="comp-grade-chose right">发现错误</view>
+        <view class="clear"></view>
+    </view>
 
 </view>
 <!--<import src="../tabbar/tabbar.wxml"/>

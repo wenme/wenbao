@@ -1,6 +1,6 @@
 <!--pages/prograde-zhifu/prograde-zhifu.wxml-->
 <view>
-<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >{{product}}</view></view>
     
 
 
@@ -22,26 +22,26 @@
 
             <view class="pro-detial-mess-row border-tope9">
                 <view class="pro-duty-bb cost">条款字数</view>
-                <view class="pro-duty-dd cost">3725字</view>
+                <view class="pro-duty-dd cost">{{word_count}}字</view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb cost">保险金数量</view>
-                <view class="pro-duty-dd cost">4项</view>
+                <view class="pro-duty-dd cost">{{benefit_count}}项</view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb cost">投资功能</view>
-                <view class="pro-duty-dd cost">投资连结型</view>
+                <view class="pro-duty-dd cost">{{investment_function}}</view>
             </view>
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb cost">解读难度</view>
-                <view class="pro-duty-dd cost">复杂</view>
+                <view class="pro-duty-dd cost">{{complexity}}</view>
             </view>
 
             <view class="pro-price border-tope9">
-                <view class="lefpric">价格：<text class="span">¥10.00</text></view>
+                <view class="lefpric">价格：<text class="span">¥{{price}}</text></view>
                 <view class="agreement">问保评级服务协议<view class="go-icon"><image src="../../images/gopage-icon-blue.png" ></image></view></view>
             <view class="clear"></view>
             </view>
@@ -54,7 +54,7 @@
 
     
     <view class="padding-30">
-        <view class="green-button">微信支付</view>
+        <view class="green-button" bindtap="pay">微信支付</view>
     </view>
 
 </view>

@@ -1,108 +1,96 @@
 <!--pages/prograde-fenhong/prograde-fenhong.wxml-->
 <view class="padding-bottom">
-<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    <view class="pro-company-name posi-fixed-top">
+        <view class="productname padd-lr-30" >{{product}}</view>
+    </view>
     <view class="part-white padd-lr-30 padding-bot20 margin-top120">
-		
+
         <view class="company-info-row posi-rela">
-            <view class="fullline">产品投资评分<text class="span red">326分</text></view>
+            <view class="fullline">{{module_score_str}}<text class="span red">{{module_score}}分</text></view>
         </view>
         <view class="company-info-row posi-rela">
-            <view class="fullline">按投资功能排名<text class="span">34名，总计245个产品</text></view>
-            <view class="gradecon txt">
+            <view class="fullline">{{module_ranking_str}}<text class="span">{{module_ranking}}名，总计{{module_product_count}}个产品</text></view>
+            <view class="gradecon txt"></view>
+        </view>
+    </view>
+
+
+    <view class="clear"></view>
 </view>
-        </view>
-		
-		
-	<view class="clear"></view>
-	</view>
 
     
 
 
    
 
-    <view class="pro-detial-mess">
-        <view class="prograde-contxt">
-            <view class="grade-table">
-                <view class="th">
-                    <view class="thd">分红方式</view>
-                    <view class="thd">分红周期</view>
-                    <view class="thd">分红条件</view>
+<view class="pro-detial-mess">
+    <view class="prograde-contxt">
+        <view class="grade-table">
+            <view class="th">
+                <view class="thd">分红方式</view>
+                <view class="thd">分红周期</view>
+                <view class="thd">分红条件</view>
                 <view class="clear"></view>
-                </view>
-                <view class="tr">
-                    <view class="td title">增加保额</view>
-                    <view class="td">周期红利</view>
-                    <view class="td">生存</view>
+            </view>
+            <view wx:for="{{dividend_info}}" class="tr">
+                <view class="td title">{{item[0]}}</view>
+                <view class="td">{{item[1]}}</view>
+                <view class="td">{{item[2]}}</view>
                 <view class="clear"></view>
-                </view>
-                <view class="tr">
-                    <view class="td title">现金给付</view>
-                    <view class="td">终了红利</view>
-                    <view class="td">身故</view>
-                <view class="clear"></view>
-                </view>
-                <view class="tr">
-                    <view class="td title">现金给付</view>
-                    <view class="td">终了红利</view>
-                    <view class="td">退保</view>
-                <view class="clear"></view>
-                </view>
+            </view>
+        </view>
+        <view class="clear"></view>
+    </view>
+    <view class="clear"></view>
+</view>
+<view class="clear"></view>
+
+
+
+<view class="pro-detial-mess">
+    <view class="pro-detial-mess-tit">
+        <view class="proli-item">分红能力</view>
+    </view>
+
+    <view class="padd-lr-30">
+
+        <view class="pro-detial-mess-row">
+            <view class="pro-duty-bb cost">公司投连3年平均收益率</view>
+            <view class="pro-duty-dd cost">{{avg_return_3y}}%</view>
             <view class="clear"></view>
-            </view>
-        <view class="clear"></view>
         </view>
-    <view class="clear"></view>
+
+        <view class="pro-detial-mess-row">
+            <view class="pro-duty-bb cost">公司投连3年平均波动率</view>
+            <view class="pro-duty-dd cost">{{volatile_return_3y}}%</view>
+            <view class="clear"></view>
+        </view>
+
+        <view class="pro-detial-mess-row">
+            <view class="pro-duty-bb cost">公司投连最近1年收益率</view>
+            <view class="pro-duty-dd cost">{{last_year_return}}%</view>
+            <view class="clear"></view>
+        </view>
+
+        <view class="pro-detial-mess-row">
+            <view class="pro-duty-bb cost">累积生息最近1年收益率</view>
+            <view class="pro-duty-dd cost">{{last_year_acc_return}}%</view>
+            <view class="clear"></view>
+        </view>
+
+
+        <view class="clear"></view>
     </view>
 
-
-
-    <view class="pro-detial-mess">
-        <view class="pro-detial-mess-tit">
-            <view class="proli-item">分红能力</view>
-        </view>
-
-        <view class="padd-lr-30">
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb cost">公司投连3年平均收益率</view>
-                <view class="pro-duty-dd cost">5.6%</view>
-                <view class="clear"></view>
-            </view>
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb cost">公司投连3年平均波动率</view>
-                <view class="pro-duty-dd cost">2.4%</view>
-                <view class="clear"></view>
-            </view>
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb cost">公司投连最近1年收益率</view>
-                <view class="pro-duty-dd cost">6.3%</view>
-                <view class="clear"></view>
-            </view>
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb cost">积累生息最近1年收益率</view>
-                <view class="pro-duty-dd cost">2.6%</view>
-                <view class="clear"></view>
-            </view>
-
-            
-        <view class="clear"></view>
-        </view>
-
     <view class="clear"></view>
-    </view>
+</view>
 
 
 <view class="wrap border-tope9 bottom-fix">
-			<view class="comp-grade-chose left">
-				专业客服
-				<view class="lineaa"></view>
-			</view>
-			<view class="comp-grade-chose right">发现错误</view>
-			<view class="clear"></view>
-		</view>
-
+    <view class="comp-grade-chose left">
+        <contact-button type="default-light">专业客服</contact-button>
+        <view class="lineaa"></view>
+    </view>
+    <view class="comp-grade-chose right">发现错误</view>
+    <view class="clear"></view>
 </view>
