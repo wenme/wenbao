@@ -1,0 +1,14 @@
+<!--pages/feedback-success/feedback-success.wxml-->
+<view>
+    <view class="part-one">
+        <view class="success-iconarea">
+            <icon type="success" size="100" />
+        </view>
+    </view>
+
+    <view class="success-title"> 谢谢您的反馈！</view>
+    <view class="success-con">
+    <text>我们已经收到你的宝贵意见。\n
+如有需要，我们将透过微信联系你。</text>
+    </view>
+</view>

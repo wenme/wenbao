@@ -1,0 +1,38 @@
+<!--pages/question-class-page/question-class-page.wxml-->
+<view class="pro-detial-messa">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">认识问保评级</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <navigator class="pro-detial-mess-row" url="">
+                <view class="pro-duty-bb cost650">什么是问保评级？</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            <navigator class="pro-detial-mess-row" url="">
+                <view class="pro-duty-bb cost650">什么时候需要问保评级？</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            <navigator class="pro-detial-mess-row" url="">
+                <view class="pro-duty-bb cost650">为什么要收费？</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            <navigator class="pro-detial-mess-row" url="">
+                <view class="pro-duty-bb cost650">评级权威吗？</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>

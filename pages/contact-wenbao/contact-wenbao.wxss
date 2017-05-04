@@ -1,0 +1,4 @@
+/* pages/contact-wenbao/contact-wenbao.wxss */
+page {
+  background:#f5f6f8;
+}

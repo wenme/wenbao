@@ -1,0 +1,14 @@
+<!--pages/start-page/start-page.wxml-->
+<swiper indicatorDots autoplay="{{autoplay}}" class="width-100">
+  <block>
+    <swiper-item>
+      <image src="../../images/start-a.jpg" mode="widthFix" bindtap="swipclick"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/start-b.jpg" mode="widthFix" bindtap="swipclick"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/start-c.jpg" mode="widthFix" bindtap="swipclick"/>
+    </swiper-item>
+  </block>
+</swiper>

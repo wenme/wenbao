@@ -1,0 +1,35 @@
+<!--pages/feedback/feedback.wxml-->
+<view>
+    <view class="part-one pro-company-name"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    <view class="padd-lr-30">
+        <view class="blue-tips">成功纠错可获得10元奖励
+        </view>
+    <view class="clear"></view>
+    </view>
+
+    <view class="padding-30">
+        <view class="feedback-list title">错误类型</view>
+
+        <view>
+            <view wx:for="{{items}}" data-index="{{index}}" size="20" bindtap="bindCheckbox" class="feedback-list">
+                <icon type="{{item.type}}" size="25"/>
+            <text>{{item.text}}</text>
+        </view>
+
+        </view>
+
+    <view class="clear"></view>
+    </view>
+
+    <view class="padd-lr-30">
+        <view class="feedback-area">
+            <textarea bindtap="bindTextAreaBlur" auto-height placeholder="请输入详细说明" placeholder-style="color:#cccccc;"/>
+        </view>
+    </view>
+
+    <view class="padding-30">
+        <button class="blue-button" hover-class="other-button-hover" bindtap="feedbackok"> 我要纠错 </button>
+    </view>
+
+
+</view>

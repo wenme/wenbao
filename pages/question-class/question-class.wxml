@@ -1,0 +1,38 @@
+<!--pages/question-class/question-class.wxml-->
+<view class="pro-detial-messa">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">热点问题</view>
+        </view>
+
+        <view class="padd-lr-30">
+
+            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
+                <view class="pro-duty-bb cost650">认识问保评级</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
+                <view class="pro-duty-bb cost650">如何搜索产品</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
+                <view class="pro-duty-bb cost650">如何解读评级</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
+                <view class="pro-duty-bb cost650">如何购买产品</view>
+                <view class="pro-duty-cc min15"></view>
+                <view class="clear"></view>
+            </navigator>
+
+            
+        <view class="clear"></view>
+        </view>
+
+    <view class="clear"></view>
+    </view>

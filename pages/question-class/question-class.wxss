@@ -1,0 +1,2 @@
+/* pages/question-class/question-class.wxss */
+@import "../../pages/product-grade/product-grade.wxss"

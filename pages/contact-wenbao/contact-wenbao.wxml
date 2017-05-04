@@ -1,0 +1,11 @@
+<!--pages/contact-wenbao/contact-wenbao.wxml-->
+<view>
+    <view class="contact-wenbao part-one">
+    <textarea bindtap="bindTextAreaBlur" auto-height placeholder="请输入详细说明" placeholder-style="color:#cccccc;"/>
+    </view>
+
+    <view class="padding-30">
+        <button bindtap="butstatus" class="{{butstatus?'blue-button':'blue-button-gray'}}" loading="{{loading}}" 
+        hover-class="other-button-hover" bindtap="feedbackok"> 留言 </button>
+    </view>
+</view>

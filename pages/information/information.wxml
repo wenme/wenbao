@@ -1,0 +1,16 @@
+<!--pages/information/information.wxml-->
+<view>
+    <view class="part-one padding-30">
+        <view class="information-tit">重大疾病保险金</view>
+        <view class="information-con">
+            <view class="p">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio
+            </view>
+
+            <view class="p">
+            Consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. 
+            </view>
+        <view class="clear"></view>
+        </view>
+    </view>
+</view>
