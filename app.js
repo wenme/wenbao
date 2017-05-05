@@ -53,9 +53,10 @@ App({
             return this.getCode()
                 .then(() => new Promise((resolve, reject) => {
                     wx.getUserInfo({
-                        success: function ({userInfo: _userInfo}) {
+                        success({userInfo: _userInfo}) {
                             resolve(userInfo = _userInfo);
-                        }
+                        },
+                        fail: reject
                     })
                 }));
         }
