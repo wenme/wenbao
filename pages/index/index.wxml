@@ -3,7 +3,7 @@
   <view class="logo" bindtap="bindViewTap"><image src="../../images/logo.png" ></image></view>
   <view>
     <view class="search-box">
-      <input class="pro-search-txt" placeholder="想了解什么保险？" />
+      <input class="pro-search-txt" placeholder="想了解什么保险？" bindinput="bindKeyword"/>
       <view class="pro-search-scan" bindtap="scanQRCode"></view>
     </view>
     <button class="search-box-but" ontap="searchProduct">搜索产品</button>
