@@ -3,18 +3,9 @@ Page({
   data: {
     autoplay: false
   },
-  swipclick: function() {
+  swipclick() {
     wx.switchTab({
-      url: '../index/index',
-      success: function(res){
-        console.log(res);
-      },
-      fail: function(res) {
-        console.log(res);
-      },
-      complete: function(res) {
-        console.log(res);
-      }
-    })
+      url: '../index/index'
+    });
   },
 })

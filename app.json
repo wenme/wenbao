@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/start-page/start-page",
     "pages/index/index",
     "pages/product-detail/product-detail",
     "pages/company-detail/company-detail",
