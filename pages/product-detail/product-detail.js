@@ -100,24 +100,35 @@ Page({
         });
     },
 
-    onLoad({product_iachina_link}) {
+    onLoad({product_iachina_link, pid}) {
+        let promise;
         if (product_iachina_link) {
-            request.withSessionKey({
+            promise = request.withSessionKey({
                 url: 'https://wenme.cc/terms/scan',
                 data: {
                     product_iachina_link: decodeURIComponent(product_iachina_link),
                 }
-            })
-
-                .then(({data: {
-                    err_code,
-                    product_detail_info
-                }}) => {
-                    if (err_code === 0) {
-                        this.setData(product_detail_info);
-                    }
-                });
+            });
         }
 
+        if (pid) {
+            promise = request.withSessionKey({
+                url: 'https://wenme.cc/terms/get_product_detail_info',
+                data: {
+                    pid
+                }
+            }).then(res => (res.data.product_detail_info = res.data.product_info_json) && res);
+        }
+
+        if (promise) {
+            promise.then(({data: {
+                err_code,
+                product_detail_info
+            }}) => {
+                if (err_code === 0) {
+                    this.setData(product_detail_info);
+                }
+            });
+        }
     }
 });
