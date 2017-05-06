@@ -11,10 +11,10 @@
         <view class="feedback-list title">错误类型</view>
 
         <view>
-            <view wx:for="{{items}}" data-index="{{index}}" size="20" bindtap="bindCheckbox" class="feedback-list">
-                <icon type="{{item.type}}" size="25"/>
-            <text>{{item.text}}</text>
-        </view>
+            <view wx:for="{{error_type}}" data-id="{{item[0]}}" size="20" bindtap="selectError" class="feedback-list">
+                <icon type="{{item[0]==id?'success':'circle'}}" size="25"/>
+                <text>{{item[1]}}</text>
+            </view>
 
         </view>
 
@@ -23,7 +23,7 @@
 
     <view class="padd-lr-30">
         <view class="feedback-area">
-            <textarea bindtap="bindTextAreaBlur" auto-height placeholder="请输入详细说明" placeholder-style="color:#cccccc;"/>
+            <textarea bindblur="bindDesc" auto-height placeholder="请输入详细说明" placeholder-style="color:#cccccc;"/>
         </view>
     </view>
 

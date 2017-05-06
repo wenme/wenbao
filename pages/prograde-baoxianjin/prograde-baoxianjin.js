@@ -11,6 +11,12 @@ const INSURANCE_TYPES   = [
 
 Page({
     data:{},
+    toFeedback() {
+        wx.navigateTo({
+            url: `../feedback/feedback?pid=${this.data.pid}`
+        });
+    },
+
     onLoad:function({pid, bid}){
         this.setData({
             pid,

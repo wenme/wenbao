@@ -120,7 +120,7 @@
 				<contact-button type="default-light">专业客服</contact-button>
 				<view class="lineaa"></view>
 			</view>
-			<view class="comp-grade-chose right">发现错误</view>
+			<view class="comp-grade-chose right" bindtap="toFeedback">发现错误</view>
 			<view class="clear"></view>
 		</view>
 </view>

@@ -4,6 +4,12 @@ const request           = require('../../utils/request');
 Page({
     data:{},
 
+    toFeedback() {
+        wx.navigateTo({
+            url: `../feedback/feedback?pid=${this.data.pid}`
+        });
+    },
+
     toExplaination(event) {
         wx.navigateTo({
             url: `../explaination/explaination?tid=${event.target.dataset.tid}`,

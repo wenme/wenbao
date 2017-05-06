@@ -53,7 +53,7 @@ Page({
                 check_rslt
             }}) => {
                 let page    = 'prograde-zhifu';
-                if (err_code === 0 && check_rslt) {
+                if (err_code === 0) {
                     page    = 'product-grade';
                 }
                 wx.navigateTo({

@@ -59,6 +59,12 @@ Page({
         });
     },
 
+    toFeedback() {
+        wx.navigateTo({
+            url: `../feedback/feedback?pid=${this.data.pid}`
+        });
+    },
+
     onLoad:function({pid}){
         this.setData({pid});
         request.withSessionKey({

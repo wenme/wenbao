@@ -2,8 +2,13 @@
 const request           = require('../../utils/request');
 
 Page({
-    data:{
+    data:{},
+    toFeedback() {
+        wx.navigateTo({
+            url: `../feedback/feedback?pid=${this.data.pid}`
+        });
     },
+
     onLoad:function({pid}){
         request.withSessionKey({
             url: 'https://wenme.cc/terms/product_module_evaluation',

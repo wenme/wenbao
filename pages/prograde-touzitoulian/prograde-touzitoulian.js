@@ -3,8 +3,13 @@ const request           = require('../../utils/request');
 const Chart             = require('../../utils/wxcharts');
 
 Page({
-    data:{
+    data:{},
+    toFeedback() {
+        wx.navigateTo({
+            url: `../feedback/feedback?pid=${this.data.pid}`
+        });
     },
+
     onLoad:function({pid, aid}){
         request.withSessionKey({
             url: 'https://wenme.cc/terms/get_investment_link_account_info',

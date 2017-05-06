@@ -17,6 +17,8 @@
     "pages/prograde-wanneng/prograde-wanneng",
     "pages/prograde-zhifu/prograde-zhifu",
     "pages/catalogue/catalogue",
+    "pages/feedback/feedback",
+    "pages/feedback-success/feedback-success",
     "pages/tabbar/tabbar"
   ],
   "window": {
