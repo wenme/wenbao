@@ -15,48 +15,36 @@
                 产品架构
                 <view class="whiteline"></view>
             </view>
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
 
 
-    <view class="{{selected?'show':'hidden'}}">
+        <view class="{{selected?'show':'hidden'}}">
             <scroll-view scroll-y="true"  class="pro-screen-right fixed-pageheight" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
                 <view class="padd-lr-30">
-                    <view class="rigli chose">
-                        工银安盛人寿
+                    <view
+                            class="rigli{{item[0]==insurerid?' chose':''}}"
+                            data-insurerid="{{item[0]}}"
+                            bindtap="select"
+                            wx:for="{{insurer_abbreviation}}">
+                        {{item[1]}}
                     </view>
-                    <view class="rigli">
-                        工银安盛人寿
-                    </view>
-                    <view class="rigli">
-                        工银安盛人寿
-                    </view>
-                    <view class="rigli">
-                        工银安盛人寿
-                    </view>
-                    <view class="rigli">
-                        工银安盛人寿
-                    </view>
-                <view class="clear"></view>
+                    <view class="clear"></view>
                 </view>
             </scroll-view>
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
 
-<view class="{{selected1?'show':'hidden'}}">
+        <view class="{{selected1?'show':'hidden'}}">
             <scroll-view scroll-y="true"  class="pro-screen-right fixed-pageheight" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
-
-
-                <view class="padd-lr-30" wx:for="{{box2}}" wx:for-item="box" wx:for-index="index">
-                    <view bindtap="chooseD" data-index="{{index}}" class="{{box.class}} rigli">{{box.name}}</view>
-                <view class="clear"></view>
+                <view class="padd-lr-30" wx:for="{{product_class}}">
+                    <view bindtap="select" data-class="{{item}}" class="{{item==class?'chose ':''}}rigli">{{item}}</view>
+                    <view class="clear"></view>
                 </view>
-
-
             </scroll-view>
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
 
@@ -64,23 +52,23 @@
         <view class="{{selected2?'show':'hidden'}}">
             <scroll-view scroll-y="true"  class="pro-screen-right fixed-pageheight" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
 
-            <view class="padd-lr-30" wx:for="{{box2}}" wx:for-item="box" wx:for-index="index">
-                    <view bindtap="chooseD" data-index="{{index}}" class="{{box.class}} rigli">{{box.name}}</view>
-                <view class="clear"></view>
+                <view class="padd-lr-30" wx:for="{{product_structure}}">
+                    <view bindtap="select" data-structure="{{item}}" class="{{item==structure?'chose ':''}}rigli">{{item}}</view>
+                    <view class="clear"></view>
                 </view>
 
 
             </scroll-view>
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
 
 
-    <view class="clear"></view>
+        <view class="clear"></view>
     </view>
 
 
     <view class="padding-30">
-        <view class="blue-button">筛选</view>
+        <view class="blue-button" bindtap="toList">筛选</view>
     </view>
 </view>

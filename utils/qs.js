@@ -3,4 +3,6 @@
  */
 
 module.exports.stringify    = (obj) => Object.keys(obj)
-    .map(key => `${key}=${obj[key]}`).join('&');
+    .filter(key => typeof obj[key] !== 'undefined')
+    .map(key => `${key}=${obj[key]}`)
+    .join('&');
