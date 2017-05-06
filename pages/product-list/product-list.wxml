@@ -3,7 +3,7 @@
     <view class="part-white pro-detial-mess-row border-bottomf568 posi-fixed-top">
         <view class="padd-lr-30">
         <view class="pro-duty-bb">共有{{total_product_count}}个匹配产品</view>
-        <view class="pro-duty-cc blue">产品筛选</view>
+        <view class="pro-duty-cc blue" bindtap="toScreen">产品筛选</view>
         <view class="clear"></view>
         </view>
     </view>

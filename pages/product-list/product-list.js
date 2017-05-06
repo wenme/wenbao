@@ -1,5 +1,8 @@
 // pages/product-list/product-list.js
 const request           = require('../../utils/request');
+const {stringify}       = require('../../utils/qs');
+
+let data;
 
 Page({
     data:{},
@@ -8,7 +11,13 @@ Page({
             url: `../product-detail/product-detail?pid=${currentTarget.dataset.pid}`
         });
     },
-    onLoad:function(data){
+    toScreen() {
+        wx.redirectTo({
+            url: `../product-screen/product-screen?${stringify(data)}`
+        });
+    },
+    onLoad:function(_data){
+        data    = _data;
         request.withSessionKey({
             url: 'https://wenme.cc/terms/terms_search',
             data
