@@ -66,6 +66,15 @@ page {
   font-size: 38rpx;
   text-align: center;
 }
+.blue-button-gray {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #b3c8f5;
+  color: #fff;
+  font-size: 38rpx;
+  text-align: center;
+}
 .green-button {
   width: 100%;
   height: 100rpx;
@@ -104,6 +113,10 @@ page {
 /*tab公用*/
 .pro-detial-mess {
   margin-top: 30rpx;
+  background:#fff;
+  font-size: 34rpx;
+}
+.pro-detial-messa {
   background:#fff;
   font-size: 34rpx;
 }
@@ -162,13 +175,18 @@ page {
 .pro-detial-mess-row .pro-duty-aa {
   width: 48rpx;
   min-height:46rpx;
-  padding: 27rpx 0rpx;
+  padding-top: 27rpx;
   float: left;
   text-align:left;
 }
 .pro-detial-mess-row .pro-duty-aa image {
   width: 32rpx;
   height: 32rpx;
+}
+.pro-detial-mess-row .pro-duty-aa.user image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 4rpx;
 }
 .pro-detial-mess-row .pro-duty-bb {
   width:295rpx;
@@ -179,6 +197,9 @@ page {
 }
 .pro-detial-mess-row .pro-duty-bb.cost {
   width:400rpx;
+}
+.pro-detial-mess-row .pro-duty-bb.cost650 {
+  width:640rpx;
 }
 .pro-detial-mess-row .pro-duty-dd.cost {
   width:230rpx;
@@ -195,6 +216,9 @@ page {
   background-size:12rpx 20rpx;
   text-align:right;
   float: right;
+}
+.pro-detial-mess-row .pro-duty-cc.min15 {
+  width: 10rpx !important;
 }
 .pro-detial-mess-row .pro-duty-dd {
   width:315rpx;
@@ -242,7 +266,7 @@ page {
   margin-top: 148rpx;
 }
 .blue {
-  color: #7ea0f0;
+  color: #7ea0f0 !important;
 }
 .red {
   color: #f05050 !important;
@@ -295,4 +319,274 @@ page {
   display: table-cell;
   vertical-align: middle;
   line-height: 50rpx;
+}
+/*产品列表*/
+.border-bottomf568 {
+  border-bottom:1px solid #f5f6f8;
+}
+.product-item {
+  border-top: 1px solid #f2f2f2;
+  padding: 30rpx 0rpx;
+}
+.product-item:first-child {
+  border-top: none;
+}
+.product-item-tit {
+  font-size: 34rpx;
+  line-height: 50rpx;
+}
+.product-item-con {
+  font-size:32rpx;
+  color: #aaaaaa;
+  padding: 10rpx 60rpx 0rpx 0rpx;
+  position: relative;
+  line-height: 40rpx;
+}
+.product-item-con .span-item {
+  padding-right: 20rpx;
+  float: left;
+}
+.product-item-con .type, .product-item-con .type.type-aa {
+  width: 70rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  border: 1px solid #09bb07;
+  color: #09bb07;
+  background: #e6f8e6;
+  text-align: center;
+  position: absolute;
+  right: 0rpx; 
+  top: 4rpx;
+  font-size:24rpx;
+}
+.product-item-con .type.type-bb {
+  border: 1px solid #5082f0;
+  color: #5082f0;
+  background: #edf2fd;
+}
+.product-item-con .type.type-cc {
+  border: 1px solid #f24e4e;
+  color: #f24e4e;
+  background: #feeded;
+}
+.part-white.border-bottomf568 {
+  width: 100%;
+}
+/*产品筛选*/
+.pro-screen-left {
+  width: 218rpx;
+  height: 50px;
+  float: left;
+  border-right: 1px solid #e9e9e9;
+}
+.pro-screen-left .liitem-default {
+  padding: 0rpx 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  border-bottom:1px solid #e9e9e9;
+  background: #fff;
+  position: relative;
+}
+.pro-screen-left .liitem-cur {
+  padding: 0rpx 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  border-bottom:1px solid #e9e9e9;
+  background: #fff;
+  position: relative;
+  color:#5082f0;
+}
+.pro-screen-left .liitem-cur .whiteline {
+  width: 6rpx;
+  height: 100rpx;
+  background: white;
+  position:absolute;
+  right: 0rpx;
+  top: 0rpx;
+  display:show;
+  right: -2rpx;
+}
+.pro-screen-left .liitem-default .whiteline {
+  display:none;
+}
+.pro-screen-right {
+  width: 528rpx;
+  float: right;
+}
+.fixed-pageheight {
+  height: 1060rpx;
+}
+.pro-screen-right .rigli {
+  min-height: 46rpx;
+  line-height: 46rpx;
+  padding:27rpx 50rpx 27rpx 0rpx;
+  position: relative;
+  border-bottom:1px solid #e9e9e9;
+  font-size: 34rpx;
+  background: none;
+}
+.pro-screen-right .rigli.chose {
+  background-image:url(https://wenme.cc/static/images/choseimg.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 46rpx;
+}
+/*联系问宝*/
+.contact-wenbao {
+  background: #fff;
+  padding: 30rpx;
+}
+.contact-wenbao textarea {
+  width: 100%;
+  min-height: 310rpx;
+  font-size: 34rpx;
+}
+/*热点问题*/
+.success-iconarea {
+  text-align: center;
+  padding-top: 95rpx;
+}
+.success-title {
+  padding:40rpx 0rpx;
+  text-align: center;
+  font-size: 38rpx;
+  color:#333333;
+}
+.success-con {
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 22rpx;
+  color:#999999;
+}
+/*信息解读*/
+.information-tit {
+  font-size: 38rpx;
+  line-height: 80rpx;
+  padding-top: 30rpx;
+}
+.information-con .p {
+  font-size:32rpx;
+  padding-top:30rpx;
+  line-height: 50rpx;
+}
+/*纠错*/
+.blue-tips {
+  line-height: 46rpx;
+  font-size: 32rpx;
+  color: #7ea0f0;
+}
+.feedback-area {
+  border:1px solid #e9e9e9;
+  padding: 30rpx;
+  min-height: 250rpx;
+  font-size: 32rpx;
+}
+.feedback-area textarea {
+  width: 100%;
+  min-height: 220rpx;
+}
+.feedback-list {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  padding: 0rpx 30rpx;
+  border:1px solid #e9e9e9;
+  margin-top:-1px;
+  position: relative;
+}
+.feedback-list icon {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+.feedback-list.title {
+  color: #999999;
+}
+.feedback-label-txt {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.feedback-label-icon {
+    width: 46rpx;
+    height: 46rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: #fcfff4;
+    border-radius: 50px;
+    position: absolute;
+    right: 0rpx;
+    top:25rpx;
+    border:1px solid #c9c9c9;
+}
+
+.feedback-label-icon-checked {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 46rpx;
+    height: 46rpx;
+    background-image:url(https://wenme.cc/static/images/choseimg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 46rpx;
+    border:none;
+}
+/*用户中心*/
+.user-header {
+  height: 300rpx;
+  background: #4682f0;
+  text-align: center;
+  align-items: center;
+  padding-top: 80rpx;
+}
+.user-photo {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  align-items: center;
+  margin: auto;
+}
+.user-photo image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.user-name {
+  font-size: 38rpx;
+  color: #ffffff;
+  padding-top: 20rpx;
+}
+.user-city {
+  font-size: 30rpx;
+  color: #aac8fa;
+  padding-top: 10rpx;
+}
+/*启动页*/
+.width-100 {
+  width: 90%;
+  height: 1100rpx;
+  text-align: center;
+  margin: auto;
+}
+.width-100 image {
+  width: 100%;
+  align-items: center;
+  margin: auto;
+}
+.startbutton {
+  width: 240rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 110rpx;
+  left: 50%;
+  margin-left:-120rpx;
+  z-index: 99999;
+}
+.startbutton image {
+  width: 240rpx;
+  height: 80rpx;
 }

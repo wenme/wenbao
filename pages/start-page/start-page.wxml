@@ -1,5 +1,5 @@
 <!--pages/start-page/start-page.wxml-->
-<swiper indicatorDots autoplay="{{autoplay}}" class="width-100">
+<swiper indicatorDots autoplay="{{autoplay}}" class="width-100 posi-rela">
   <block>
     <swiper-item>
       <image src="https://wenme.cc/static/images/start-a.jpg" mode="widthFix" bindtap="swipclick"/>
@@ -11,4 +11,5 @@
       <image src="https://wenme.cc/static/images/start-c.jpg" mode="widthFix" bindtap="swipclick"/>
     </swiper-item>
   </block>
+  <view class="startbutton"><image src="../../images/startbutton.png" bindtap="swipclick"/></view>
 </swiper>
