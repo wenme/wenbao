@@ -24,15 +24,24 @@ const request   = (options = {}) => new Promise((resolve, reject) => {
 
 module.exports  = request;
 
-module.exports.withSessionKey   = (options = {}) => getApp()
-    .getSessionKey()
-    .then(session_key => {
-        options.data    = Object.assign({session_key}, options.data || {});
-
-        return request(Object.assign({
-            method: 'POST',
-            header: {
-                'content-type': 'application/x-www-form-urlencoded'
-            }
-        }, options));
+module.exports.withSessionKey   = (options = {}) => {
+    wx.showLoading({
+        title   : 'loading',
+        mask    : true
     });
+    return getApp()
+        .getSessionKey()
+        .then(session_key => {
+            options.data    = Object.assign({session_key}, options.data || {});
+
+            return request(Object.assign({
+                method: 'POST',
+                header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                }
+            }, options)).then(res => {
+                wx.hideToast();
+                return res;
+            });
+        });
+};
