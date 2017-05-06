@@ -1,10 +1,10 @@
 <!--pages/user-home/user-home.wxml-->
 <view>
     <view class="user-header">
-        <view class="user-photo"><image src="../../images/userpic.jpg" ></image></view>
-        <view class="user-name">布卓君</view>
-        <view class="user-city">广州</view>
-    <view class="clear"></view>
+        <view class="user-photo"><image src="{{avatar_url}}" ></image></view>
+        <view class="user-name">{{nick_name}}</view>
+        <view class="user-city">{{city}}</view>
+        <view class="clear"></view>
     </view>
     
     <view class="pro-detial-messa">
@@ -12,7 +12,7 @@
             <view class="pro-detial-mess-row padd-lr-30">
                 <view class="pro-duty-aa user"><image src="../../images/user-icona.png" ></image></view>
                 <view class="pro-duty-bb">我的产品评级</view>
-                <view class="pro-duty-cc"><text class="red">7</text>份产品评级
+                <view class="pro-duty-cc"><text class="red">{{my_purchased_product_count}}</text>份产品评级
 </view>
                 <view class="clear"></view>
             </view>
@@ -21,7 +21,7 @@
                 <view class="pro-duty-aa user"><image src="../../images/user-iconb.png" ></image></view>
                 <view class="pro-duty-bb">关注过的产品
 </view>
-                <view class="pro-duty-cc"><text class="red">20</text>个产品</view>
+                <view class="pro-duty-cc"><text class="red">{{my_followed_product_count}}</text>个产品</view>
                 <view class="clear"></view>
             </view>
 

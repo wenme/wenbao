@@ -1,19 +1,46 @@
 // pages/user-home/user-home.js
+const request           = require('../../utils/request');
+
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
-  }
-})
+    data:{},
+
+    toFeedback() {
+        wx.navigateTo({
+            url: `../feedback/feedback?pid=${this.data.pid}`
+        });
+    },
+
+    toExplaination(event) {
+        wx.navigateTo({
+            url: `../explaination/explaination?tid=${event.target.dataset.tid}`,
+            fail(res) {
+                console.log(res);
+            }
+        });
+    },
+
+    toBaoXianJin(event) {
+        wx.navigateTo({
+            url: `../prograde-baoxianjin/prograde-baoxianjin?bid=${event.target.dataset.bid}&pid=${this.data.pid}`,
+            fail(res) {
+                console.log(res);
+            }
+        });
+    },
+
+    onLoad:function(){
+        request.withSessionKey({
+            url: 'https://wenme.cc/users/user_center'
+        })
+            .then(({
+                       data: {
+                           err_code,
+                           user_info
+                       }
+                   }) => {
+                if (err_code === 0) {
+                    this.setData(user_info);
+                }
+            });
+    }
+});
