@@ -1,2 +1,11 @@
-{{title}}:
-{{explaination}}
+<view>
+    <view class="part-one padding-30">
+        <view class="information-tit">{{title}}</view>
+        <view class="information-con">
+            <view class="p">
+                {{explaination}}
+            </view>
+            <view class="clear"></view>
+        </view>
+    </view>
+</view>

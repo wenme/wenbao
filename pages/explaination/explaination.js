@@ -11,10 +11,7 @@ Page({
     onLoad({tid}) {
         request.withSessionKey({
             url: 'https://wenme.cc/helpdesk/get_explaination',
-            data: {
-                tid,
-                session_key
-            }
+            data: {tid}
         })
 
             .then(({data: {
