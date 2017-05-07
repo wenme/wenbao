@@ -6,32 +6,17 @@
 
         <view class="padd-lr-30">
 
-            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
-                <view class="pro-duty-bb cost650">认识问保评级</view>
+            <navigator
+                    class="pro-detial-mess-row"
+                    wx:for="{{question_category}}"
+                    hover-class="none"
+                    url="../question-class-page/question-class-page?category={{item}}">
+                <view class="pro-duty-bb cost650">{{item}}</view>
                 <view class="pro-duty-cc min15"></view>
                 <view class="clear"></view>
             </navigator>
-
-            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
-                <view class="pro-duty-bb cost650">如何搜索产品</view>
-                <view class="pro-duty-cc min15"></view>
-                <view class="clear"></view>
-            </navigator>
-
-            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
-                <view class="pro-duty-bb cost650">如何解读评级</view>
-                <view class="pro-duty-cc min15"></view>
-                <view class="clear"></view>
-            </navigator>
-
-            <navigator class="pro-detial-mess-row" url="../../pages/question-class-page/question-class-page">
-                <view class="pro-duty-bb cost650">如何购买产品</view>
-                <view class="pro-duty-cc min15"></view>
-                <view class="clear"></view>
-            </navigator>
-
             
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
     <view class="clear"></view>

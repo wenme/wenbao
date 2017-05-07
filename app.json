@@ -20,6 +20,7 @@
     "pages/feedback/feedback",
     "pages/feedback-success/feedback-success",
     "pages/question-class/question-class",
+    "pages/question-class-page/question-class-page",
     "pages/contact-wenbao/contact-wenbao",
     "pages/user-home/user-home"
   ],
