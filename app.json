@@ -21,6 +21,7 @@
     "pages/feedback-success/feedback-success",
     "pages/question-class/question-class",
     "pages/question-class-page/question-class-page",
+    "pages/question-information/question-information",
     "pages/contact-wenbao/contact-wenbao",
     "pages/user-home/user-home"
   ],

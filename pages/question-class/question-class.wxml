@@ -10,7 +10,7 @@
                     class="pro-detial-mess-row"
                     wx:for="{{question_category}}"
                     hover-class="none"
-                    url="../question-class-page/question-class-page?category={{item}}">
+                    url="../question-class-page/question-class-page?question_category={{item}}">
                 <view class="pro-duty-bb cost650">{{item}}</view>
                 <view class="pro-duty-cc min15"></view>
                 <view class="clear"></view>
