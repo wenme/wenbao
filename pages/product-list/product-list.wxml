@@ -8,9 +8,12 @@
         </view>
     </view>
 
-    <view class="pro-detial-mess padd-lr-30 margin-top120">
-
-
+    <scroll-view
+            scroll-y="true"
+            bindscrolltolower="more"
+            class="pro-detial-mess padd-lr-30 margin-top120"
+            style="width: auto; height: 750rpx"
+            scroll-with-animation>
         <view class="product-item" wx:for="{{product_list}}" data-pid="{{item.pid}}" bindtap="toDetail">
             <view class="product-item-tit">{{item.product}}</view>
             <view class="product-item-con">
@@ -21,6 +24,6 @@
             </view>
         </view>
         <view class="clear"></view>
-    </view>
+    </scroll-view>
 
 </view>

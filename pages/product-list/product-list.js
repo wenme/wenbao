@@ -16,6 +16,19 @@ Page({
             url: `../product-screen/product-screen?${stringify(data)}`
         });
     },
+    more() {
+        let {data}  = this;
+        let {type, product_list}  = data;
+        data.page_num++;
+        request.withSessionKey({
+            url: `https://wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
+            data
+        })
+            .then(({data}) => {
+                data.product_list   = product_list.concat(data.product_list);
+                this.setData(data);
+            });
+    },
     onLoad:function(data){
         this.setData(data);
         let {type}  = data;
@@ -24,13 +37,9 @@ Page({
             data
         })
             .then(({
-                data: {
-                    product_list,
-                    total_page_count,
-                    total_product_count
-                }
+                data
             }) => {
-                this.setData({product_list, total_page_count, total_product_count});
+                this.setData(data);
             });
     }
 });
