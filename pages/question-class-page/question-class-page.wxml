@@ -4,7 +4,12 @@
             <view class="proli-item">{{question_category}}</view>
         </view>
 
-        <view class="padd-lr-30">
+        <scroll-view
+                scroll-y="true"
+                bindscrolltolower="more"
+                style="width: auto; height: 450rpx"
+                scroll-with-animation
+                class="padd-lr-30">
 
             <navigator
                     wx:for="{{question_list}}"
@@ -17,7 +22,7 @@
             </navigator>
 
         <view class="clear"></view>
-        </view>
+        </scroll-view>
 
     <view class="clear"></view>
     </view>
