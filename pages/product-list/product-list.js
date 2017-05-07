@@ -16,10 +16,11 @@ Page({
             url: `../product-screen/product-screen?${stringify(data)}`
         });
     },
-    onLoad:function(_data){
-        data    = _data;
+    onLoad:function(data){
+        this.setData(data);
+        let {type}  = data;
         request.withSessionKey({
-            url: 'https://wenme.cc/terms/terms_search',
+            url: `https://wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
             data
         })
             .then(({

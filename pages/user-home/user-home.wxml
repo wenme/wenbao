@@ -12,8 +12,12 @@
             <view class="pro-detial-mess-row padd-lr-30">
                 <view class="pro-duty-aa user"><image src="../../images/user-icona.png" ></image></view>
                 <view class="pro-duty-bb">我的产品评级</view>
-                <view class="pro-duty-cc"><text class="red">{{my_purchased_product_count}}</text>份产品评级
-</view>
+                <navigator
+                        class="pro-duty-cc"
+                        hover-class="none"
+                        url="../product-list/product-list?type=purchased">
+                    <text class="red">{{my_purchased_product_count}}</text>份产品评级
+                </navigator>
                 <view class="clear"></view>
             </view>
 
@@ -21,21 +25,32 @@
                 <view class="pro-duty-aa user"><image src="../../images/user-iconb.png" ></image></view>
                 <view class="pro-duty-bb">关注过的产品
 </view>
-                <view class="pro-duty-cc"><text class="red">{{my_followed_product_count}}</text>个产品</view>
+                <navigator
+                        class="pro-duty-cc"
+                        hover-class="none"
+                        url="../product-list/product-list?type=followed">
+                    <text class="red">{{my_followed_product_count}}</text>个产品
+                </navigator>
                 <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row padd-lr-30">
                 <view class="pro-duty-aa user"><image src="../../images/user-iconc.png" ></image></view>
                 <view class="pro-duty-bb">热点问题</view>
-                <view class="pro-duty-cc">足够解决80%疑问</view>
+                <navigator
+                        class="pro-duty-cc"
+                        hover-class="none"
+                        url="../question-class/question-class">足够解决80%疑问</navigator>
                 <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row padd-lr-30">
                 <view class="pro-duty-aa user"><image src="../../images/user-icond.png" ></image></view>
                 <view class="pro-duty-bb">联系问保</view>
-                <view class="pro-duty-cc">求建议</view>
+                <navigator
+                        class="pro-duty-cc"
+                        hover-class="none"
+                        url="../contact-wenbao/contact-wenbao">求建议</navigator>
                 <view class="clear"></view>
             </view>
 			

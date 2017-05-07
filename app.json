@@ -19,6 +19,8 @@
     "pages/catalogue/catalogue",
     "pages/feedback/feedback",
     "pages/feedback-success/feedback-success",
+    "pages/question-class/question-class",
+    "pages/contact-wenbao/contact-wenbao",
     "pages/user-home/user-home"
   ],
   "window": {
@@ -27,22 +29,23 @@
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "color":"#88aaf9",
-    "selectedColor":"#4682f0",
-    "borderStyle":"white",
-    "backgroundColor":"#f6f6f6",
-    "list":[{
-      "pagePath":"pages/index/index",
-      "iconPath":"images/home-icon.png",
-      "selectedIconPath":"images/home-iconS.png",
-      "text":""
-    },
+  "tabBar": {
+    "color": "#88aaf9",
+    "selectedColor": "#4682f0",
+    "borderStyle": "white",
+    "backgroundColor": "#f6f6f6",
+    "list": [
       {
-        "pagePath":"pages/user-home/user-home",
-        "iconPath":"images/user-icon.png",
-        "selectedIconPath":"images/user-iconS.png",
-        "text":""
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home-icon.png",
+        "selectedIconPath": "images/home-iconS.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/user-home/user-home",
+        "iconPath": "images/user-icon.png",
+        "selectedIconPath": "images/user-iconS.png",
+        "text": ""
       }
     ]
   }
