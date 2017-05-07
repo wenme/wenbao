@@ -23,7 +23,7 @@
 
     <view class="padd-lr-30">
         <view class="feedback-area">
-            <textarea bindblur="bindDesc" auto-height placeholder="请输入详细说明" placeholder-style="color:#cccccc;"/>
+            <textarea bindinput="bindDesc" auto-height placeholder="请输入详细说明" placeholder-style="color:#cccccc;"/>
         </view>
     </view>
 
