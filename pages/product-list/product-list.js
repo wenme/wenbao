@@ -29,7 +29,8 @@ Page({
                 this.setData(data);
             });
     },
-    onLoad:function(data){
+    onLoad:function(_data){
+        data        = _data;
         this.setData(data);
         let {type}  = data;
         request.withSessionKey({
