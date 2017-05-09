@@ -2,7 +2,7 @@
 const request           = require('../../utils/request');
 const {stringify}       = require('../../utils/qs');
 
-let data;
+let data, loading;
 
 Page({
     data:{},
@@ -17,6 +17,12 @@ Page({
         });
     },
     more() {
+        if (loading) {
+            return;
+        }
+        else {
+            loading = true;
+        }
         let {data}  = this;
         let {type, product_list}  = data;
         let page_num= data.page_num++;
@@ -25,6 +31,7 @@ Page({
             data
         })
             .then(({data}) => {
+                loading = false;
                 if (!(data.product_list && data.product_list.length)) {
                     return this.setData({
                         page_num
