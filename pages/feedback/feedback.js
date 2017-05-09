@@ -6,10 +6,10 @@ let desc;
 Page({
     data: {},
     feedbackok() {
-        let {pid, id}   = this.data;
+        let {pid, error_type}   = this.data;
         let data    = {
             pid,
-            error_id    : id
+            error_id_arr: error_type.filter(error => !!error[2]).map(([id]) => id).join(',')
         };
         if (desc) {
             data.error_desc = desc;
@@ -24,7 +24,11 @@ Page({
 
     },
     selectError({currentTarget}) {
-        this.setData(currentTarget.dataset);
+        let {error_type}= this.data;
+        let {index}     = currentTarget.dataset;
+        let error       = error_type[index];
+        error[2]        = !error[2];
+        this.setData({error_type});
     },
     bindDesc({detail: {value}}) {
         desc = value;
@@ -35,6 +39,8 @@ Page({
             data: {
                 pid
             }
-        }).then(({data}) => this.setData(data));
+        }).then(({data}) => {
+            this.setData(data);
+        });
     }
 });

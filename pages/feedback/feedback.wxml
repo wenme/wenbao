@@ -11,8 +11,8 @@
         <view class="feedback-list title">错误类型</view>
 
         <view>
-            <view wx:for="{{error_type}}" data-id="{{item[0]}}" size="20" bindtap="selectError" class="feedback-list">
-                <icon type="{{item[0]==id?'success':'circle'}}" size="25" color="rgb(80,130,240)"/>
+            <view wx:for="{{error_type}}" data-index="{{index}}" size="20" bindtap="selectError" class="feedback-list">
+                <icon type="{{item[2]?'success':'circle'}}" size="25" color="rgb(80,130,240)"/>
                 <text>{{item[1]}}</text>
             </view>
 
