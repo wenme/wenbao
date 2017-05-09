@@ -25,6 +25,11 @@ Page({
             data
         })
             .then(({data}) => {
+                if (!data.product_list.length) {
+                    return this.setData({
+                        page_num    : data.page_num - 1
+                    });
+                }
                 data.product_list   = product_list.concat(data.product_list);
                 this.setData(data);
             });
