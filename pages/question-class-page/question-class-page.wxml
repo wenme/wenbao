@@ -7,7 +7,7 @@
         <scroll-view
                 scroll-y="true"
                 bindscrolltolower="more"
-                style="width: auto; height: 450rpx"
+                style="width: auto; height: 1250rpx"
                 scroll-with-animation
                 class="padd-lr-30">
 
