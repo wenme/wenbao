@@ -19,15 +19,15 @@ Page({
     more() {
         let {data}  = this;
         let {type, product_list}  = data;
-        data.page_num++;
+        let page_num= data.page_num++;
         request.withSessionKey({
             url: `https://wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
             data
         })
             .then(({data}) => {
-                if (!data.product_list.length) {
+                if (!(data.product_list && data.product_list.length)) {
                     return this.setData({
-                        page_num    : data.page_num - 1
+                        page_num
                     });
                 }
                 data.product_list   = product_list.concat(data.product_list);
