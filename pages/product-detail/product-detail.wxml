@@ -9,7 +9,7 @@
 			公司详情
 			<view class="lineaa"></view>
 		</view>
-		<view class="pro-company-chose right" bindtap="download">条款下载链接</view>
+		<view class="pro-company-chose right" bindtap="download">查看条款</view>
 		<view class="clear"></view>
 	</view>
 
