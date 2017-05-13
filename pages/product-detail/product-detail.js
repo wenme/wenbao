@@ -84,19 +84,29 @@ Page({
     },
 
     download() {
+        wx.showLoading({
+            title   : 'loading',
+            mask    : true
+        });
         wx.downloadFile({
-          url: this.data.terms_download_link,
-          success: function({tempFilePath}){
-            wx.openDocument({
-                filePath    : tempFilePath,
-                success(res) {
-                    console.log(res)
-                },
-                fail(res) {
-                    console.log(res)
-                }
-            });
-          }
+            url: this.data.terms_download_link,
+            success({tempFilePath}){
+                wx.openDocument({
+                    filePath    : tempFilePath,
+                    success(res) {
+                        console.log(res)
+                    },
+                    fail(res) {
+                        console.log(res)
+                    },
+                    complete() {
+                        wx.hideLoading();
+                    }
+                });
+            },
+            fail() {
+                wx.hideLoading();
+            }
         });
     },
 
