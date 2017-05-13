@@ -46,12 +46,13 @@ Page({
                         },
                         series      : [
                             {
-                                name: '成交量1',
+                                name: '投连账户名',
                                 data: account_info.invest_value
                             },
                             {
                                 name: account_info.invest_bm_name,
-                                data: account_info.invest_bm_value
+                                data: account_info.invest_bm_value,
+                                color:'#adff2f'
                             }
                         ],
                         dataLabel   : false
