@@ -16,11 +16,6 @@ Page({
 
         // tabbar  : app.globalData.tabbar
     },
-    bindViewTap: function () {
-        wx.redirectTo({
-            url: '../catalogue/catalogue'
-        })
-    },
     bindKeyword({detail: {value}}) {
         keyword = value;
     },

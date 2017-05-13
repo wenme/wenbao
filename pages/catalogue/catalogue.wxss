@@ -1,3 +1,0 @@
-/* pages/catalogue/catalogue.wxss */
-page {line-height:35px; padding: 20px;}
-.border { margin-top:10px; padding-top:10px; border-top:1px solid #c5c5c5;}
