@@ -6,12 +6,12 @@
         <view class="company-info-row posi-rela">
             <view class="gradeable">产品综合评分</view>
             <view class="gradecon">{{product_score}}分</view>
-			<view class="mess-iconaa"></view>
+			<view class="mess-iconaa" bindtap="toExplaination" data-tid="{{product_score_hintid}}"></view>
         </view>
         <view class="company-info-row posi-rela">
             <view class="gradeable">产品综合评级</view>
             <view class="gradecon"><image src="../../images/star{{product_rating}}.png" ></image></view>
-			<view class="mess-iconaa"></view>
+			<view class="mess-iconaa" bindtap="toExplaination" data-tid="{{product_rating_hintid}}"></view>
         </view>
 		
 		

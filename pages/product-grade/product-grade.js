@@ -65,6 +65,15 @@ Page({
         });
     },
 
+    toExplaination(event) {
+        wx.navigateTo({
+            url: `../explaination/explaination?tid=${event.target.dataset.tid}`,
+            fail(res) {
+                console.log(res);
+            }
+        });
+    },
+
     onLoad:function({pid}){
         this.setData({pid});
         request.withSessionKey({
