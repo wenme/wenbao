@@ -44,18 +44,20 @@ Page({
                         height      : 200,
                         categories  : evaluation_info.invest_time_line,
                         yAxis       : {
-                            min     : 0
+                            min     : 800
                         },
                         series      : [
                             {
-                                name: '成交量1',
+                                name: '投连账户名',
                                 data: evaluation_info.invest_value
                             },
                             {
                                 name: evaluation_info.invest_bm_name,
-                                data: evaluation_info.invest_bm_value
+                                data: evaluation_info.invest_bm_value,
+                                color:'#adff2f'
                             }
-                        ]
+                        ],
+                        dataLabel   : false
                     });
                 }
             });
