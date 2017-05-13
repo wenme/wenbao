@@ -30,17 +30,27 @@ Page({
             selected2:true
         })
     },
-    select({target}) {
-        this.setData(target.dataset);
+    select({target  : {dataset}}) {
+        let [key] = Object.keys(dataset);
+        if (dataset[key] === this.data[key]) {
+            return this.setData({
+                [key]   : ''
+            });
+        }
+        this.setData(dataset);
     },
     toList() {
         let {keyword, insurerid, 'class': _class, structure}    = this.data;
-        let data            = {
-            product_class   : _class,
-            keyword,
-            insurer_id      : insurerid,
-            product_structure: structure
-        };
+        let data            = {keyword};
+        if (_class) {
+            data.product_class  = _class;
+        }
+        if (!isNaN(parseInt(insurerid))) {
+            data.insurer_id = insurerid;
+        }
+        if (structure) {
+            data.product_structure  = structure;
+        }
         wx.redirectTo({
             url: `../product-list/product-list?${stringify(data)}`
         });
