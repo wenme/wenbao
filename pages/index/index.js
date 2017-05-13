@@ -27,7 +27,7 @@ Page({
         //     });
         // }
         wx.navigateTo({
-            url: `../product-list/product-list?keyword=${keyword}`
+            url: `../product-list/product-list?keyword=${keyword}&type=`
         });
     },
 

@@ -1,4 +1,8 @@
 //app.js
+const query = { // 产品列表搜索条件
+    search  : true,
+    page_num: 1
+};
 let code, userInfo, session_key;
 
 App({
@@ -84,8 +88,19 @@ App({
             success: resolve
         }));
     },
-    globalData:{
-        userInfo:null,
-        code    : ""
+
+    getQuery() {
+        return query;
+    },
+
+    setQuery(data) {
+        Object.keys(data).forEach(key => {
+            let value   = data[key];
+            if (value != null) {
+                query[key] = value;
+            } else {
+                delete query[key];
+            }
+        });
     }
 });

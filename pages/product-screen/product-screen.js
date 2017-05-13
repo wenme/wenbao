@@ -1,6 +1,7 @@
 // pages/product-screen/product-screen.js
 const request           = require('../../utils/request');
-const {stringify}       = require('../../utils/qs');
+
+const app               = getApp();
 
 Page({
     
@@ -34,35 +35,33 @@ Page({
         let [key] = Object.keys(dataset);
         if (dataset[key] === this.data[key]) {
             return this.setData({
-                [key]   : ''
+                [key]   : null
             });
         }
         this.setData(dataset);
     },
     toList() {
-        let {keyword, insurerid, 'class': _class, structure}    = this.data;
-        let data            = {keyword};
-        if (_class) {
-            data.product_class  = _class;
-        }
-        if (!isNaN(parseInt(insurerid))) {
-            data.insurer_id = insurerid;
-        }
-        if (structure) {
-            data.product_structure  = structure;
-        }
-        wx.redirectTo({
-            url: `../product-list/product-list?${stringify(data)}`
+        let {
+            insurerid       : insurer_id,
+            'class'         : product_class,
+            structure       : product_structure
+        }                   = this.data;
+        app.setQuery({
+            search          : true,
+            page_num        : 1,
+            insurer_id,
+            product_class,
+            product_structure
         });
+        wx.navigateBack();
     },
-    onLoad:function(data){
-        data.insurerid  = data.insurer_id;
-        delete data.insurer_id;
-        data.class      = data.product_class;
-        delete data.product_class;
-        data.structure  = data.product_structure;
-        delete data.product_structure;
-        this.setData(data);
+    onLoad:function(){
+        let data        = app.getQuery();
+        this.setData({
+            insurerid   : data.insurer_id,
+            'class'     : data.product_class,
+            structure   : data.product_structure
+        });
         request.withSessionKey({
             url: 'https://wenme.cc/terms/get_search_filter'
         })

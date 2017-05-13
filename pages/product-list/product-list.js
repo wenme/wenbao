@@ -1,8 +1,9 @@
 // pages/product-list/product-list.js
 const request           = require('../../utils/request');
-const {stringify}       = require('../../utils/qs');
 
-let data, loading;
+const app               = getApp();
+
+let loading;
 
 Page({
     data:{},
@@ -12,8 +13,8 @@ Page({
         });
     },
     toScreen() {
-        wx.redirectTo({
-            url: `../product-screen/product-screen?${stringify(data)}`
+        wx.navigateTo({
+            url: `../product-screen/product-screen`
         });
     },
     more() {
@@ -23,8 +24,9 @@ Page({
         else {
             loading = true;
         }
-        let {data}  = this;
-        let {type, product_list}  = data;
+        let data    = app.getQuery();
+        let {type}  = data;
+        let {product_list} = this.data;
         let page_num= data.page_num++;
         request.withSessionKey({
             url: `https://wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
@@ -33,7 +35,7 @@ Page({
             .then(({data}) => {
                 loading = false;
                 if (!(data.product_list && data.product_list.length)) {
-                    return this.setData({
+                    return app.setQuery({
                         page_num
                     });
                 }
@@ -41,18 +43,24 @@ Page({
                 this.setData(data);
             });
     },
-    onLoad:function(_data){
-        data        = _data;
-        this.setData(data);
-        let {type}  = data;
-        request.withSessionKey({
-            url: `https://wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
-            data
-        })
-            .then(({
+    onLoad:function(query){
+        app.setQuery(query);
+    },
+
+    onShow() {
+        let data        = app.getQuery();
+        if (data.search) {
+            let {type}  = data;
+            app.setQuery({search: false});
+            request.withSessionKey({
+                url: `https://wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
                 data
-            }) => {
-                this.setData(data);
-            });
+            })
+                .then(({
+                           data
+                       }) => {
+                    this.setData(data);
+                });
+        }
     }
 });
