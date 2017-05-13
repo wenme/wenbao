@@ -42,7 +42,7 @@ Page({
                         height      : 200,
                         categories  : account_info.invest_time_line,
                         yAxis       : {
-                            min     : 0
+                            min     : 800
                         },
                         series      : [
                             {
