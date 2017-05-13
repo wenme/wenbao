@@ -71,7 +71,7 @@
 
 
 
-    <view class="pro-detial-mess">
+    <view class="pro-detial-mess" wx:if="{{product_structure!=='传统型'}}">
         <view class="pro-detial-mess-tit">
             <view class="proli-item">投资</view>
         </view>
