@@ -53,7 +53,8 @@ Page({
                                 name: account_info.invest_bm_name,
                                 data: account_info.invest_bm_value
                             }
-                        ]
+                        ],
+                        dataLabel   : false
                     });
                 }
             });
