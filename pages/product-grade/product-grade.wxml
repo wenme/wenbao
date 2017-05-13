@@ -28,35 +28,35 @@
 
         <view class="padd-lr-30">
 
-            <view class="pro-detial-mess-row">
+            <view class="pro-detial-mess-row" wx:if="{{life_benefit_count}}">
                 <view class="pro-duty-aa"><image src="../../images/insur-icona.png" ></image></view>
                 <view class="pro-duty-bb">人寿</view>
                 <view class="pro-duty-cc" data-code="1" bindtap="toZeren">{{life_benefit_count}}项保险金</view>
                 <view class="clear"></view>
             </view>
 
-            <view class="pro-detial-mess-row">
+            <view class="pro-detial-mess-row" wx:if="{{disease_benefit_count}}">
                 <view class="pro-duty-aa"><image src="../../images/insur-iconb.png" ></image></view>
                 <view class="pro-duty-bb">疾病</view>
                 <view class="pro-duty-cc" data-code="2" bindtap="toZeren">{{disease_benefit_count}}项保险金</view>
                 <view class="clear"></view>
             </view>
 
-            <view class="pro-detial-mess-row">
+            <view class="pro-detial-mess-row" wx:if="{{accident_benefit_count}}">
                 <view class="pro-duty-aa"><image src="../../images/insur-iconc.png" ></image></view>
                 <view class="pro-duty-bb">意外</view>
                 <view class="pro-duty-cc" data-code="3" bindtap="toZeren">{{accident_benefit_count}}项保险金</view>
                 <view class="clear"></view>
             </view>
 
-            <view class="pro-detial-mess-row">
+            <view class="pro-detial-mess-row" wx:if="{{medical_benefit_count}}">
                 <view class="pro-duty-aa"><image src="../../images/insur-icond.png" ></image></view>
                 <view class="pro-duty-bb">医疗</view>
                 <view class="pro-duty-cc" data-code="4" bindtap="toZeren">{{medical_benefit_count}}项保险金</view>
                 <view class="clear"></view>
             </view>
 			
-			<view class="pro-detial-mess-row">
+			<view class="pro-detial-mess-row" wx:if="{{saving_benefit_count}}">
                 <view class="pro-duty-aa"><image src="../../images/insur-icone.png" ></image></view>
                 <view class="pro-duty-bb">储蓄</view>
                 <view class="pro-duty-cc" data-code="5" bindtap="toZeren">{{saving_benefit_count}}项保险金</view>
