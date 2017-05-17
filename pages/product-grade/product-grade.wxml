@@ -43,7 +43,7 @@
             </view>
 
             <view class="pro-detial-mess-row" wx:if="{{accident_benefit_count}}">
-                <view class="pro-duty-aa"><image src="../../images/insur-iconc.png" ></image></view>
+                <view class="pro-duty-aa"><image src="../../images/insur-iconf.png" ></image></view>
                 <view class="pro-duty-bb">意外</view>
                 <view class="pro-duty-cc" data-code="3" bindtap="toZeren">{{accident_benefit_count}}项保险金</view>
                 <view class="clear"></view>

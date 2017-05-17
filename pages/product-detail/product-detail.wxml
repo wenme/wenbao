@@ -20,7 +20,7 @@
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
             <view class="{{baseInfo?'proli-item-cur':'proli-item'}}" bindtap="showBaseInfo">基本信息</view>
-            <view class="{{purchaseInfo?'proli-item-cur':'proli-item'}}" bindtap="showPurchaseInfo">购买信息</view>
+            <view class="{{purchaseInfo?'proli-item-cur':'proli-item'}}" bindtap="showPurchaseInfo" style="margin:0 30rpx 0rpx 160rpx !important;">购买信息</view>
         </view>
 
         <view class="padd-lr-30">

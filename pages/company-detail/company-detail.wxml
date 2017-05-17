@@ -32,7 +32,7 @@
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
             <view class="{{selected?'proli-item-cur':'proli-item'}}" bindtap="selected">市场地位</view>
-            <view class="{{selected1?'proli-item-cur':'proli-item'}}" bindtap="selected1">偿付能力</view>
+            <view class="{{selected1?'proli-item-cur':'proli-item'}}" bindtap="selected1" style="margin:0 30rpx 0rpx 160rpx !important;">偿付能力</view>
         </view>
 
         <view class="padd-lr-30">

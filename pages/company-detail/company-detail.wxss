@@ -76,5 +76,4 @@ page {
 	color: #09bb07;
 	text-indent: 10px;
 	font-size: 32rpx;
-	margin-top: 14rpx;
 }
