@@ -16,7 +16,7 @@
 
 
     <view class="clear"></view>
-</view>
+
 
     
 
@@ -76,6 +76,8 @@
     </view>
 
     <view class="clear"></view>
+</view>
+
 </view>
 
 
