@@ -10,21 +10,21 @@ Page({
         selected1:false,
         selected2:false
         },
-    selected:function(e){
+    selected(){
         this.setData({
             selected1:false,
             selected2:false,
             selected:true
-        })
+        });
     },
-    selected1:function(e){
+    selected1(){
         this.setData({
             selected:false,
             selected2:false,
             selected1:true
-        })
+        });
     },
-    selected2:function(e){
+    selected2(){
         this.setData({
             selected:false,
             selected1:false,
