@@ -59,12 +59,12 @@ Page({
         });
     },
 
-    toFeedback() {
-        wx.navigateTo({
-            url: `../feedback/feedback?pid=${this.data.pid}`
-        });
-    },
-
+    // toFeedback() {
+    //     wx.navigateTo({
+    //         url: `../feedback/feedback?pid=${this.data.pid}`
+    //     });
+    // },
+    //
     toExplaination({target}) {
         request.withSessionKey({
             url: 'https://wenme.cc/helpdesk/get_explaination',

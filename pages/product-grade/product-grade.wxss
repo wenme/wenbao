@@ -3,10 +3,10 @@ page {
   background:#f5f6f8;
 }
 .comp-grade-chose {
-  width: 50%;
+  /*width: 50%;*/
   height: 110rpx;
   line-height: 110rpx;
-  float: left;
+  /*float: left;*/
   background: #fff;
   text-align: center;
   font-size: 32rpx;

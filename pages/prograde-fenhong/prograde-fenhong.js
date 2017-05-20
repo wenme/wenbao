@@ -3,11 +3,11 @@ const request           = require('../../utils/request');
 
 Page({
     data:{},
-    toFeedback() {
-        wx.navigateTo({
-            url: `../feedback/feedback?pid=${this.data.pid}`
-        });
-    },
+    // toFeedback() {
+    //     wx.navigateTo({
+    //         url: `../feedback/feedback?pid=${this.data.pid}`
+    //     });
+    // },
 
     onLoad:function({pid}){
         request.withSessionKey({
