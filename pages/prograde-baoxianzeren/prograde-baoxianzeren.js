@@ -10,13 +10,31 @@ Page({
         });
     },
 
-    toExplaination(event) {
-        wx.navigateTo({
-            url: `../explaination/explaination?tid=${event.target.dataset.tid}`,
-            fail(res) {
-                console.log(res);
-            }
-        });
+    toExplaination({target}) {
+        request.withSessionKey({
+            url: 'https://wenme.cc/helpdesk/get_explaination',
+            data: target.dataset
+        })
+
+            .then(({data: {
+                err_code,
+                explaination_rslt: {title, explaination}
+            }}) => {
+                if (err_code === 0) {
+                    wx.showModal({
+                        title: title,
+                        showCancel: false,
+                        confirmText:'关闭',
+                        confirmColor:'#5082f0',
+                        content: explaination,
+                        success: function(res) {
+                            if (res.confirm) {
+                                console.log('用户点击确定')
+                            }
+                        }
+                    });
+                }
+            });
     },
 
     toBaoXianJin(event) {
