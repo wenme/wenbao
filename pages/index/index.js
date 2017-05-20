@@ -38,6 +38,6 @@ Page({
                     url: `../product-detail/product-detail?product_iachina_link=${encodeURIComponent(result).replace(/\./g, "%2E")}`
                 });
             }
-        })
+        });
     }
 });
