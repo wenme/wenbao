@@ -20,9 +20,9 @@ Page({
         // tabbar          : app.globalData.tabbar,
     },
 
-    toZeren(event) {
-        wx.redirectTo({
-            url: `../prograde-baoxianzeren/prograde-baoxianzeren?mCode=${event.target.dataset.code}&pid=${this.data.pid}`,
+    toZeren({target}) {
+        wx.navigateTo({
+            url: `../prograde-baoxianzeren/prograde-baoxianzeren?mCode=${target.dataset.code}&pid=${this.data.pid}`,
             fail(res) {
                 console.log(res);
             }
