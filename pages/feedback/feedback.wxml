@@ -1,6 +1,6 @@
 <!--pages/feedback/feedback.wxml-->
 <view>
-    <view class="part-one pro-company-name"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>
+    <!--<view class="part-one pro-company-name"><view class="productname padd-lr-30" >工银安盛人寿鑫如意终身寿险</view></view>-->
     <view class="padd-lr-30">
         <view class="blue-tips">成功纠错可获得10元奖励
         </view>
@@ -11,7 +11,7 @@
         <view class="feedback-list title">错误类型</view>
 
         <view>
-            <view wx:for="{{error_type}}" data-index="{{index}}" size="20" bindtap="selectError" class="feedback-list">
+            <view wx:for="{{feedback_error_type}}" data-index="{{index}}" size="20" bindtap="selectError" class="feedback-list">
                 <icon type="{{item[2]?'success':'circle'}}" size="25" color="rgb(80,130,240)"/>
                 <text>{{item[1]}}</text>
             </view>

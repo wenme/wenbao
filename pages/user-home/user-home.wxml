@@ -49,8 +49,8 @@
                 <view class="pro-duty-bb">联系问保</view>
                 <navigator
                         class="pro-duty-cc"
-                        hover-class="none"
-                        url="../contact-wenbao/contact-wenbao">求建议</navigator>
+                        hover-class="anone"
+                        url="../feedback/feedback">求建议</navigator>
                 <view class="clear"></view>
             </view>
 			
