@@ -1,7 +1,7 @@
 // pages/product-grade/product-grade.js
 const request           = require('../../utils/request');
 
-Page({
+Page(Object.assign({
     data:{
         product   : "",
         product_score: 0,
@@ -65,32 +65,6 @@ Page({
     //     });
     // },
     //
-    toExplaination({target}) {
-        request.withSessionKey({
-            url: 'https://wenme.cc/helpdesk/get_explaination',
-            data: target.dataset
-        })
-
-            .then(({data: {
-                err_code,
-                explaination_rslt: {title, explaination}
-            }}) => {
-                if (err_code === 0) {
-                    wx.showModal({
-                        title: title,
-                        showCancel: false,
-                        confirmText:'关闭',
-                        confirmColor:'#5082f0',
-                        content: explaination,
-                        success: function(res) {
-                            if (res.confirm) {
-                                console.log('用户点击确定')
-                            }
-                        }
-                    });
-                }
-            });
-    },
 
     onLoad:function({pid}){
         this.setData({pid});
@@ -109,4 +83,4 @@ Page({
                 }
             });
     }
-});
+}, require('../../utils/toExplanation')));
