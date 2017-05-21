@@ -55,12 +55,5 @@
         <view class="clear"></view>
     </view>
 
-    <view class="wrap border-tope9 bottom-fix">
-        <view class="comp-grade-chose left">
-            <contact-button type="default-light">专业客服</contact-button>
-            <view class="lineaa"></view>
-        </view>
-        <!--<view class="comp-grade-chose right" bindtap="toFeedback">发现错误</view>-->
-        <view class="clear"></view>
-    </view>
+    <include src="../contact-button.wxml"/>
 </view>
