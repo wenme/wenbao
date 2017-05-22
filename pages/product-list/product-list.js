@@ -62,5 +62,9 @@ Page({
                     this.setData(data);
                 });
         }
+    },
+
+    onUnload() {
+        app.setQuery({search: true});
     }
 });
