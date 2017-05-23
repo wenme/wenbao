@@ -1,6 +1,7 @@
 <view class="wrap border-tope9 bottom-fix">
     <view class="comp-grade-chose left">
-        <contact-button type="default-light">专业客服</contact-button>
+        专业客服
+        <contact-button style="opacity:0; position: absolute; left: {{item*27}}px; height: 100%; line-height: 110rpx" size="27" wx:for="{{[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]}}"></contact-button>
         <view class="lineaa"></view>
     </view>
     <!--<view class="comp-grade-chose right" bindtap="toFeedback">发现错误</view>-->
