@@ -6,7 +6,7 @@ Page({
 
     onLoad:function(){
         request.withSessionKey({
-            url: 'https://wenme.cc/helpdesk/get_question_category'
+            url: 'https://api.wenme.cc/helpdesk/get_question_category'
         })
             .then(({data}) => {
                 this.setData(data);

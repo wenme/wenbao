@@ -7,7 +7,7 @@ page {
 
 .pro-company-chose.left {
   height: 110rpx;
-  background-image: url(https://wenme.cc/static/images/company-icon.png);
+  background-image: url(https://resouce.wenme.cc/static/images/company-icon.png);
   background-size: 46rpx;
   background-repeat: no-repeat;
   background-position: 76rpx center;
@@ -26,7 +26,7 @@ page {
 .pro-company-chose.right {
   color: #09bb07;
   height: 110rpx;
-  background-image: url(https://wenme.cc/static/images/down-icon.png);
+  background-image: url(https://resouce.wenme.cc/static/images/down-icon.png);
   background-size: 46rpx;
   background-repeat: no-repeat;
   background-position: 46rpx center;

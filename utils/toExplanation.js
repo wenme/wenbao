@@ -7,7 +7,7 @@ const request           = require('./request');
 module.exports  = {
     toExplaination({target}) {
         request.withSessionKey({
-            url: 'https://wenme.cc/helpdesk/get_explaination',
+            url: 'https://api.wenme.cc/helpdesk/get_explaination',
             data: target.dataset
         })
 

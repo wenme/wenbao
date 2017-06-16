@@ -211,7 +211,7 @@ page {
   padding: 27rpx 0rpx;
   color:#999999;
   padding-right:25rpx;
-  background-image:url(https://wenme.cc/static/images/gopage-icon.png);
+  background-image:url(https://resouce.wenme.cc/static/images/gopage-icon.png);
   background-repeat: no-repeat;
   background-position: right center;
   background-size:12rpx 20rpx;
@@ -237,7 +237,7 @@ page {
   min-height:46rpx;
   padding: 27rpx 0rpx;
   padding-right:25rpx;
-  background-image:url(https://wenme.cc/static/images/gopage-icon.png);
+  background-image:url(https://resouce.wenme.cc/static/images/gopage-icon.png);
   background-repeat: no-repeat;
   background-position: right center;
   background-size:12rpx 20rpx;
@@ -430,7 +430,7 @@ page {
   background: none;
 }
 .pro-screen-right .rigli.chose {
-  background-image:url(https://wenme.cc/static/images/choseimg.png);
+  background-image:url(https://resouce.wenme.cc/static/images/choseimg.png);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 46rpx;
@@ -531,7 +531,7 @@ page {
     top: 0px;
     width: 46rpx;
     height: 46rpx;
-    background-image:url(https://wenme.cc/static/images/choseimg.png);
+    background-image:url(https://resouce.wenme.cc/static/images/choseimg.png);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 46rpx;

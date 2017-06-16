@@ -43,7 +43,7 @@ Page(Object.assign({
 
     toGrade() {
         request.withSessionKey({
-            url: 'https://wenme.cc/orders/check_product_is_paid',
+            url: 'https://api.wenme.cc/orders/check_product_is_paid',
             data: {
                 pid : this.data.pid
             }
@@ -105,7 +105,7 @@ Page(Object.assign({
         let promise;
         if (product_iachina_link) {
             promise = request.withSessionKey({
-                url: 'https://wenme.cc/terms/scan',
+                url: 'https://api.wenme.cc/terms/scan',
                 data: {
                     product_iachina_link: decodeURIComponent(product_iachina_link),
                 }
@@ -114,7 +114,7 @@ Page(Object.assign({
 
         if (pid) {
             promise = request.withSessionKey({
-                url: 'https://wenme.cc/terms/get_product_detail_info',
+                url: 'https://api.wenme.cc/terms/get_product_detail_info',
                 data: {
                     pid
                 }

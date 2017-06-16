@@ -13,7 +13,7 @@ page {
 }
 .comp-grade-chose.left {
   height: 110rpx;
-  background-image: url(https://wenme.cc/static/images/service-icon.png);
+  background-image: url(https://resouce.wenme.cc/static/images/service-icon.png);
   background-size: 46rpx;
   background-repeat: no-repeat;
   background-position: 76rpx center;
@@ -32,7 +32,7 @@ page {
 .comp-grade-chose.right {
   color: #4682f0;
   height: 110rpx;
-  background-image: url(https://wenme.cc/static/images/feb-icon.png);
+  background-image: url(https://resouce.wenme.cc/static/images/feb-icon.png);
   background-size: 46rpx;
   background-repeat: no-repeat;
   background-position: 70rpx center;

@@ -22,7 +22,7 @@ Page({
             loading: true
         });
         request.withSessionKey({
-            url : 'https://wenme.cc/users/feedback',
+            url : 'https://api.wenme.cc/users/feedback',
             data: {feedback_content}
         }).then(() => {
             this.setData({

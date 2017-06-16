@@ -10,7 +10,7 @@
     <view class="pro-detial-messa">
 
             <view class="pro-detial-mess-row padd-lr-30">
-                <view class="pro-duty-aa user"><image src="../../images/user-icona.png" ></image></view>
+                <view class="pro-duty-aa user"><image src="resouce.wenme.cc/static/images/user-icona.png" ></image></view>
                 <view class="pro-duty-bb">我的产品评级</view>
                 <navigator
                         class="pro-duty-cc"
@@ -22,7 +22,7 @@
             </view>
 
             <view class="pro-detial-mess-row padd-lr-30">
-                <view class="pro-duty-aa user"><image src="../../images/user-iconb.png" ></image></view>
+                <view class="pro-duty-aa user"><image src="resouce.wenme.cc/static/images/user-iconb.png" ></image></view>
                 <view class="pro-duty-bb">关注过的产品
 </view>
                 <navigator
@@ -35,7 +35,7 @@
             </view>
 
             <view class="pro-detial-mess-row padd-lr-30">
-                <view class="pro-duty-aa user"><image src="../../images/user-iconc.png" ></image></view>
+                <view class="pro-duty-aa user"><image src="resouce.wenme.cc/static/images/user-iconc.png" ></image></view>
                 <view class="pro-duty-bb">热点问题</view>
                 <navigator
                         class="pro-duty-cc"
@@ -45,7 +45,7 @@
             </view>
 
             <view class="pro-detial-mess-row padd-lr-30">
-                <view class="pro-duty-aa user"><image src="../../images/user-icond.png" ></image></view>
+                <view class="pro-duty-aa user"><image src="resouce.wenme.cc/static/images/user-icond.png" ></image></view>
                 <view class="pro-duty-bb">联系问保</view>
                 <navigator
                         class="pro-duty-cc"

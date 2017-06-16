@@ -63,7 +63,7 @@ Page({
             structure   : data.product_structure
         });
         request.withSessionKey({
-            url: 'https://wenme.cc/terms/get_search_filter'
+            url: 'https://api.wenme.cc/terms/get_search_filter'
         })
             .then(({data}) => {
                 this.setData(data);

@@ -12,7 +12,7 @@ Page({
 
     onLoad:function({pid, aid}){
         request.withSessionKey({
-            url: 'https://wenme.cc/terms/get_investment_link_account_info',
+            url: 'https://api.wenme.cc/terms/get_investment_link_account_info',
             data: {
                 pid,
                 account_id: aid

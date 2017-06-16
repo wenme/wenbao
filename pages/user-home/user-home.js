@@ -6,7 +6,7 @@ Page({
 
     onLoad:function(){
         request.withSessionKey({
-            url: 'https://wenme.cc/users/user_center'
+            url: 'https://api.wenme.cc/users/user_center'
         })
             .then(({
                        data: {

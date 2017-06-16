@@ -21,7 +21,7 @@ App({
                                 delete data.nickName;
                                 delete data.avatarUrl;
                                 wx.request({
-                                    url: 'https://wenme.cc/users/wx_login',
+                                    url: 'https://api.wenme.cc/users/wx_login',
                                     data,
                                     method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
                                     header: {

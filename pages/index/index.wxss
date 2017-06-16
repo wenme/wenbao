@@ -30,7 +30,7 @@
 .pro-search-scan {
   width: 106rpx;
   height: 106rpx;
-  background-image: url(https://wenme.cc/static/images/scan-icon.png);
+  background-image: url(https://resouce.wenme.cc/static/images/scan-icon.png);
   background-size:50rpx;
   background-repeat: no-repeat;
   background-position: center;

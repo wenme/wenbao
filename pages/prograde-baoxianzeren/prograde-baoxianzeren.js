@@ -21,7 +21,7 @@ Page(Object.assign({
 
     onLoad:function({pid, mCode}){
         request.withSessionKey({
-            url: 'https://wenme.cc/terms/product_module_evaluation',
+            url: 'https://api.wenme.cc/terms/product_module_evaluation',
             data: {
                 pid,
                 module_code: mCode
