@@ -10,7 +10,7 @@ Page({
 
     onLoad({tid}) {
         request.withSessionKey({
-            url: 'https://api.wenme.cc/helpdesk/get_explaination',
+            url: 'https://dev.wenme.cc/helpdesk/get_explaination',
             data: {tid}
         })
 

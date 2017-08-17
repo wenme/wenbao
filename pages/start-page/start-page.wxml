@@ -2,14 +2,14 @@
 <swiper indicatorDots autoplay="{{autoplay}}" class="width-100 posi-rela">
   <block>
     <swiper-item>
-      <image src="https://resouce.wenme.cc/static/images/start-a.jpg" mode="widthFix" bindtap="swipclick"/>
+      <image src="https://resource.wenme.cc/static/images/start-a.jpg" mode="widthFix" bindtap="swipclick"/>
     </swiper-item>
     <swiper-item>
-      <image src="https://resouce.wenme.cc/static/images/start-b.jpg" mode="widthFix" bindtap="swipclick"/>
+      <image src="https://resource.wenme.cc/static/images/start-b.jpg" mode="widthFix" bindtap="swipclick"/>
     </swiper-item>
     <swiper-item>
-      <image src="https://resouce.wenme.cc/static/images/start-c.jpg" mode="widthFix" bindtap="swipclick"/>
+      <image src="https://resource.wenme.cc/static/images/start-c.jpg" mode="widthFix" bindtap="swipclick"/>
     </swiper-item>
   </block>
-  <view class="startbutton"><image src="resouce.wenme.cc/static/images/startbutton.png" bindtap="swipclick"/></view>
+  <view class="startbutton"><image src="https://resource.wenme.cc/static/images/startbutton.png" bindtap="swipclick"/></view>
 </swiper>

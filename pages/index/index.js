@@ -6,9 +6,9 @@ let keyword;
 Page({
     data: {
         imgUrls: [
-            'resouce.wenme.cc/static/images/home-tips01.jpg',
-            'resouce.wenme.cc/static/images/home-tips02.jpg',
-            'resouce.wenme.cc/static/images/home-tips03.jpg'
+            'https://resource.wenme.cc/static/images/home-tips01.jpg',
+            'https://resource.wenme.cc/static/images/home-tips02.jpg',
+            'https://resource.wenme.cc/static/images/home-tips03.jpg'
         ],
         autoplay: false,
         interval: 5000,

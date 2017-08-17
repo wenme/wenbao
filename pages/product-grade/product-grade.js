@@ -69,7 +69,7 @@ Page(Object.assign({
     onLoad:function({pid}){
         this.setData({pid});
         request.withSessionKey({
-            url: 'https://api.wenme.cc/terms/product_brief_evaluation',
+            url: 'https://dev.wenme.cc/terms/product_brief_evaluation',
             data: {pid}
         })
             .then(({

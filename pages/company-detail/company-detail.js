@@ -43,7 +43,7 @@ Page(Object.assign({
 
     onLoad({insurer_id}) {
         request.withSessionKey({
-            url: 'https://api.wenme.cc/insurer/get_insurer_info',
+            url: 'https://dev.wenme.cc/insurer/get_insurer_info',
             data: {insurer_id}
         })
 

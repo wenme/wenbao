@@ -14,7 +14,7 @@ Page({
             data.feedback_content = desc;
         }
         request.withSessionKey({
-            url : 'https://api.wenme.cc/users/feedback',
+            url : 'https://dev.wenme.cc/users/feedback',
             data
         })
             .then(({data: {err_code}}) => err_code === 0 && wx.redirectTo({
@@ -34,7 +34,7 @@ Page({
     },
     onLoad(/*{pid}*/) {
         request.withSessionKey({
-            url: 'https://api.wenme.cc/users/feedback_error_type',
+            url: 'https://dev.wenme.cc/users/feedback_error_type',
             /*data: {
                 pid
             }*/

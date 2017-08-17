@@ -7,7 +7,7 @@ Page({
     onLoad(data){
         this.setData(data);
         request.withSessionKey({
-            url: 'https://api.wenme.cc/helpdesk/get_answer',
+            url: 'https://dev.wenme.cc/helpdesk/get_answer',
             data
         })
             .then(({data}) => {

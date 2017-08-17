@@ -5,7 +5,7 @@ Page({
     data:{},
     pay() {
         request.withSessionKey({
-            url : 'https://api.wenme.cc/orders/make_orders',
+            url : 'https://dev.wenme.cc/orders/make_orders',
             data: {
                 pid : this.data.pid,
                 good_quantity: 1
@@ -50,7 +50,7 @@ Page({
     },
     onLoad:function({pid}){
         request.withSessionKey({
-            url: 'https://api.wenme.cc/terms/term_analysis_info',
+            url: 'https://dev.wenme.cc/terms/term_analysis_info',
             data: {
                 pid
             }

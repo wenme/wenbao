@@ -69,7 +69,7 @@ page {
 	text-align: center;
 	border:1px solid #17bf15;
 	float: right;
-	background-image: url(https://resouce.wenme.cc/static/images/photo-icon.png);
+	background-image: url(https://resource.wenme.cc/static/images/photo-icon.png);
 	background-size: 36rpx;
 	background-repeat: no-repeat;
 	background-position: 20rpx center;

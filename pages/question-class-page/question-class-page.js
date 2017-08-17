@@ -16,7 +16,7 @@ Page({
         let {question_list}  = data;
         let page_num= data.page_num++;
         request.withSessionKey({
-            url: `https://api.wenme.cc/helpdesk/get_question_list`,
+            url: `https://dev.wenme.cc/helpdesk/get_question_list`,
             data
         })
             .then(({data}) => {
@@ -34,7 +34,7 @@ Page({
     onLoad(data){
         this.setData(data);
         request.withSessionKey({
-            url: 'https://api.wenme.cc/helpdesk/get_question_list',
+            url: 'https://dev.wenme.cc/helpdesk/get_question_list',
             data
         })
             .then(({data}) => {

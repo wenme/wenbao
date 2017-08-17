@@ -11,7 +11,7 @@ Page({
 
     onLoad:function({pid}){
         request.withSessionKey({
-            url: 'https://api.wenme.cc/terms/product_module_evaluation',
+            url: 'https://dev.wenme.cc/terms/product_module_evaluation',
             data: {
                 pid,
                 module_code: 6,

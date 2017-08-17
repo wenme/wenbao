@@ -42,7 +42,7 @@
 
             <view class="pro-price border-tope9">
                 <view class="lefpric">价格：<text class="span">¥{{price}}</text></view>
-                <view class="agreement">问保评级服务协议<view class="go-icon"><image src="resouce.wenme.cc/static/images/gopage-icon-blue.png" ></image></view></view>
+                <view class="agreement">问保评级服务协议<view class="go-icon"><image src="https://resource.wenme.cc/static/images/gopage-icon-blue.png" ></image></view></view>
             <view class="clear"></view>
             </view>
             

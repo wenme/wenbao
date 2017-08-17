@@ -23,7 +23,7 @@ Page({
             bid
         });
         request.withSessionKey({
-            url: 'https://api.wenme.cc/terms/get_benefit_info',
+            url: 'https://dev.wenme.cc/terms/get_benefit_info',
             data: {
                 pid,
                 benefit_id: bid

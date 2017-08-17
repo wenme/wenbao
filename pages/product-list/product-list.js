@@ -29,7 +29,7 @@ Page({
         let {product_list} = this.data;
         let page_num= data.page_num++;
         request.withSessionKey({
-            url: `https://api.wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
+            url: `https://dev.wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
             data
         })
             .then(({data}) => {
@@ -53,7 +53,7 @@ Page({
             let {type}  = data;
             app.setQuery({search: false});
             request.withSessionKey({
-                url: `https://api.wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
+                url: `https://dev.wenme.cc/terms/${type?`my_${type}_product`:'terms_search'}`,
                 data
             })
                 .then(({
