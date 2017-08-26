@@ -71,25 +71,25 @@
 
 
 
-    <view class="pro-detial-mess" wx:if="{{product_structure!=='传统型'}}">
-        <view class="pro-detial-mess-tit">
-            <view class="proli-item">投资</view>
-        </view>
+    <!--<view class="pro-detial-mess" wx:if="{{product_structure!=='传统型'}}">-->
+        <!--<view class="pro-detial-mess-tit">-->
+            <!--<view class="proli-item">投资</view>-->
+        <!--</view>-->
 
-        <view class="padd-lr-30">
+        <!--<view class="padd-lr-30">-->
 
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">{{product_structure}}</view>
-                <view class="pro-duty-cc" bindtap="toProductType"></view>
-                <view class="clear"></view>
-            </view>
+            <!--<view class="pro-detial-mess-row">-->
+                <!--<view class="pro-duty-bb">{{product_structure}}</view>-->
+                <!--<view class="pro-duty-cc" bindtap="toProductType"></view>-->
+                <!--<view class="clear"></view>-->
+            <!--</view>-->
 
-            
-            <view class="clear"></view>
-        </view>
+            <!---->
+            <!--<view class="clear"></view>-->
+        <!--</view>-->
 
-        <view class="clear"></view>
-    </view>
+        <!--<view class="clear"></view>-->
+    <!--</view>-->
 
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">

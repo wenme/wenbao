@@ -38,26 +38,26 @@ Page(Object.assign({
         });
     },
 
-    toProductType() {
-        let {product_structure, pid} = this.data;
-        let type;
-        switch (product_structure) {
-            case '分红型'  :
-                type = 'fenhong';
-                break;
-            case '万能型'  :
-                type = 'wanneng';
-                break;
-            case '投资连结型':
-                type = 'touzi';
-        }
-        wx.navigateTo({
-            url: `../prograde-${type}/prograde-${type}?pid=${pid}`,
-            fail(res) {
-                console.log(res);
-            }
-        });
-    },
+    // toProductType() {
+    //     let {product_structure, pid} = this.data;
+    //     let type;
+    //     switch (product_structure) {
+    //         case '分红型'  :
+    //             type = 'fenhong';
+    //             break;
+    //         case '万能型'  :
+    //             type = 'wanneng';
+    //             break;
+    //         case '投资连结型':
+    //             type = 'touzi';
+    //     }
+    //     wx.navigateTo({
+    //         url: `../prograde-${type}/prograde-${type}?pid=${pid}`,
+    //         fail(res) {
+    //             console.log(res);
+    //         }
+    //     });
+    // },
 
     // toFeedback() {
     //     wx.navigateTo({
