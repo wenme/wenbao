@@ -42,35 +42,35 @@ Page(Object.assign({
     },
 
     toGrade() {
-        request.withSessionKey({
-            url: 'https://dev.wenme.cc/orders/check_product_is_paid',
-            data: {
-                pid : this.data.pid
-            }
-        })
-            .then(({data: {
-                err_code,
-                check_rslt
-            }}) => {
-                let page    = 'prograde-zhifu';
-                if (err_code === 0 && check_rslt) {
-                    page    = 'product-grade';
-                }
+        // request.withSessionKey({
+        //     url: 'https://dev.wenme.cc/orders/check_product_is_paid',
+        //     data: {
+        //         pid : this.data.pid
+        //     }
+        // })
+        //     .then(({data: {
+        //         err_code,
+        //         check_rslt
+        //     }}) => {
+        //         let page    = 'prograde-zhifu';
+        //         if (err_code === 0) {
+                   let page    = 'product-grade';
+                // }
                 wx.navigateTo({
                     url: `../${page}/${page}?pid=${this.data.pid}`,
                     fail(res) {
                         console.log(res);
                     }
                 });
-            })
-            .catch(() => {
-                wx.navigateTo({
-                    url: `../prograde-zhifu/prograde-zhifu?pid=${this.data.pid}`,
-                    fail(res) {
-                        console.log(res);
-                    }
-                });
-            })
+            // })
+            // .catch(() => {
+            //     wx.navigateTo({
+            //         url: `../prograde-zhifu/prograde-zhifu?pid=${this.data.pid}`,
+            //         fail(res) {
+            //             console.log(res);
+            //         }
+            //     });
+            // })
 
     },
 
