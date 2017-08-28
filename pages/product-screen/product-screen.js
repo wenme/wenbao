@@ -8,18 +8,21 @@ Page({
     data:{
         selected:true,
         selected1:false,
-        selected2:false
+        selected2:false,
+        selected3:false
         },
     selected(){
         this.setData({
             selected1:false,
             selected2:false,
+            selected3:false,
             selected:true
         });
     },
     selected1(){
         this.setData({
             selected:false,
+            selected3:false,
             selected2:false,
             selected1:true
         });
@@ -28,7 +31,16 @@ Page({
         this.setData({
             selected:false,
             selected1:false,
-            selected2:true
+            selected2:true,
+            selected3:false
+        })
+    },
+    selected3(){
+        this.setData({
+            selected:false,
+            selected1:false,
+            selected2:false,
+            selected3:true
         })
     },
     select({target  : {dataset}}) {
@@ -44,14 +56,16 @@ Page({
         let {
             insurerid       : insurer_id,
             'class'         : product_class,
-            structure       : product_structure
+            structure       : product_structure,
+            year
         }                   = this.data;
         app.setQuery({
             search          : true,
             page_num        : 1,
             insurer_id,
             product_class,
-            product_structure
+            product_structure,
+            filing_year     : year
         });
         wx.navigateBack();
     },

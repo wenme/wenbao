@@ -15,6 +15,10 @@
                 产品架构
                 <view class="whiteline"></view>
             </view>
+            <view class="{{selected3?'liitem-cur':'liitem-default'}}" bindtap="selected3">
+                上市时间
+                <view class="whiteline"></view>
+            </view>
             <view class="clear"></view>
         </view>
 
@@ -62,6 +66,18 @@
             <view class="clear"></view>
         </view>
 
+        <view class="{{selected3?'show':'hidden'}}">
+            <scroll-view scroll-y="true"  class="pro-screen-right fixed-pageheight" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+
+                <view class="padd-lr-30" wx:for="{{filing_year}}">
+                    <view bindtap="select" data-year="{{item}}" class="{{item==year?'chose ':''}}rigli">{{item}}</view>
+                    <view class="clear"></view>
+                </view>
+
+
+            </scroll-view>
+            <view class="clear"></view>
+        </view>
 
 
         <view class="clear"></view>
