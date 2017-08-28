@@ -349,17 +349,9 @@ page {
   float: left;
 }
 .product-item-con .type, .product-item-con .type.type-aa {
-  width: 70rpx;
-  height: 38rpx;
-  line-height: 38rpx;
-  border: 1px solid #09bb07;
-  color: #09bb07;
-  background: #e6f8e6;
   text-align: center;
   position: absolute;
-  right: 0rpx; 
-  top: 4rpx;
-  font-size:24rpx;
+  right: 0;
 }
 .product-item-con .type.type-bb {
   border: 1px solid #5082f0;

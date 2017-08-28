@@ -16,8 +16,18 @@
             scroll-with-animation>
         <view class="product-item" wx:for="{{product_list}}" data-pid="{{item.pid}}" bindtap="toDetail">
             <view class="product-item-tit">{{item.product}}</view>
+            <view class="company-info-row posi-rela">
+                <view class="gradecon">
+                    <view wx:if="{{item.rating_star === '未有评级'}}" class="no-grade">{{item.rating_star}}</view>
+                    <image wx:else src="{{item.rating_star}}"></image>
+                </view>
+                <view class="insured_cover gradecon" wx:if="{{item.insured_cover_icon.length}}">
+                    保障
+                    <image wx:for="{{item.insured_cover_icon}}" wx:for-item="img" src="{{img}}"></image>
+                </view>
+            </view>
             <view class="product-item-con">
-                <view class="type type-{{item.complexity=='简单'?'aa':item.complexity=='中等'?'bb':'cc'}}">{{item.complexity}}</view>
+                <view class="type">{{item.product_structure}}</view>
                 <view class="span-item">{{item.insurer_abbreviation}}</view>
                 <view class="span-item">{{item.product_class}}</view>
                 <view class="clear"></view>

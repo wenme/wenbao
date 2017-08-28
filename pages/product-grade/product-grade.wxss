@@ -64,9 +64,22 @@ page {
 	color: #ff7800;
 	position:relative;
 }
+.company-info-row .gradecon.insured_cover {
+    float: right;
+    width: auto;
+    font-size:28rpx;
+    color:#aaaaaa;
+}
+.company-info-row .gradecon.insured_cover image {
+    width: 28rpx;
+    margin: 0 4rpx;
+}
 .company-info-row .gradecon image {
 	width:189rpx;
 	height:28rpx;
+}
+.company-info-row .gradecon .no-grade {
+    font-size:28rpx;
 }
 .company-info-row .mess-iconaa {
 	position:absolute;
