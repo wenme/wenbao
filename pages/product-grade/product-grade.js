@@ -20,9 +20,12 @@ Page(Object.assign({
         // tabbar          : app.globalData.tabbar,
     },
 
-    toZeren({target}) {
+    toDisease({target: {dataset : {code, type}}}) {
+        if (type !== '疾病') {
+            return;
+        }
         wx.navigateTo({
-            url: `../prograde-baoxianzeren/prograde-baoxianzeren?mCode=${target.dataset.code}&pid=${this.data.pid}`,
+            url: `../disease-insurance/disease-insurance?mCode=${code}&pid=${this.data.pid}`,
             fail(res) {
                 console.log(res);
             }
@@ -69,17 +72,17 @@ Page(Object.assign({
     onLoad:function({pid}){
         this.setData({pid});
         request.withSessionKey({
-            url: 'https://dev.wenme.cc/terms/product_brief_evaluation',
+            url: 'https://dev.wenme.cc/terms/get_product_rating_info',
             data: {pid}
         })
             .then(({
                 data: {
                     err_code,
-                    evaluation_info
+                    rating_info_json
                 }
             }) => {
                 if (err_code === 0) {
-                    this.setData(evaluation_info);
+                    this.setData(rating_info_json);
                 }
             });
     }
