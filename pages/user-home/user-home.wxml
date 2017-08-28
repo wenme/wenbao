@@ -21,6 +21,7 @@
                 <view class="clear"></view>
             </view>
 
+<!--
             <view class="pro-detial-mess-row padd-lr-30">
                 <view class="pro-duty-aa user"><image src="https://resource.wenme.cc/static/images/user-iconb.png" ></image></view>
                 <view class="pro-duty-bb">关注过的产品
@@ -33,6 +34,7 @@
                 </navigator>
                 <view class="clear"></view>
             </view>
+-->
 
             <view class="pro-detial-mess-row padd-lr-30">
                 <view class="pro-duty-aa user"><image src="https://resource.wenme.cc/static/images/user-iconc.png" ></image></view>
