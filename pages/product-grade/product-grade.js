@@ -32,9 +32,9 @@ Page(Object.assign({
         });
     },
 
-    toZerenchuwai() {
+    toApplyInfo() {
         wx.navigateTo({
-            url: `../prograde-zerenchuwai/prograde-zerenchuwai?pid=${this.data.pid}`,
+            url: `../apply-info/apply-info?pid=${this.data.pid}`,
             fail(res) {
                 console.log(res);
             }

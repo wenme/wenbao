@@ -117,6 +117,10 @@ page {
   background:#fff;
   font-size: 34rpx;
 }
+
+.pro-detial-mess.first {
+  margin-top: 220rpx;
+}
 .pro-detial-messa {
   background:#fff;
   font-size: 34rpx;

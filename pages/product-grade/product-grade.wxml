@@ -118,7 +118,7 @@
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">保险金申请资料</view>
-                <view class="pro-duty-cc" bindtap="toZerenchuwai"></view>
+                <view class="pro-duty-cc" bindtap="toApplyInfo"></view>
                 <view class="clear"></view>
             </view>
 
