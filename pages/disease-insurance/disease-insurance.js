@@ -12,7 +12,7 @@ Page(Object.assign({
 
     onLoad:function({pid, mCode}){
         request.withSessionKey({
-            url: 'https://dev.wenme.cc/terms/get_benefit_info',
+            url: 'https://dev.wenme.cc/terms/get_product_benefit_info',
             data: {
                 pid,
                 benefit_id: mCode
@@ -21,11 +21,11 @@ Page(Object.assign({
             .then(({
                 data: {
                     err_code,
-                    applying_docs_json
+                    benefit_info_json
                 }
             }) => {
                 if (err_code === 0) {
-                    this.setData(applying_docs_json);
+                    this.setData(benefit_info_json);
                 }
             });
     }

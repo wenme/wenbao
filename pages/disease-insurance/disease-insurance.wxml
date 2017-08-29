@@ -23,28 +23,7 @@
 </view>
     
 
-    <view class="pro-detial-mess">
-        <view class="pro-detial-mess-tit">
-            <view class="proli-item">保险金</view>
-        </view>
-
-        <view class="padd-lr-30">
-
-
-            <view wx:for="{{benefit_arr}}" class="pro-detial-mess-row">
-                <view class="pro-duty-bb">{{item[1]}}</view>
-                <view class="pro-duty-cc" data-bid="{{item[0]}}" bindtap="toBaoXianJin">{{item[2]}}</view>
-                <view class="clear"></view>
-            </view>
-            <view class="clear"></view>
-        </view>
-
-        <view class="clear"></view>
-    </view>
-
-
-
-    <view class="pro-detial-mess">
+    <view class="pro-detial-mess first">
         <view class="pro-detial-mess-tit">
             <view class="proli-item">{{benefit_name}}</view>
         </view>
@@ -63,6 +42,7 @@
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
             <view class="proli-item">特定重大疾病 列表与定义</view>
+            <view class="proli-item-right">{{desease_count}}种</view>
         </view>
 
         <view class="padd-lr-30">

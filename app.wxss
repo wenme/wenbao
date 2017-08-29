@@ -135,6 +135,11 @@ page {
   float: left;
   color: #999999;
 }
+.proli-item-right {
+  margin: 0 30rpx;
+  float: right;
+  color: #999999;
+}
 .proli-item-cur {
   height: 82rpx;
   line-height: 82rpx;
