@@ -60,6 +60,7 @@ Page({
                 .then(({
                            data
                        }) => {
+                    data.type = type;
                     this.setData(data);
                 });
         }

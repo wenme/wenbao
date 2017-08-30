@@ -3,7 +3,7 @@
     <view class="part-white pro-detial-mess-row border-bottomf568 posi-fixed-top">
         <view class="padd-lr-30">
         <view class="pro-duty-bb">共有<text>{{total_product_count}}</text>个匹配产品</view>
-        <view class="pro-duty-cc blue" bindtap="toScreen" wx:if="{{!type}}">产品筛选</view>
+        <view class="pro-duty-cc blue" bindtap="toScreen" wx:if="{{!type && type !== 'purchased'}}">产品筛选</view>
         <view class="clear"></view>
         </view>
     </view>
