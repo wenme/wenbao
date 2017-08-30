@@ -211,7 +211,7 @@ page {
   margin-top: 4rpx;
 }
 .pro-detial-mess-row .pro-duty-bb {
-  width:295rpx;
+  max-width:295rpx;
   min-height:46rpx;
   padding: 27rpx 0rpx;
   color:#333;
@@ -230,7 +230,7 @@ page {
   width:230rpx;
 }
 .pro-detial-mess-row .pro-duty-cc {
-  width:315rpx;
+  min-width:315rpx;
   min-height:46rpx;
   padding: 27rpx 0rpx;
   color:#999999;
