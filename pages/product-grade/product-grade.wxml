@@ -44,9 +44,10 @@
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
             <view class="proli-item">保障</view>
+            <view class="proli-item-toggle{{showGuarantee ? '': ' off'}}" bindtap="toggleGuarantee"></view>
         </view>
 
-        <view class="padd-lr-30">
+        <view class="padd-lr-30" wx:if="{{showGuarantee}}">
 
             <view class="pro-detial-mess-row" wx:for="{{benefits}}">
                 <view class="pro-duty-aa"><image src="{{item[0]}}" ></image></view>
@@ -112,9 +113,10 @@
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
             <view class="proli-item">理赔</view>
+            <view class="proli-item-toggle{{showSettlement ? '': ' off'}}" bindtap="toggleSettlement"></view>
         </view>
 
-        <view class="padd-lr-30">
+        <view class="padd-lr-30" wx:if="{{showSettlement}}">
 
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb">保险金申请资料</view>

@@ -17,7 +17,18 @@ Page(Object.assign({
         waiting_period  : "",
         exclusion_count : 0,
 
+        showGuarantee: true,
+        showSettlement: true
+
         // tabbar          : app.globalData.tabbar,
+    },
+
+    toggleGuarantee() {
+        this.setData({ showGuarantee: !this.data.showGuarantee });
+    },
+
+    toggleSettlement() {
+        this.setData({ showSettlement: !this.data.showSettlement });
     },
 
     toDisease({target: {dataset : {code, type}}}) {
