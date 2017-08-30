@@ -1,5 +1,5 @@
 //app.js
-const query = { // 产品列表搜索条件
+let query = { // 产品列表搜索条件
     search  : true,
     page_num: 1
 };
@@ -102,5 +102,12 @@ App({
                 delete query[key];
             }
         });
+    },
+
+    resetQuery() {
+        query = {
+            search  : true,
+            page_num: 1
+        };
     }
 });

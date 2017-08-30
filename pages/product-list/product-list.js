@@ -44,6 +44,7 @@ Page({
             });
     },
     onLoad:function(query){
+        app.resetQuery();
         app.setQuery(query);
     },
 
