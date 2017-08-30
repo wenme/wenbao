@@ -1,8 +1,8 @@
 <!--pages/product-grade/product-grade.wxml-->
 <view class="padding-bottom">
-    <view class="pro-company-name">
-        <view class="productname padd-lr-30" >
-            {{product}}
+    <view class="pro-company-name padd-lr-30">
+        <view class="product-item">
+            <view class="product-item-tit">{{product}}</view>
             <view class="company-info-row posi-rela">
                 <view class="gradecon">
                     <view wx:if="{{rating_star === '未有评级'}}" class="no-grade">{{rating_star}}</view>
