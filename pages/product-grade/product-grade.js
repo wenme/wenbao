@@ -32,7 +32,7 @@ Page(Object.assign({
     },
 
     toDisease({target: {dataset : {code, type}}}) {
-        if (type !== '疾病') {
+        if (type !== '重大疾病') {
             return;
         }
         wx.navigateTo({

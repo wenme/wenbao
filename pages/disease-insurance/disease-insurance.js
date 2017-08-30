@@ -2,13 +2,19 @@
 const request           = require('../../utils/request');
 
 Page(Object.assign({
-    data:{},
+    data:{
+        showDisease: true
+    },
     //
     // toFeedback() {
     //     wx.navigateTo({
     //         url: `../feedback/feedback?pid=${this.data.pid}`
     //     });
     // },
+
+    toggleDisease() {
+        this.setData({ showDisease: !this.data.showDisease });
+    },
 
     onLoad:function({pid, mCode}){
         request.withSessionKey({
