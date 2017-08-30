@@ -43,6 +43,9 @@ page {
   padding-left:30rpx;
   padding-right:30rpx;
 }
+.padd-lr-30 > text {
+  line-height: 1.5;
+}
 .mess-iconaa {
   width: 32rpx;
   height: 32rpx;

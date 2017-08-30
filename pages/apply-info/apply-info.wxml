@@ -28,54 +28,10 @@
             <view class="proli-item">{{item[0]}}</view>
         </view>
 
-        <view class="padd-lr-30">
-
-
-            <view wx:for="{{item[1]}}" class="pro-detial-mess-row">
-                <view class="pro-duty-bb">{{item}}</view>
-                <view class="clear"></view>
-            </view>
-            <view class="clear"></view>
-        </view>
+        <view class="padd-lr-30"><text>{{item[1]}}</text></view>
 
         <view class="clear"></view>
     </view>
-
-
-
-    <view class="pro-detial-mess">
-        <view class="pro-detial-mess-tit">
-            <view class="proli-item">{{benefit_name}}</view>
-        </view>
-
-        <view class="padd-lr-30">
-
-            <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb">等待期</view>
-                <view class="pro-duty-dd">{{waiting_period}}</view>
-                <view class="clear"></view>
-            </view>
-        </view>
-    </view>
-
-
-    <view class="pro-detial-mess">
-        <view class="pro-detial-mess-tit">
-            <view class="proli-item">特定重大疾病 列表与定义</view>
-        </view>
-
-        <view class="padd-lr-30">
-
-            <view wx:for="{{desease_list}}" class="pro-detial-mess-row">
-                <view class="pro-duty-bb">{{item[0]}}</view>
-            </view>
-
-            <view class="clear"></view>
-        </view>
-
-        <view class="clear"></view>
-    </view>
-
 
 
     <include src="../contact-button.wxml"/>
