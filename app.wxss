@@ -205,6 +205,9 @@ page {
   color:#333;
   float: left;
 }
+.pro-duty-bb text {
+  color: #ff7800;
+}
 .pro-detial-mess-row .pro-duty-bb.cost {
   width:400rpx;
 }
@@ -356,6 +359,7 @@ page {
 .product-item-con .span-item {
   padding-right: 20rpx;
   float: left;
+  margin-right: 90rpx;
 }
 .product-item-con .type, .product-item-con .type.type-aa {
   text-align: center;
