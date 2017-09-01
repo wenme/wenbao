@@ -48,7 +48,7 @@
 			<view class="{{baseInfo?'show':'hidden'}}">
                 <view class="pro-detial-mess-row">
                     <view class="messlable">保险公司</view>
-                    <view class="messcon">{{insurer}}</view>
+                    <view class="messcon">{{insurer_abbr}}</view>
                     <!--<view wx:if="{{product_class_hintid !== undefined}}" class="mess-iconaa" bindtap="toExplaination" data-tid="{{product_class_hintid}}"></view>-->
                 </view>
 				<view class="pro-detial-mess-row">
