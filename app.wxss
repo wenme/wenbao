@@ -90,8 +90,6 @@ page {
 }
 /*公司*/
 .pro-company-name {
-  height: 120rpx;
-  display: table;
   font-size: 34rpx;
   background:#fff;
   overflow: hidden;

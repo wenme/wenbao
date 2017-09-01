@@ -17,7 +17,7 @@
                 </view>
                 <view class="product-item-con">
                     <view class="type">{{product_structure}}</view>
-                    <view class="span-item">{{insurer}}</view>
+                    <view class="span-item">{{insurer_abbr}}</view>
                     <view class="span-item">{{product_class}}</view>
                     <view class="clear"></view>
                 </view>
