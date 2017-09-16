@@ -1,17 +1,26 @@
 <!--pages/prograde-touzitoulian/prograde-touzitoulian.wxml-->
 <view class="padding-bottom">
-<view class="pro-company-name posi-fixed-top"><view class="productname padd-lr-30" >{{product}}</view></view>
-    <view class="part-white padd-lr-30 padding-bot20 margin-top120">
-		<view class="company-info-row title">
-            {{account_name}}
+    <view class="pro-company-name padd-lr-30">
+        <view class="product-item">
+            <view class="product-item-tit">{{product}}</view>
+            <view class="company-info-row posi-rela">
+                <view class="gradecon">
+                    <view wx:if="{{rating_star === '未有评级'}}" class="no-grade">{{rating_star}}</view>
+                    <image wx:else src="{{rating_star}}"></image>
+                </view>
+                <view class="insured_cover gradecon" wx:if="{{insured_cover_icon.length}}">
+                    保障
+                    <image wx:for="{{insured_cover_icon}}" src="{{item}}"></image>
+                </view>
+            </view>
+            <view class="product-item-con">
+                <view class="type">{{product_structure}}</view>
+                <view class="span-item">{{insurer_abbr}}</view>
+                <view class="span-item">{{product_class}}</view>
+                <view class="clear"></view>
+            </view>
         </view>
-        <view class="company-info-row posi-rela">
-            <view class="fullline">{{valuation_date}}单位卖出价<text class="span red">{{ask_price}}元</text></view>
-        </view>
-		
-		
-	<view class="clear"></view>
-	</view>
+    </view>
 
     
 

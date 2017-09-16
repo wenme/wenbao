@@ -12,7 +12,7 @@ Page({
 
     onLoad:function({pid, aid}){
         request.withSessionKey({
-            url: 'https://dev.wenme.cc/terms/get_investment_link_account_info',
+            url: 'https://dev.wenme.cc/terms/get_investment_linked_account_info',
             data: {
                 pid,
                 account_id: aid
@@ -21,7 +21,7 @@ Page({
             .then(({
                 data: {
                     err_code,
-                    account_info
+                    account_info_json: account_info
                 }
             }) => {
                 if (err_code === 0) {

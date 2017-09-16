@@ -76,7 +76,7 @@
                 <view class="pro-duty-bb">{{item[0]}}</view>
                 <navigator
                         hover-class="none"
-                        url="../prograde-touzitoulian/prograde-touzitoulian?account_id={{item[2]}}"
+                        url="../prograde-touzitoulian/prograde-touzitoulian?aid={{item[2]}}&pid={{pid}}"
                         class="pro-duty-cc">{{item[1]}}</navigator>
                 <view class="clear"></view>
             </view>
