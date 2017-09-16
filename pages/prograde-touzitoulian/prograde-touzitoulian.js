@@ -29,9 +29,9 @@ Page({
                         'account_spread',
                         'avg_return_3y',
                         'last_year_return',
-                        'manage_fee',
+                        'avg_volatility_3y',
                         'this_year_return',
-                        'volatile_return_3y'
+                        'investment_management_fee'
                     ].forEach(key => account_info[key] = (account_info[key]*100).toFixed(1));
                     this.setData(account_info);
 
@@ -40,18 +40,18 @@ Page({
                         type        : 'line',
                         width       : 300,
                         height      : 200,
-                        categories  : account_info.invest_time_line,
+                        categories  : account_info.time_line,
                         yAxis       : {
                             min     : 800
                         },
                         series      : [
                             {
-                                name: '投连账户名',
-                                data: account_info.invest_value
+                                name: account_info.account_name,
+                                data: account_info.investment_value
                             },
                             {
-                                name: account_info.invest_bm_name,
-                                data: account_info.invest_bm_value,
+                                name: account_info.benchmark_str,
+                                data: account_info.benchmark_value,
                                 color:'#adff2f'
                             }
                         ],

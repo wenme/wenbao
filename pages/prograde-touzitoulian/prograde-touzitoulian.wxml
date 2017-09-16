@@ -27,12 +27,34 @@
 
     <view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
-            <view class="proli-item">投资价值走势</view>
+            <view class="proli-item">{{account_name}}</view>
+        </view>
+        <view class="padd-lr-30">
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">{{sell_date}}单位卖出价</view>
+                <view class="pro-duty-dd cost">{{sell_price}}</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">资产类别</view>
+                <view class="pro-duty-dd cost">{{risk_rating_str}}</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="pro-detial-mess-row">
+                <view class="pro-duty-bb cost">业绩比较基准</view>
+                <view class="pro-duty-dd cost">{{benchmark_str}}</view>
+                <view class="clear"></view>
+            </view>
+
+            <view class="clear"></view>
         </view>
 
         <view class="prograde-contxt">
             <canvas style="width: 300px; height: 200px;" canvas-id="touzijiazhi"></canvas>
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
     <view class="clear"></view>
@@ -50,16 +72,14 @@
         <view class="padd-lr-30">
 
             <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb cost">3年平均收益率
-</view>
+                <view class="pro-duty-bb cost">3年平均收益率</view>
                 <view class="pro-duty-dd cost">{{avg_return_3y}}%</view>
                 <view class="clear"></view>
             </view>
 
             <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb cost">3年平均波动率
-</view>
-                <view class="pro-duty-dd cost">{{volatile_return_3y}}%</view>
+                <view class="pro-duty-bb cost">3年平均波动率</view>
+                <view class="pro-duty-dd cost">{{avg_volatility_3y}}%</view>
                 <view class="clear"></view>
             </view>
 
@@ -70,14 +90,13 @@
             </view>
 
             <view class="pro-detial-mess-row">
-                <view class="pro-duty-bb cost">今年收益率
-</view>
+                <view class="pro-duty-bb cost">今年收益率</view>
                 <view class="pro-duty-dd cost">{{this_year_return}}%</view>
                 <view class="clear"></view>
             </view>
 
             
-        <view class="clear"></view>
+            <view class="clear"></view>
         </view>
 
     <view class="clear"></view>
@@ -94,7 +113,7 @@
             <view class="pro-detial-mess-row">
                 <view class="pro-duty-bb cost">资产管理费
 </view>
-                <view class="pro-duty-dd cost">{{manage_fee}}%</view>
+                <view class="pro-duty-dd cost">{{investment_management_fee}}%</view>
                 <view class="clear"></view>
             </view>
 
@@ -102,7 +121,7 @@
                 <view class="pro-duty-bb cost">单位买卖差价
 
 </view>
-                <view class="pro-duty-dd cost">{{account_spread}}%</view>
+                <view class="pro-duty-dd cost">{{bid_ask_spread}}%</view>
                 <view class="clear"></view>
             </view>
 
