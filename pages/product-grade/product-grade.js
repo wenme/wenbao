@@ -18,7 +18,8 @@ Page(Object.assign({
         exclusion_count : 0,
 
         showGuarantee: true,
-        showSettlement: true
+        showSettlement: true,
+        showInvestment: true
 
         // tabbar          : app.globalData.tabbar,
     },
@@ -29,6 +30,10 @@ Page(Object.assign({
 
     toggleSettlement() {
         this.setData({ showSettlement: !this.data.showSettlement });
+    },
+
+    toggleInvestment() {
+        this.setData({ showInvestment: !this.data.showInvestment });
     },
 
     toDisease({target: {dataset : {code, type}}}) {
