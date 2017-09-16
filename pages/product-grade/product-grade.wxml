@@ -41,7 +41,7 @@
     
 
 
-    <view class="pro-detial-mess">
+    <view class="pro-detial-mess" wx:if="{{benefits.length}}">
         <view class="pro-detial-mess-tit">
             <view class="proli-item">保障</view>
             <view class="proli-item-toggle{{showGuarantee ? '': ' off'}}" bindtap="toggleGuarantee"></view>
@@ -64,25 +64,29 @@
 
 
 
-    <!--<view class="pro-detial-mess" wx:if="{{product_structure!=='传统型'}}">-->
-        <!--<view class="pro-detial-mess-tit">-->
-            <!--<view class="proli-item">投资</view>-->
-        <!--</view>-->
+    <view class="pro-detial-mess" wx:if="{{investment_linked_info && investment_linked_info.length || universal_life_info && universal_life_info.length}}">
+        <view class="pro-detial-mess-tit">
+            <view class="proli-item">投资</view>
+            <view class="proli-item-toggle{{showInvestment ? '': ' off'}}" bindtap="toggleInvestment"></view>
+        </view>
 
-        <!--<view class="padd-lr-30">-->
+        <view class="padd-lr-30" wx:if="{{showInvestment}}">
 
-            <!--<view class="pro-detial-mess-row">-->
-                <!--<view class="pro-duty-bb">{{product_structure}}</view>-->
-                <!--<view class="pro-duty-cc" bindtap="toProductType"></view>-->
-                <!--<view class="clear"></view>-->
-            <!--</view>-->
+            <view class="pro-detial-mess-row" wx:for="{{investment_linked_info && investment_linked_info.length ? investment_linked_info : universal_life_info}}">
+                <view class="pro-duty-bb">{{item[0]}}</view>
+                <navigator
+                        hover-class="none"
+                        url="../prograde-touzitoulian/prograde-touzitoulian?account_id={{item[2]}}"
+                        class="pro-duty-cc">{{item[1]}}</navigator>
+                <view class="clear"></view>
+            </view>
 
-            <!---->
-            <!--<view class="clear"></view>-->
-        <!--</view>-->
 
-        <!--<view class="clear"></view>-->
-    <!--</view>-->
+            <view class="clear"></view>
+        </view>
+
+        <view class="clear"></view>
+    </view>
 
     <!--<view class="pro-detial-mess">
         <view class="pro-detial-mess-tit">
