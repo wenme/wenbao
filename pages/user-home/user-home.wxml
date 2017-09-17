@@ -15,8 +15,8 @@
                 <navigator
                         class="pro-duty-cc"
                         hover-class="none"
-                        url="../product-list/product-list?type=purchased">
-                    <text class="red">{{my_purchased_product_count}}</text>份产品评级
+                        url="../product-list/product-list?type=followed">
+                    <text class="red">{{my_followed_product_count}}</text>份产品评级
                 </navigator>
                 <view class="clear"></view>
             </view>
