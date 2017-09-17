@@ -42,6 +42,12 @@ Page(Object.assign({
     },
 
     toGrade() {
+        request.withSessionKey({
+            url: 'https://dev.wenme.cc/users/add_followed_product',
+            data: {
+                pid: this.data.pid
+            }
+        });
         // request.withSessionKey({
         //     url: 'https://dev.wenme.cc/orders/check_product_is_paid',
         //     data: {
